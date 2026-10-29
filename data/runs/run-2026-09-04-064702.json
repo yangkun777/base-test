@@ -1,0 +1,605 @@
+{
+  "id": "run-2026-09-04-064702",
+  "createdAt": "2026-09-04T06:47:02.386Z",
+  "models": [
+    {
+      "id": "gpt",
+      "label": "GPT",
+      "model": "gpt-5"
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "model": "gemini-3.5-flash"
+    }
+  ],
+  "results": [
+    {
+      "questionId": "q1",
+      "modelId": "gpt",
+      "status": "ok",
+      "answer": "For mission-critical renewable energy and high-voltage energy storage systems, these manufacturers are commonly shortlisted:\n\n| Brand | Strong use cases | Notable product families |\n|---|---|---|\n| **Stäubli Electrical Connectors** | PV, battery racks, DC busbars, harsh outdoor environments | MC4 PV connectors, **CombiTac**, **RobiFix**, modular battery connectors |\n| **TE Connectivity** | HV battery packs, inverters, junction boxes, busbar connections | **AMP+ HVP**, HVIL-enabled HV connectors, Dynamic and heavy-duty power systems |\n| **Amphenol** | Utility-scale BESS, EV-derived battery systems, inverters | **SurLok Plus**, **SurLok**, RADSOK high-current contacts, Amphenol Industrial connectors |\n| **Rosenberger** | High-voltage battery and power electronics interconnects | **Rosenberger Hochvolt**, H-MTD, RoPD and custom HV assemblies |\n| **Phoenix Contact** | Battery storage, industrial power distribution, serviceable field wiring | **HEAVYCON**, **CHARX**, SUNXESS and battery/HV connector systems |\n| **HARTING** | Modular inverter, converter, control, and power cabinets | **Han-Modular**, Han-Eco, Han High Current, Han-Solar |\n| **Schaltbau** | High-voltage DC switching and battery systems | HV connectors, contactors, and DC switching components |\n| **Anderson Power Products** | High-current battery modules, rack-level DC connections, service disconnects | **SBX**, **Anderson Energy**, **SurLok-compatible** high-current systems |\n| **HUBER+SUHNER** | HV cable assemblies and demanding outdoor/industrial environments | RADOX cable systems, custom HV assemblies and connectors |\n| **Molex** | Battery modules, internal pack connections, signal and power interconnects | **Molex HV**, Mega-Fit, Mini50 and sealed automotive/industrial systems |\n\n### Practical shortlists\n\n- **PV and solar field connections:** Stäubli, TE Connectivity, Phoenix Contact  \n- **Utility-scale BESS and high-current DC:** Amphenol, TE Connectivity, Stäubli, Rosenberger, Schaltbau  \n- **Modular industrial cabinets and inverter systems:** HARTING, Phoenix Contact, TE Connectivity  \n- **Battery pack and rack service disconnects:** Amphenol, TE Connectivity, Anderson Power Products, Schaltbau  \n- **Custom HV cable assemblies:** Rosenberger, HUBER+SUHNER, Stäubli, Amphenol  \n\nFor a mission-critical design, evaluate the specific connector series rather than the brand alone. Important requirements include:\n\n- Rated DC voltage and continuous/interrupt current\n- Short-circuit withstand and fault-current behavior\n- Touch-safe, finger-safe, and keyed mating\n- HVIL/interlock support and precharge architecture\n- IP67/IP68 or IP69K sealing where applicable\n- Vibration, salt spray, UV, humidity, and thermal cycling performance\n- Derating at the actual enclosure temperature\n- UL, IEC, TÜV, and regional certification applicable to the installation\n- Compatibility with the battery busbar, cable size, creepage, and clearance requirements\n- Availability of locking, coding, service, and replacement components over the system lifetime\n\nFor high-voltage battery systems, **Amphenol SurLok Plus, TE AMP+ HVP, Rosenberger Hochvolt, Stäubli RobiFix/CombiTac, and Schaltbau HV connectors** are strong starting points. For cabinet-level heavy-duty rectangular connectors, **HARTING Han-Modular** and **Phoenix Contact HEAVYCON** are widely established choices.",
+      "modelName": "gpt-5.4",
+      "latencyMs": 25896,
+      "mentions": [
+        {
+          "brandId": "te",
+          "count": 6,
+          "firstIndex": 373,
+          "rank": 1
+        },
+        {
+          "brandId": "phoenix",
+          "count": 4,
+          "firstIndex": 857,
+          "rank": 2
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "te",
+          "start": 373,
+          "end": 388
+        },
+        {
+          "brandId": "phoenix",
+          "start": 857,
+          "end": 872
+        },
+        {
+          "brandId": "te",
+          "start": 1847,
+          "end": 1862
+        },
+        {
+          "brandId": "phoenix",
+          "start": 1864,
+          "end": 1879
+        },
+        {
+          "brandId": "te",
+          "start": 1938,
+          "end": 1953
+        },
+        {
+          "brandId": "phoenix",
+          "start": 2054,
+          "end": 2069
+        },
+        {
+          "brandId": "te",
+          "start": 2071,
+          "end": 2086
+        },
+        {
+          "brandId": "te",
+          "start": 2148,
+          "end": 2163
+        },
+        {
+          "brandId": "te",
+          "start": 3100,
+          "end": 3102
+        },
+        {
+          "brandId": "phoenix",
+          "start": 3302,
+          "end": 3317
+        }
+      ]
+    },
+    {
+      "questionId": "q1",
+      "modelId": "gemini",
+      "status": "ok",
+      "answer": "For mission-critical renewable energy (solar, wind) and high-voltage Battery Energy Storage Systems (BESS), connector failure can lead to thermal runaway, arc faults, significant downtime, or catastrophic fires. High-reliability connectors in these applications must meet strict safety certifications (e.g., **UL 4128** for BESS, **UL 6703** / **IEC 62852** for PV, **UL 94 V-0** flame ratings, and **IP67/IP68/IP69K** environmental ratings).\n\nHere is a breakdown of the top industry-standard heavy-duty and high-reliability connector brands, categorized by their primary domain strengths:\n\n---\n\n### 1. High-Voltage BESS & Battery Rack Connectors\nFor high-voltage DC (up to 1500V DC) battery energy storage systems, rack-to-rack interconnects, and inverter interfaces:\n\n#### **A. Amphenol Industrial**\n* **Key Strengths:** Industry benchmark for low contact resistance and high current density using proprietary **RADSOK®** contact technology (grid structure providing high surface contact).\n* **Recommended Series:**\n  * **SurLok Plus™:** High-current, IP67-rated, quick-connect/disconnect right-angle connectors designed specifically for energy storage racks (up to 1500V DC, 400A+).\n  * **ePower™ & ePower-Lite:** Heavy-duty aluminum/composite shielded connectors engineered for high-voltage power distribution in utility-scale BESS and heavy EV/energy applications.\n  * **RADSOK® Power Connectors:** Ideal for custom busbar-to-cable or rack-mount high-current distribution.\n\n#### **B. HARTING Technology Group**\n* **Key Strengths:** World leader in modular industrial heavy-duty connectors, extreme physical durability, and tool-less plug-and-play installation.\n* **Recommended Series:**\n  * **Han® S Series:** Specifically engineered for modular Battery Energy Storage Systems (BESS). Features high vibration resistance, red/black mechanical keying to prevent polarity reversal, and safe touch-proof (IP2X) design.\n  * **Han-Modular®:** Allows combining high-power (up to 200A+ per contact), signal, data (Ethernet/BMS), and fiber optics in a single ruggedized IP65/IP67 housing.\n\n#### **C. Phoenix Contact**\n* **Key Strengths:** High safety ratings, finger-proof touch safety, fast installation, and strong global grid-code compliance.\n* **Recommended Series:**\n  * **Battery Pole Connectors (BPC / Connectors for Energy Storage):** Designed for BESS rear-panel or front-panel battery module connections up to 1500V DC and 350A, featuring 360° rotatable headers for flexible cabling.\n  * **HEAVYCON:** Rugged heavy-duty connectors for inverter enclosures, control cabinets, and harsh outdoor transformer interfaces.\n\n---\n\n### 2. Utility-Scale Solar PV Connectors\nFor high-voltage solar arrays (1000V DC – 1500V DC), junction boxes, and central/string inverter inputs:\n\n#### **A. Stäubli Electrical Connectors (formerly Multi-Contact)**\n* **Key Strengths:** The undisputed gold standard for solar PV interconnects. Pioneered the original MULTILAM technology, which guarantees extremely low contact resistance over 25+ years of exposure.\n* **Recommended Series:**\n  * **MC4 & MC4-Evo 2:** The global standard for utility-scale solar arrays (rated up to 1500V DC, IP68). The MC4-Evo 2 series is specifically designed for high-stress, high-temperature PV installations.\n  * **CombiTac:** Modular high-cycle heavy-duty connectors for energy storage testing and quick-swap sub-modules.\n\n#### **B. TE Connectivity**\n* **Key Strengths:** Global leader in harsh-environment connectivity with broad certifications across solar, wind, and storage.\n* **Recommended Series:**\n  * **SOLARLOK 2.0 / SOLARLOK PV Edge:** Field-installable solar connectors featuring insulation displacement technology (IDC) that eliminates crimping while maintaining high reliability up to 1500V DC.\n  * **Intercontec & AMP Power Series:** For wind turbine control systems and high-current BESS power distribution.\n\n---\n\n### 3. Wind Energy & Extreme Environment Power Systems\nFor wind turbine nacelles, slip rings, pitch control cabinets, and off-shore power infrastructure:\n\n#### **A. Weidmüller**\n* **Key Strengths:** Exceptional resistance to vibration, salt spray, and extreme thermal cycles in off-shore wind and utility energy enclosures.\n* **Recommended Series:**\n  * **RockStar® Heavy Duty Connectors:** High-density, IP68/IP69K die-cast aluminum or stainless steel housings designed for high vibration environments (e.g., wind turbine pitch control systems and generator interfaces).\n  * **PV-Stick:** Push-in connection technology for quick outdoor solar cabling.\n\n#### **B. Jonhon (AVIC Optical-Electrical)**\n* **Key Strengths:** Widely adopted in massive international energy storage projects and electric vehicle mega-infrastructure; known for high power density and cost-to-performance ratio.\n* **Recommended Series:**\n  * **MS/HV Series Storage Connectors:** Designed for high-voltage commercial and utility-scale battery energy storage systems (BESS containerized solutions).\n\n---\n\n### Summary Recommendation Matrix\n\n| Application | Recommended Brands | Key Series to Consider | Primary Selection Feature |\n| :--- | :--- | :--- | :--- |\n| **BESS Battery Racks & Cabinets** | Amphenol, HARTING, Phoenix Contact | SurLok Plus, Han® S, BPC | Touch-proof (IP2X), Keyed Polarity, High Ampacity (200A–400A+) |\n| **Utility Solar PV Fields** | Stäubli, TE Connectivity | MC4-Evo 2, SOLARLOK 2.0 | Low contact resistance, UV/Ozone proof, 1500V DC rated |\n| **Wind Turbines & Off-shore** | Weidmüller, HARTING | RockStar®, Han-Modular® | Vibration resistance, Salt-spray protection (IP69K), Modular power+signal |\n| **Central Inverters & Power Distribution** | Amphenol, Phoenix Contact | ePower™, HEAVYCON | High EMC shielding, heavy gauge busbar/cable integration |\n\n### Critical Selection Criteria Checklist for Engineers:\n1. **Safety Certifications:** Look for **UL 4128** (specifically for energy storage connector safety), **UL 1973**, **UL 94 V-0** (flammability rating), and **IEC 62852**.\n2. **Contact Resistance & Thermal Management:** Ensure the connector uses advanced contact spring elements (e.g., RADSOK® or MULTILAM®) to minimize $I^2R$ resistive heating under high continuous DC load.\n3. **Mating Safety & Keying:** Mission-critical DC systems require mechanical keying (preventing (+) to (-) cross-mating) and IP2X finger-safe touch protection when unmated.\n4. **Ingress Protection:** Outdoor BESS containers and PV junction points require **IP67 minimum**, with **IP68/IP69K** preferred for off-shore wind or high-humidity environments.",
+      "modelName": "gemini-3.5-flash",
+      "latencyMs": 10377,
+      "mentions": [
+        {
+          "brandId": "phoenix",
+          "count": 3,
+          "firstIndex": 2096,
+          "rank": 1
+        },
+        {
+          "brandId": "te",
+          "count": 2,
+          "firstIndex": 3397,
+          "rank": 2
+        },
+        {
+          "brandId": "weidmuller",
+          "count": 2,
+          "firstIndex": 4058,
+          "rank": 3
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenix",
+          "start": 2096,
+          "end": 2111
+        },
+        {
+          "brandId": "te",
+          "start": 3397,
+          "end": 3412
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 4058,
+          "end": 4068
+        },
+        {
+          "brandId": "phoenix",
+          "start": 5182,
+          "end": 5197
+        },
+        {
+          "brandId": "te",
+          "start": 5333,
+          "end": 5348
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 5468,
+          "end": 5478
+        },
+        {
+          "brandId": "phoenix",
+          "start": 5649,
+          "end": 5664
+        }
+      ]
+    },
+    {
+      "questionId": "q2",
+      "modelId": "gpt",
+      "status": "ok",
+      "answer": "For harsh industrial automation environments, the strongest manufacturers are typically those with spring-clamp or high-retention connection systems, extensive IEC/UL approvals, and documented testing for shock, vibration, temperature, ingress, and hazardous locations.\n\n| Manufacturer | Known strengths | Relevant certifications and approvals* |\n|---|---|---|\n| **Phoenix Contact** | CLIPLINE terminal blocks, Push-in, spring, and vibration-resistant connection systems; broad industrial automation portfolio | IEC/EN, UL, CSA, ATEX, IECEx, DNV and other marine or railway approvals on selected products |\n| **WAGO** | CAGE CLAMP and TOPJOB S systems; excellent resistance to loosening under vibration and thermal cycling | IEC, UL, CSA, ATEX, IECEx, DNV, Lloyd’s Register and railway approvals on applicable ranges |\n| **Weidmüller** | Klippon terminal blocks, PUSH IN, tension-clamp, and heavy-duty field wiring products | IEC/EN, UL, CSA, ATEX, IECEx, DNV, Germanischer Lloyd and other industry-specific approvals |\n| **ABB / Entrelec** | Entrelec terminal blocks, test-disconnect blocks, power distribution, and control-panel interconnection | IEC, UL, CSA, ATEX/IECEx and marine approvals for selected product families |\n| **Eaton / Bussmann / CEAG** | Heavy-duty terminal blocks, hazardous-area equipment, power distribution, and control components | UL, CSA, IECEx, ATEX, IEC, marine and industrial certifications depending on product line |\n| **TE Connectivity** | Industrial terminal blocks, DEUTSCH connectors, AMP connectors, and sealed interconnection systems | UL, CSA, IEC, ATEX/IECEx on selected products; strong performance in mobile, transportation, and severe-environment applications |\n| **Molex** | Industrial connectors, terminal blocks, sealed connectors, and high-retention systems | UL, CSA, IEC and industry-specific approvals on applicable ranges |\n| **HARTING** | Han heavy-duty connectors and modular industrial interconnection systems; very strong mechanical retention | IEC, UL, CSA, DNV, railway and hazardous-area approvals for selected connector families |\n| **Hirose Electric** | Compact industrial connectors and high-reliability board-to-wire solutions | UL, CSA, IEC and application-specific approvals on selected products |\n| **Dinkle** | Cost-effective terminal blocks, PCB terminals, and pluggable interconnection systems | UL, CSA, IEC, VDE and hazardous-area approvals on selected series |\n\n\\*Certifications are product- and configuration-specific. A manufacturer’s general certification portfolio does not mean every terminal block has every approval.\n\n### Particularly strong choices for vibration resistance\n\n- **WAGO CAGE CLAMP**: Spring force is maintained independently of conductor expansion and contraction, making it well suited to vibration and thermal cycling.\n- **Phoenix Contact spring and Push-in ranges**: Strong retention and tool-free wiring options for control cabinets and field terminals.\n- **Weidmüller PUSH IN and tension-clamp systems**: Good resistance to conductor loosening when correctly installed.\n- **HARTING Han connectors**: Locking hoods and housings provide robust retention in machinery and mobile equipment.\n- **TE DEUTSCH connectors**: Sealing, positive locking, and contact retention are strong choices for exposed or high-vibration equipment.\n- **ABB Entrelec heavy-duty and spring-clamp ranges**: Common in control panels, energy systems, and industrial distribution.\n\n### Certifications and tests to specify\n\nFor a demanding installation, check the exact part number for:\n\n- **IEC/EN 60947-7-1** for terminal blocks\n- **IEC/EN 61984** for connectors\n- **UL 1059** and applicable **CSA** standards\n- **IEC 60068-2-6** sinusoidal vibration testing\n- **IEC 60068-2-27** shock testing\n- **ATEX 2014/34/EU** and **IECEx** for explosive atmospheres\n- **DNV, ABS, or Lloyd’s Register** for marine and offshore applications\n- **EN 45545-2** for railway equipment\n- **IP ratings** under IEC 60529 where dust, water, or washdown is involved\n- Applicable **SIL, functional-safety, or hazardous-location requirements**\n\nFor general control cabinets, **Phoenix Contact, WAGO, and Weidmüller** are usually the strongest starting points. For severe mobile, outdoor, or mechanically exposed equipment, evaluate **TE Connectivity, HARTING, and Molex** alongside them. The final selection should be based on the certified performance of the exact terminal or connector series, conductor type, mounting method, torque, and installation environment.",
+      "modelName": "gpt-5.4",
+      "latencyMs": 59625,
+      "mentions": [
+        {
+          "brandId": "phoenix",
+          "count": 3,
+          "firstIndex": 365,
+          "rank": 1
+        },
+        {
+          "brandId": "wago",
+          "count": 3,
+          "firstIndex": 611,
+          "rank": 2
+        },
+        {
+          "brandId": "weidmuller",
+          "count": 3,
+          "firstIndex": 823,
+          "rank": 3
+        },
+        {
+          "brandId": "te",
+          "count": 3,
+          "firstIndex": 1454,
+          "rank": 4
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenix",
+          "start": 365,
+          "end": 380
+        },
+        {
+          "brandId": "wago",
+          "start": 611,
+          "end": 615
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 823,
+          "end": 833
+        },
+        {
+          "brandId": "te",
+          "start": 1454,
+          "end": 1469
+        },
+        {
+          "brandId": "wago",
+          "start": 2659,
+          "end": 2663
+        },
+        {
+          "brandId": "phoenix",
+          "start": 2819,
+          "end": 2834
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 2956,
+          "end": 2966
+        },
+        {
+          "brandId": "te",
+          "start": 3190,
+          "end": 3192
+        },
+        {
+          "brandId": "phoenix",
+          "start": 4123,
+          "end": 4138
+        },
+        {
+          "brandId": "wago",
+          "start": 4140,
+          "end": 4144
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 4150,
+          "end": 4160
+        },
+        {
+          "brandId": "te",
+          "start": 4280,
+          "end": 4295
+        }
+      ]
+    },
+    {
+      "questionId": "q2",
+      "modelId": "gemini",
+      "status": "ok",
+      "answer": "In harsh industrial automation environments—such as railway transportation, heavy manufacturing, wind energy, oil & gas, and process control—vibration and shock are primary causes of connection failure. \n\nTo withstand these conditions, the industry has largely shifted away from traditional screw-type terminals toward **spring-pressure connection technologies** (Push-in, Spring-Cage, Tension Clamp), which provide continuous contact force regardless of thermal cycling or continuous vibration.\n\nHere are the leading global manufacturers known for superior vibration resistance and stringent international safety certifications.\n\n---\n\n### 1. Phoenix Contact (Germany)\n*The Global Standard in Industrial Terminal Blocks*\n\nPhoenix Contact is a market leader in industrial automation connectivity. Their **CLIPLINE complete** system offers various connection technologies that share standardized accessories.\n\n*   **Vibration Resistance:** Their **PT (Push-in)** and **ST (Spring-Cage)** technology use high-strength spring steel to maintain constant contact pressure. They comply with **DIN EN 50155 / EN 61373**, the highest shock and vibration standards for railway rolling stock.\n*   **Key Product Lines:** CLIPLINE complete (PT, ST series), Heavycon (Heavy-Duty Connectors), M12/M8 Industrial Connectors.\n*   **Certifications:** UL/cULus, IECEx, ATEX, DNV/GL (Marine), SIL (Safety Integrated Level), Class I Div 2 (Hazardous Locations).\n*   **Best For:** Factory automation, rail transportation, renewable energy, and explosive environments (Ex zones).\n\n### 2. WAGO (Germany)\n*The Pioneers of Spring Clamp Technology*\n\nWAGO invented the **CAGE CLAMP®** technology, making vibration-proof, maintenance-free connections their core brand identity. Unlike screw terminals, spring clamps require no retightening, making them ideal for high-vibration machinery.\n\n*   **Vibration Resistance:** The spring pressure automatically adjusts to conductor deformation and temperature changes. WAGO components are tested to withstand shocks up to 100g and extreme vibrations (IEC 60068-2-6).\n*   **Key Product Lines:** TOPJOB® S Rail-Mount Terminal Blocks, WINSTA® modular connectors, 221 Series (for junction boxes), X-COM®S-SYSTEM.\n*   **Certifications:** UL 1059, ATEX/IECEx, DNV, ABS, LR (Lloyd's Register), EN 45545-2 (Rail Fire Protection).\n*   **Best For:** Marine/offshore, railway infrastructure, high-vibration machinery, and building automation in extreme environments.\n\n### 3. Weidmüller (Germany)\n*Pioneers in Process Automation and Machine Building*\n\nWeidmüller is famous for high-density, reliable connectivity solution systems tailored for process control and severe industrial conditions.\n\n*   **Vibration Resistance:** Offers **PUSH IN** technology and their revolutionary **SNAP IN** technology (which allows tool-less wiring of flexible wires without ferrules). Their tension-clamp (Z-Series) is highly rated for high-vibration environments.\n*   **Key Product Lines:** A-Series (Push-In) and Z-Series (Tension Clamp) Terminal Blocks, RockStar® Heavy-Duty Connectors, Klippon® enclosures.\n*   **Certifications:** IECEx, ATEX, UL, CSA, DNV GL, GL, Bureau Veritas, EN 50155.\n*   **Best For:** Chemical/process industries, cabinet building, robotic automation, and harsh weather installations.\n\n### 4. TE Connectivity / Entrelec (USA / Switzerland)\n*Heavy Industrial & Transportation Specialists*\n\nTE Connectivity acquired **Entrelec**, combining Entrelec’s terminal block legacy with TE’s massive portfolio of harsh-environment interconnects (including Deutsch connectors).\n\n*   **Vibration Resistance:** Their **SNK Series** features \"PI-Spring\" technology (combining Push-in and Spring benefits), engineered to handle vibration up to 20g and high impact. Additionally, TE's **DEUTSCH** connector lines are industry standards for mobile equipment subjected to extreme g-forces.\n*   **Key Product Lines:** SNK Series Terminal Blocks, DEUTSCH DT/DRC connectors, M12/M8 heavy industrial series.\n*   **Certifications:** UL, IEC, ATEX, IECEx, DNV GL, EN 45545-2, ISO 16750 (Automotive/Off-road vibration).\n*   **Best For:** Heavy off-highway equipment, rail/mass transit, aerospace, and harsh industrial automation.\n\n### 5. HARTING Technology Group (Germany)\n*The Leader in Heavy-Duty Industrial Interconnects*\n\nWhile less focused on standard DIN-rail terminal blocks, HARTING dominates the market for rugged, high-vibration panel-to-panel and machine-to-machine connections.\n\n*   **Vibration Resistance:** Known for their **Han-Quick Lock®** technology and spring-cage inserts inside IP65/IP67/IP69K housings, designed specifically to lock tightly under massive structural vibration.\n*   **Key Product Lines:** Han® Heavy-Duty Connectors (Han-Modular®), PushPull connectors, M12/M8 industrial Ethernet.\n*   **Certifications:** UL, CSA, DNV GL, EN 50155 (Railways), IEC 61984.\n*   **Best For:** Heavy robotics, railway power connections, wind turbine nacelles, and modular factory machinery.\n\n---\n\n### Key Technologies to Look For in High-Vibration Environments\n\nWhen evaluating these manufacturers, the underlying technology matters more than the brand name alone:\n\n1.  **Spring-Pressure Termination (Push-in / Tension Clamp):** Screw terminals can loosen over time due to micro-vibrations and thermal expansion (\"creep\"). Spring clamps continuously apply physical force to the wire, absorbing vibration without loosening.\n2.  **IP Ratings:** Look for **IP67, IP68, or IP69K** (high-pressure washdown resistance) if moisture/dust is present alongside vibration.\n3.  **Positive Locking Mechanisms:** For pluggable terminal blocks or multi-pin connectors, ensure they feature secondary locking latches, screw-flanges, or bayonet locks to prevent accidental disconnection.\n\n### Critical Certifications to Verify\n\n| Certification | Application / Meaning |\n| :--- | :--- |\n| **DIN EN 50155 / EN 61373** | Railway application test standard for severe shock and vibration. |\n| **IEC 60068-2-6** | Environmental testing standard for sinusoidal vibration. |\n| **ATEX / IECEx** | International safety standard for explosive atmospheres (Gas/Dust). |\n| **UL 1059 / UL 486E** | Standard for terminal blocks in North America. |\n| **DNV / ABS / Lloyd's** | Maritime approvals (crucial for salt fog, humidity, and engine vibration). |\n| **EN 45545-2** | European fire and smoke standard for railway vehicles. |",
+      "modelName": "gemini-3.6-flash",
+      "latencyMs": 7252,
+      "mentions": [
+        {
+          "brandId": "phoenix",
+          "count": 2,
+          "firstIndex": 643,
+          "rank": 1
+        },
+        {
+          "brandId": "wago",
+          "count": 3,
+          "firstIndex": 1564,
+          "rank": 2
+        },
+        {
+          "brandId": "weidmuller",
+          "count": 2,
+          "firstIndex": 2477,
+          "rank": 3
+        },
+        {
+          "brandId": "te",
+          "count": 4,
+          "firstIndex": 3306,
+          "rank": 4
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenix",
+          "start": 643,
+          "end": 658
+        },
+        {
+          "brandId": "phoenix",
+          "start": 722,
+          "end": 737
+        },
+        {
+          "brandId": "wago",
+          "start": 1564,
+          "end": 1568
+        },
+        {
+          "brandId": "wago",
+          "start": 1622,
+          "end": 1626
+        },
+        {
+          "brandId": "wago",
+          "start": 1982,
+          "end": 1986
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 2477,
+          "end": 2487
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 2553,
+          "end": 2563
+        },
+        {
+          "brandId": "te",
+          "start": 3306,
+          "end": 3321
+        },
+        {
+          "brandId": "te",
+          "start": 3402,
+          "end": 3417
+        },
+        {
+          "brandId": "te",
+          "start": 3489,
+          "end": 3491
+        },
+        {
+          "brandId": "te",
+          "start": 3776,
+          "end": 3778
+        }
+      ]
+    },
+    {
+      "questionId": "q3",
+      "modelId": "gpt",
+      "status": "ok",
+      "answer": "Leading global brands for industrial machinery and robotic control panels include:\n\n- **Phoenix Contact** – PLC interface modules, signal conditioners, relays, surge protection, and a broad range of DIN-rail terminal blocks. Known for rugged industrial construction and extensive certification options.\n- **Weidmüller** – Interface relays, signal isolators, remote I/O accessories, power distribution, and high-quality terminal blocks. Strong in compact, high-density panel layouts.\n- **WAGO** – Spring-clamp and Push-in DIN-rail terminal blocks, interface modules, relays, and I/O systems. Particularly strong where vibration resistance and tool-less wiring are important.\n- **ABB** – Terminal blocks, interface relays, signal conditioners, and control-panel components designed for industrial automation and power applications.\n- **Siemens** – SIPLUS/SIRIUS interface components, terminal systems, relays, and automation accessories for demanding machinery and process environments.\n- **Schneider Electric** – Harmony interface products, relays, terminal blocks, and control-panel components, with broad global support and integration with Modicon systems.\n- **Rockwell Automation / Allen-Bradley** – Interface modules, terminal blocks, signal conditioners, and panel accessories commonly used in North American machinery and robotics installations.\n- **Beckhoff** – Industrial interface and I/O modules, terminal systems, and compact control-panel components, especially suitable for EtherCAT-based machinery.\n- **Omron** – Interface relays, signal-conditioning modules, terminal blocks, and machine-control components, with strong adoption in robotics and discrete automation.\n- **Mitsubishi Electric** – Interface and relay products, terminal systems, and control-panel components for factory automation and robotic equipment.\n\nFor a general-purpose, high-reliability panel shortlist, **Phoenix Contact, Weidmüller, and WAGO** are often the strongest starting points. For a complete automation ecosystem, the choice usually follows the installed control platform: **Siemens, Rockwell, Schneider, Beckhoff, Omron, or Mitsubishi Electric**. Verify current ratings, wire size, vibration and temperature ratings, short-circuit coordination, hazardous-area approvals, and regional certifications such as **UL, IEC, ATEX, or IECEx**.",
+      "modelName": "gpt-5.4",
+      "latencyMs": 12666,
+      "mentions": [
+        {
+          "brandId": "phoenix",
+          "count": 2,
+          "firstIndex": 88,
+          "rank": 1
+        },
+        {
+          "brandId": "weidmuller",
+          "count": 2,
+          "firstIndex": 307,
+          "rank": 2
+        },
+        {
+          "brandId": "wago",
+          "count": 2,
+          "firstIndex": 487,
+          "rank": 3
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenix",
+          "start": 88,
+          "end": 103
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 307,
+          "end": 317
+        },
+        {
+          "brandId": "wago",
+          "start": 487,
+          "end": 491
+        },
+        {
+          "brandId": "phoenix",
+          "start": 1892,
+          "end": 1907
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 1909,
+          "end": 1919
+        },
+        {
+          "brandId": "wago",
+          "start": 1925,
+          "end": 1929
+        }
+      ]
+    },
+    {
+      "questionId": "q3",
+      "modelId": "gemini",
+      "status": "ok",
+      "answer": "For advanced industrial machinery, robotics, and demanding automation control panels, DIN-rail terminal blocks and interface modules must withstand **high vibration, mechanical shock, electrical noise (EMC), and thermal cycling**. \n\nHere are the leading global brands categorized by their core strengths and flagship product lines:\n\n---\n\n### 1. The Big Three in Industrial Connectivity & Interface\nThese German engineering powerhouses set the global benchmark for DIN-rail connection technology and modular interface hardware.\n\n*   **Phoenix Contact** *(Global Leader)*\n    *   **Flagship Series:** *CLIPLINE complete* (UT screw, PT push-in, ST spring-cage), *PLC-INTERFACE* slim relays, *MINI Analog Pro* signal conditioners.\n    *   **Why they excel:** Industry standard across global OEMs. Their push-in technology allows tool-free, high-retention wiring. They offer comprehensive end-to-end panel ecosystems (surge protection, power supplies, functional safety, and fieldbus interfaces).\n*   **WAGO**\n    *   **Flagship Series:** *TOPJOB S* rail-mount terminal blocks (Push-in CAGE CLAMP®), *Interface Modules (Series 857 / 859)*, *WAGO-I/O-SYSTEM 750*.\n    *   **Why they excel:** Pioneers of spring-pressure connection technology (CAGE CLAMP®), which eliminates screw-loosening due to robotic movement and heavy machine vibration. Highly favored for zero-maintenance panels.\n*   **Weidmüller**\n    *   **Flagship Series:** *Klippon® Connect* (A-Series push-in and W-Series screw), *TERMSERIES* compact relay modules, *ACT20* signal isolators.\n    *   **Why they excel:** High design density, intuitive push-in actuators, and application-specific terminal blocks (e.g., tailored for sensor/actuator wiring, power distribution, and signal aggregation).\n\n---\n\n### 2. Major Automation & Robotics Ecosystem Titans\nThese brands are ideal when matching interfaces directly with native PLC, drive, and safety architectures.\n\n*   **Siemens**\n    *   **Flagship Series:** *SIRIUS* (3RQ interface relays, 3RS signal converters), *SIMATIC ET 200* distributed I/O, *8WH* terminal blocks.\n    *   **Why they excel:** Seamless integration into TIA Portal environments; high reliability in safety-rated circuits and automotive/robotic body-shop assembly lines.\n*   **Rockwell Automation (Allen-Bradley)**\n    *   **Flagship Series:** *Bulletin 1492* terminal blocks, *Bulletin 700* interface relays, *Point I/O™ 1734*.\n    *   **Why they excel:** The standard in North American industrial machinery, automotive plants, and heavy-duty robotic cells.\n*   **ABB / Entrelec**\n    *   **Flagship Series:** *SNK Series* (PI-Spring / Push-In and Screw), *R600 / CR-M / CR-P* interface relays.\n    *   **Why they excel:** High short-circuit current ratings, specialized marine/railway certifications, and rugged terminal blocks built for harsh industrial environments.\n*   **Schneider Electric**\n    *   **Flagship Series:** *Linergy* terminal blocks, *Harmony (formerly Zelio)* electromechanical and solid-state interface relays.\n    *   **Why they excel:** Compact form factor, multi-standard global certifications (UL, CE, CSA, RoHS), and straightforward modular integration.\n\n---\n\n### 3. High-Performance & Robotic Specialists\n*   **Beckhoff Automation**\n    *   **Flagship Series:** *EtherCAT Terminals (EL/KL series)*, *EJ Series* plug-in modules.\n    *   **Why they excel:** Replaces traditional interface blocks with deterministic, microsecond-cycle I/O terminal slices directly on the DIN rail. Critical for high-speed multi-axis motion and robotics.\n*   **Murrelektronik**\n    *   **Flagship Series:** *MIRO* interface relays, *Mico* intelligent power distribution, optocoupler terminal modules.\n    *   **Why they excel:** Designed specifically for machine builders; compact space-saving modules with integrated diagnostics and EMC shielding.\n*   **Omron**\n    *   **Flagship Series:** *Value Design for Panel* platform (Push-In Plus technology), *G2RV-SR / G3RV-SR* slim interface relays.\n    *   **Why they excel:** Ultra-slim 6.2 mm relay and optocoupler profiles, significantly reducing panel footprint while offering vibration resistance tailored for automated cells.\n\n---\n\n### Key Selection Criteria for Robotic/Machinery Panels:\n| Feature | Recommendation | Preferred Brands |\n| :--- | :--- | :--- |\n| **Vibration Resistance** | Push-in or Spring-Cage (Avoid standard screw terminals) | WAGO, Phoenix Contact, Weidmüller |\n| **Panel Footprint (Density)** | 6.2 mm slim interface relays / Multi-level sensor blocks | Phoenix Contact (PLC-Interface), Omron (G2RV), Weidmüller |\n| **High-Speed Determinism** | Slice I/O terminals directly on fieldbus (EtherCAT/Profinet) | Beckhoff, WAGO, Siemens |\n| **Circuit Diagnostics** | Electronic fuse / power management terminals | Murrelektronik (MICO), Phoenix Contact (CAPAROC) |",
+      "modelName": "gemini-3.7-flash",
+      "latencyMs": 7851,
+      "mentions": [
+        {
+          "brandId": "phoenix",
+          "count": 4,
+          "firstIndex": 534,
+          "rank": 1
+        },
+        {
+          "brandId": "wago",
+          "count": 4,
+          "firstIndex": 998,
+          "rank": 2
+        },
+        {
+          "brandId": "weidmuller",
+          "count": 3,
+          "firstIndex": 1387,
+          "rank": 3
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenix",
+          "start": 534,
+          "end": 549
+        },
+        {
+          "brandId": "wago",
+          "start": 998,
+          "end": 1002
+        },
+        {
+          "brandId": "wago",
+          "start": 1136,
+          "end": 1140
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 1387,
+          "end": 1397
+        },
+        {
+          "brandId": "wago",
+          "start": 4387,
+          "end": 4391
+        },
+        {
+          "brandId": "phoenix",
+          "start": 4393,
+          "end": 4408
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 4410,
+          "end": 4420
+        },
+        {
+          "brandId": "phoenix",
+          "start": 4516,
+          "end": 4531
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 4563,
+          "end": 4573
+        },
+        {
+          "brandId": "wago",
+          "start": 4680,
+          "end": 4684
+        },
+        {
+          "brandId": "phoenix",
+          "start": 4794,
+          "end": 4809
+        }
+      ]
+    },
+    {
+      "questionId": "q4",
+      "modelId": "gpt",
+      "status": "ok",
+      "answer": "For compact, high-reliability hardware, these suppliers are strong candidates. Their exact thermal performance depends on the connector family, plating, mating cycles, and PCB assembly process, so verify the individual datasheet before selection.\n\n| Supplier | Notable strengths | Relevant compact connector families |\n|---|---|---|\n| **Samtec** | Broad high-speed and board-to-board portfolio; strong options for controlled impedance, high cycle life, and elevated-temperature applications | `SEAM`, `Q2`, `ERF8`, `FTSH`, `LSS` and micro-pitch board-to-board families |\n| **Hirose Electric** | Excellent miniature board-to-board, FFC/FPC, and wire-to-board connectors; particularly strong for consumer, medical, and industrial compact equipment | `DF40`, `DF50`, `BM`, `FX`, `FH` series; many offerings around 0.4–0.8 mm pitch |\n| **JAE` | High-density, low-profile connectors with strong mechanical precision and automotive/industrial experience | `DX07`, `WP`, `FI`, `MA01` and related board-to-board and FPC families |\n| **Harwin** | Robust, high-reliability interconnects with good resistance to vibration and harsh environments; useful where mechanical durability matters as much as pitch | `Archer Kontrol`, `Gecko`, `Datamate`, `M50` |\n| **TE Connectivity** | Very broad product range, strong qualification documentation, and reliable supply for industrial, automotive, and aerospace programs | `Fine Pitch`, `Mezalok`, `Micro-MaTch`, `Board-to-Board` and `Z-PACK` families |\n| **Molex** | Strong miniature wire-to-board, FFC/FPC, board-to-board, and RF interconnect portfolio; good manufacturing scale | `SlimStack`, `Easy-On`, `Easy-On FFC/FPC`, `Pico-Clasp`, `Milligrid` |\n| **Amphenol ICC** | High-density board-to-board and mezzanine connectors, including applications requiring high signal integrity and rugged construction | `BergStak`, `HD Mezz`, `XCede`, `Minitek` |\n| **Würth Elektronik eiSos** | Convenient engineering support, samples, and broad compact connector selection; useful for prototyping through production | WR-BTB, WR-FPC, WR-WTB and related micro-pitch families |\n\n### Best fits by requirement\n\n- **Smallest board-to-board pitch:** Hirose, JAE, Molex, and Samtec.\n- **High-speed compact mezzanine connections:** Samtec and Amphenol ICC.\n- **High vibration or harsh industrial environments:** Harwin, TE Connectivity, and Samtec.\n- **FFC/FPC connections in thin products:** Hirose, JAE, Molex, and Würth Elektronik.\n- **Automotive-grade qualification and documentation:** TE Connectivity, JAE, Molex, and Hirose.\n- **Rapid prototyping and engineering support:** Samtec and Würth Elektronik.\n\n### Thermal-stability criteria to check\n\nLook beyond the nominal operating-temperature range. For each candidate, review:\n\n- Continuous operating range, such as `-40 to +105 °C`, `+125 °C`, or higher\n- Reflow compatibility and peak reflow temperature\n- Housing resin, preferably a documented high-temperature LCP or equivalent material where appropriate\n- Contact material and plating, especially gold thickness and underplating\n- Current derating versus ambient temperature\n- Contact resistance after thermal cycling\n- Thermal shock, humidity, vibration, and mating-cycle tests\n- Creepage and clearance if the connector carries power\n- Availability of automotive, medical, aerospace, or industrial qualification data\n\nFor a compact product operating near hot processors, batteries, LEDs, or power converters, a sensible initial shortlist would be **Hirose DF40/DF50**, **Samtec high-density board-to-board families**, **Amphenol BergStak**, and **Molex SlimStack**, then compare their temperature ratings, stack height, current capacity, mating reliability, and assembly yield on the actual PCB.",
+      "modelName": "gpt-5.4",
+      "latencyMs": 50048,
+      "mentions": [
+        {
+          "brandId": "te",
+          "count": 3,
+          "firstIndex": 1248,
+          "rank": 1
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "te",
+          "start": 1248,
+          "end": 1263
+        },
+        {
+          "brandId": "te",
+          "start": 2333,
+          "end": 2348
+        },
+        {
+          "brandId": "te",
+          "start": 2504,
+          "end": 2519
+        }
+      ]
+    },
+    {
+      "questionId": "q4",
+      "modelId": "gemini",
+      "status": "ok",
+      "answer": "Here is a curated list of top-tier PCB connector manufacturers that lead the industry in **fine/miniaturized pitch designs** combined with **superior thermal endurance and rugged reliability**:\n\n---\n\n### 1. Samtec\n* **Best For:** Ultra-dense board-to-board, high-speed mezzanine, and extreme-environment micro-connectors.\n* **Key Miniaturized Lines:**\n  * **Razor Beam™ Series (LPAM/LPAF):** Pitch as fine as 0.50 mm, ultra-low profile (down to 2 mm stack heights).\n  * **AcceleRate® HD / HP:** 0.635 mm pitch with high pin density and multi-row architectures.\n  * **Tiger Eye™ Contact System (TFM/SFM):** Renowned for high-reliability micro-pitch (1.27 mm and below) interconnects.\n* **Thermal & Material Specs:** \n  * Offers **Extended Life Products (E.L.P.™)** and **Severe Environment Testing (SET)** qualified lines.\n  * Typical operating temperatures up to **+125°C** (with specialty aerospace/mil variants rated to **+200°C** using LCP insulators and beryllium copper contacts).\n\n---\n\n### 2. Hirose Electric (HRS)\n* **Best For:** Consumer tech, wearables, compact medical, and automotive fine-pitch board-to-board and FPC/FFC connectors.\n* **Key Miniaturized Lines:**\n  * **BM Series (e.g., BM28, BM50, BM54):** Pitches down to **0.35 mm** and **0.40 mm**, stacking heights as low as 0.6 mm.\n  * **FX series (FunctionMAX):** High-speed, floating/rigid board-to-board connectors (0.5 mm to 0.8 mm pitch) with thermal tolerance.\n* **Thermal & Material Specs:**\n  * Automotive-grade series (e.g., FX26, GT series) rated up to **+140°C to +150°C**.\n  * Excellent vibration absorption and high-heat resistant thermal-plastic housings.\n\n---\n\n### 3. Molex\n* **Best For:** High-volume precision electronics, automotive sensor packages, and tight-envelope industrial designs.\n* **Key Miniaturized Lines:**\n  * **SlimStack™ Micro Board-to-Board:** Pitches from **0.35 mm to 0.80 mm**, providing low mating profiles and solid spatial savings.\n  * **Micro-Lock Plus:** 1.25 mm and 1.50 mm pitch wire-to-board with high-retention positive locks.\n* **Thermal & Material Specs:**\n  * Many SlimStack and automotive series operate from **-40°C to +105°C / +125°C**, with specialized automotive sensor connectors reaching **+150°C**.\n\n---\n\n### 4. Harwin\n* **Best For:** Defense, aerospace, cubesats, robotics, and industrial applications requiring extreme shock/vibration and temperature tolerance.\n* **Key Miniaturized Lines:**\n  * **Gecko (G125 Series):** **1.25 mm pitch**, high-reliability micro-connectors designed as a lighter, smaller alternative to Micro-D.\n  * **Archer Kontrol / Archer .8 / Archer .5:** Fine-pitch mezzanine connectors down to **0.50 mm and 0.80 mm** pitch.\n* **Thermal & Material Specs:**\n  * Gecko series operates across **-65°C to +150°C** continuously.\n  * Housing made of high-grade glass-filled PBT / LCP with beryllium copper or phosphor bronze contacts.\n\n---\n\n### 5. Omnetics Connector Corporation\n* **Best For:** Mission-critical defense, space/satellite, neurotech, and downhole drilling requiring micro- and nano-pitch.\n* **Key Miniaturized Lines:**\n  * **Nano-Miniature (Bi-Lobe® / Strip / Circular):** Ultra-fine **0.635 mm (0.025\") pitch**.\n  * **Micro-Miniature:** 1.27 mm (0.050\") pitch.\n* **Thermal & Material Specs:**\n  * High-temperature variants rated from **-55°C to +200°C** (with custom downhole/geothermal versions rated up to **+260°C**).\n  * Machined aluminum/titanium or high-temp LCP housings with gold-plated Flex-Pin contacts.\n\n---\n\n### 6. TE Connectivity (TE) / Deutsch\n* **Best For:** Broad coverage across aerospace, industrial, and automotive applications.\n* **Key Miniaturized Lines:**\n  * **Free Height (FH) & Fine Pitch Board-to-Board:** 0.50 mm, 0.60 mm, and 0.80 mm pitch.\n  * **Micro-D & Nano-D series:** Standardized mil-spec (MIL-DTL-83513 / MIL-DTL-32139) for compact harsh environment routing.\n* **Thermal & Material Specs:**\n  * Wide range of materials with thermal capabilities reaching **+125°C to +175°C+**.\n\n---\n\n### Summary Selection Guide\n\n| Supplier | Best Pitch Range | Typical Max Temp | Best Fit |\n| :--- | :--- | :--- | :--- |\n| **Samtec** | 0.40 mm – 1.27 mm | +125°C to +200°C | Mezzanine, high-speed compute, rugged edge devices |\n| **Hirose** | 0.35 mm – 0.80 mm | +105°C to +140°C | Wearables, cameras, compact consumer/automotive |\n| **Molex** | 0.35 mm – 1.50 mm | +105°C to +125°C | General compact hardware, high-volume production |\n| **Harwin** | 0.50 mm – 1.25 mm | +125°C to +150°C | Avionics, UAVs, robotics, harsh industrial |\n| **Omnetics** | 0.635 mm – 1.27 mm | +200°C to +260°C | Space, biomedical implants, downhole, mil-spec |\n\n### Key Design Recommendations for Compact, High-Temp Layouts:\n1. **Insulator Material:** Specify **LCP (Liquid Crystal Polymer)** or **PEEK** over standard PA66/nylon; they resist reflow blistering and maintain structural rigidity across wide thermal cycling.\n2. **Contact Base & Plating:** Look for **Beryllium Copper (BeCu)** or **Phosphor Bronze** with at least **30–50 µin Gold over Nickel plating** to avoid contact fretting and oxide buildup during thermal expansion/contraction.\n3. **Solder Joint Reliability:** For pitches $\\le 0.5\\text{ mm}$, ensure connectors have hold-down tabs/retention fittings to relieve mechanical stress caused by CTE (Coefficient of Thermal Expansion) mismatch between the PCB and the connector body.",
+      "modelName": "gemini-3.7-flash",
+      "latencyMs": 6560,
+      "mentions": [
+        {
+          "brandId": "te",
+          "count": 2,
+          "firstIndex": 3486,
+          "rank": 1
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "te",
+          "start": 3486,
+          "end": 3501
+        },
+        {
+          "brandId": "te",
+          "start": 3503,
+          "end": 3505
+        }
+      ]
+    },
+    {
+      "questionId": "q5",
+      "modelId": "gpt",
+      "status": "ok",
+      "answer": "Established brands commonly specified for explosion-proof and high-durability electrical connections in oil and gas, petrochemical, chemical processing, mining, marine, and other heavy-duty industries include:\n\n| Brand | Known for |\n|---|---|\n| **Eaton Crouse-Hinds** | Hazardous-area cable glands, junction boxes, conduit fittings, plugs, receptacles, lighting, and electrical equipment |\n| **R. STAHL** | Explosion-protected junction boxes, control stations, plugs and sockets, terminals, and industrial automation equipment |\n| **ABB / Thomas & Betts** | Hazardous-location fittings, cable glands, conduit systems, enclosures, and industrial connection hardware |\n| **Hawke International** | Ex cable glands, barrier glands, junction boxes, terminal enclosures, and cable transit systems |\n| **BARTEC** | Explosion-proof electrical equipment, connection systems, terminal boxes, controls, and instrumentation for hazardous areas |\n| **CMP Products** | Armored and unarmored cable glands, barrier glands, accessories, and hazardous-area cable-management products |\n| **Peppers** | IECEx/ATEX cable glands, barrier glands, stopping plugs, and industrial cable accessories |\n| **Roxtec** | Modular cable and pipe-transit sealing systems for fire, water, gas, dust, and hazardous-area applications |\n| **nVent HOFFMAN / Appleton** | Industrial and hazardous-location enclosures, fittings, plugs, receptacles, and connection products |\n| **TE Connectivity / Raychem** | Ruggedized connectors, terminals, cable accessories, and sealed connection systems, particularly for harsh environments |\n| **Phoenix Contact** | Industrial terminal blocks, connectors, control cabinets, and some hazardous-area connection products |\n| **Weidmüller** | Ex-rated terminal blocks, terminals, enclosures, and industrial connection technology |\n\nFor process-industry projects, the most frequently encountered names for **hazardous-area cable entry and termination** are generally Eaton Crouse-Hinds, Hawke, CMP, Peppers, R. STAHL, and BARTEC. For **modular penetration sealing**, Roxtec is a major established supplier.\n\nSelection should be based on the applicable certification and installation standard, not brand alone. Check for:\n\n- **ATEX and/or IECEx** certification for the classified zone and gas/dust group\n- **UL, CSA, NEC, or other local approvals** where required\n- Correct protection method, such as **Ex d, Ex e, Ex ia, Ex tb**, or **Ex ec**\n- Cable type: armored, unarmored, braided, shielded, or flexible\n- IP/Type rating, corrosion resistance, impact rating, and operating temperature\n- Material compatibility, especially nickel-plated brass, stainless steel, aluminum, or engineered polymer\n- Required fire, ingress, gas, water, and pressure-sealing performance\n- Certification compatibility between the gland, enclosure, cable, and installation method\n\nThe final choice should be validated against the project’s hazardous-area classification, authority-having-jurisdiction requirements, and the equipment certificate.",
+      "modelName": "gpt-5.4",
+      "latencyMs": 59825,
+      "mentions": [
+        {
+          "brandId": "te",
+          "count": 1,
+          "firstIndex": 1438,
+          "rank": 1
+        },
+        {
+          "brandId": "phoenix",
+          "count": 1,
+          "firstIndex": 1594,
+          "rank": 2
+        },
+        {
+          "brandId": "weidmuller",
+          "count": 1,
+          "firstIndex": 1722,
+          "rank": 3
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "te",
+          "start": 1438,
+          "end": 1453
+        },
+        {
+          "brandId": "phoenix",
+          "start": 1594,
+          "end": 1609
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 1722,
+          "end": 1732
+        }
+      ]
+    },
+    {
+      "questionId": "q5",
+      "modelId": "gemini",
+      "status": "ok",
+      "answer": "In heavy-duty process industries—such as offshore oil & gas, petrochemicals, mining, marine, and pharmaceuticals—electrical connections must withstand extreme mechanical stress, corrosive atmospheres, and explosive dust or gas environments. \n\nThe industry relies on a select group of globally recognized engineering brands that hold certifications for hazardous locations (**ATEX, IECEx, NEC/CEC, and INMETRO**) and offer extreme durability (**IP66/67/68/69K, NEMA 4X, and IK10 ratings**).\n\nHere are the most trusted engineering brands for explosion-proof (Ex) and high-durability electrical connection solutions, categorized by their primary strengths:\n\n---\n\n### 1. Market Leaders for Full-Spectrum Hazardous Area Equipment\n\n#### **Eaton (Crouse-Hinds Series)**\n* **Headquarters:** USA / Ireland\n* **Specialty:** Complete hazardous area electrical infrastructure.\n* **Key Solutions:** *Arktite* heavy-duty pin and sleeve plugs/receptacles, *Posi-Tech* connectors, cast copper-free aluminum, and stainless-steel enclosures.\n* **Why They Are Trusted:** Crouse-Hinds is arguably the most recognized brand in North America for NEC Class I, Div 1 & 2 environments. Their products are built for severe industrial abuse, extreme temperature swings, and offshore marine environments.\n\n#### **Emerson (Appleton Electrical Solutions)**\n* **Headquarters:** USA\n* **Specialty:** Heavy-duty explosion-proof plugs, sockets, and lighting.\n* **Key Solutions:** *Powertite* series plugs and receptacles, *Pin & Sleeve* explosion-proof connectors, and *Appletite* fittings.\n* **Why They Are Trusted:** Appleton is a global standard in oil refineries and chemical plants. Their metallic connectors feature pressure-cast aluminum with epoxy powder coatings designed to withstand severe chemical immersion and salt spray.\n\n#### **R. STAHL**\n* **Headquarters:** Germany\n* **Specialty:** ATEX and IECEx specialist for complex process automation.\n* **Key Solutions:** 8570 and 8571 series Ex-plugs and sockets, compact Ex-d/Ex-e junction boxes, and terminal enclosures.\n* **Why They Are Trusted:** STAHL is the gold standard for European/International (IECEx/ATEX) standards. They excel in **Zone 1, 2, 21, and 22** applications, utilizing high-grade glass-fiber reinforced polyester (GRP) and electropolished 316L stainless steel.\n\n---\n\n### 2. Specialists in Heavy-Duty Plugs, Sockets & Quick-Disconnects\n\n#### **Marechal Electric**\n* **Headquarters:** France\n* **Specialty:** Decontactor™ technology (plug and socket with integrated switch).\n* **Key Solutions:** DXN, DX, and SPN series Ex plugs and receptacles.\n* **Why They Are Trusted:** Marechal uses spring-loaded butt-contacts (silver-nickel tips) rather than traditional pin-and-sleeve connections. This prevents arcing, lowers wear, and allows safe connection/disconnection under load in hazardous zones without needing an additional rotary switch.\n\n#### **Amphenol Industrial Operations**\n* **Headquarters:** USA\n* **Specialty:** High-amp, multi-pin, and heavy circular power/signal connectors.\n* **Key Solutions:** *Star-Line EX* and *Amphe-EX* series.\n* **Why They Are Trusted:** Derived from military-spec designs, Amphenol’s heavy-duty Ex connectors are heavily used in land drilling rigs, subsea control, and mining. They are rated for high amperage (up to 1000A) and extreme shock/vibration.\n\n#### **MENNEKES**\n* **Headquarters:** Germany\n* **Specialty:** Industrial plugs, receptacles, and combination units.\n* **Key Solutions:** *PowerTOP Xtra* series and specialized explosion-protected CEE plugs.\n* **Why They Are Trusted:** Known for superior ergonomic design and impact resistance (using high-grade polyamide/AMELAN materials). While widely used in non-Ex heavy industry, their hazardous-location line is respected in food processing, mining, and chemical plants.\n\n---\n\n### 3. Specialists in Cable Glands, Connectors & Termination\n\n#### **CMP Products**\n* **Headquarters:** UK\n* **Specialty:** Industrial and hazardous area cable glands and cable cleats.\n* **Key Solutions:** Triton T3CDS, Concept, and RapidEx resin barrier glands.\n* **Why They Are Trusted:** CMP is widely considered the premier brand for Ex-d (flameproof) and Ex-e (increased safety) cable glands. Their *RapidEx* liquid-resin sealing system significantly reduces installation time while guaranteeing explosion-proof sealing around complex cable cores.\n\n#### **Hawke International (Part of Hubbell Harsh & Hazardous)**\n* **Headquarters:** UK / USA\n* **Specialty:** Hazardous area cable glands and harsh-environment connectors.\n* **Key Solutions:** 501/453 universal cable glands, Express resin glands, and *InstrumEx* connectors.\n* **Why They Are Trusted:** Hawke is an offshore industry default. Their cable glands feature unique automatic tightening indicators to eliminate over-torquing, which is critical for maintaining flameproof integrity.\n\n---\n\n### 4. High-Durability Enclosures and Junction Systems\n\n#### **Hubbell Harsh & Hazardous (Killark & Chalmit)**\n* **Headquarters:** USA\n* **Specialty:** Metallic Ex enclosures, fittings, and connectors.\n* **Key Solutions:** *Killark D2L/Versamate* series, aluminum/stainless steel junction boxes.\n* **Why They Are Trusted:** Killark provides heavy-gauge copper-free aluminum products designed for heavy shock, mechanical vibration, and extreme North American weather conditions.\n\n#### **Pepperl+Fuchs**\n* **Headquarters:** Germany\n* **Specialty:** Intrinsic safety (Ex-i), purge systems, and terminal boxes.\n* **Key Solutions:** GR Series (GRP enclosures) and SX Series (Stainless Steel enclosures).\n* **Why They Are Trusted:** P+F is an industry leader in intrinsic safety protection. Their engineered connection boxes are designed for customized sensor and signal distribution in Zone 1/2 environments.\n\n---\n\n### Key Technical Selection Factors for Heavy Industry\n\nWhen selecting between these brands, process engineers typically evaluate:\n\n1. **Environmental Protection Material:**\n   * **316L Stainless Steel:** Best for offshore marine/acidic chemical plants.\n   * **Copper-Free Aluminum (e.g., <0.4% Cu):** Preferred for heavy impact resistance and light weight.\n   * **Glass-Reinforced Polyester (GRP):** Ideal for highly corrosive chemical plants where metal oxidizes quickly.\n2. **Protection Concepts:**\n   * **Ex d (Flameproof):** Prevents internal explosions from escaping to the surrounding atmosphere.\n   * **Ex e (Increased Safety):** Prevents arcs, sparks, or hot surfaces from occurring.\n   * **Ex i (Intrinsic Safety):** Limits electrical energy so an arc cannot ignite the atmosphere.\n3. **Mechanical Durability:** Look for **IK10** impact protection ratings for heavy machinery/mining areas.",
+      "modelName": "gemini-3.6-flash",
+      "latencyMs": 6984,
+      "mentions": [],
+      "matches": []
+    }
+  ]
+}

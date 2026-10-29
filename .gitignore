@@ -1,0 +1,5 @@
+node_modules/
+frontend/dist/
+.dlp-artifact-backup-*/
+data/results.json
+.env

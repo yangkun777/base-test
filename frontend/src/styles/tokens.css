@@ -1,0 +1,47 @@
+:root {
+  --page: #f3f6fb;
+  --surface: #ffffff;
+  --surface-2: #f7f9fc;
+  --surface-3: #eef2f7;
+  --ink: #1c2740;
+  --ink-2: #5c6b82;
+  --muted: #8b97a8;
+  --grid: #e6ebf3;
+  --axis: #d5dce8;
+  --border: #e6ebf3;
+  --border-strong: #d7deea;
+  --nav: #1b2436;
+  --nav-ink: #d7deea;
+  --nav-active: #2f6fed;
+
+  --s-degson: #2f6fed;
+  --s-te: #d95926;
+  --s-phoenix: #168a62;
+  --s-wago: #c07a00;
+  --s-weidmuller: #c44776;
+
+  --m-gpt: #6b61c9;
+  --m-gemini: #1a7a32;
+
+  --accent: #2f6fed;
+  --accent-soft: #eaf1ff;
+  --good: #1a8a46;
+  --bad: #d14343;
+  --gold: #e0a106;
+
+  --font-sans: "Segoe UI Variable Text", "Segoe UI", "PingFang SC", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  --font-mono: "Cascadia Mono", ui-monospace, Consolas, monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 14px;
+  --shadow: 0 1px 2px rgba(22, 34, 51, 0.04), 0 8px 24px rgba(22, 34, 51, 0.04);
+}

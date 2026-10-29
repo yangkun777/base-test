@@ -1,0 +1,11 @@
+{
+  "name": "degson-geo-baseline",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Degson 海外 GEO 品牌曝光基线评估平台（独立项目）",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "cd frontend && npm run build"
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "id": "run-2026-10-22-033251",
+  "createdAt": "2026-10-22T03:32:51.898Z",
+  "models": [
+    {
+      "id": "gpt",
+      "label": "GPT",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "model": "gemini-3.5-flash"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What are the best DIN rail terminal block brands?"
+    }
+  ],
+  "results": [
+    {
+      "questionId": "q1",
+      "modelId": "gpt",
+      "status": "ok",
+      "answer": "Top DIN rail terminal block brands, broadly speaking:\n\n### Tier 1 / Most widely trusted\n- **Phoenix Contact**\n- **Weidmüller**\n- **WAGO**\n- **ABB / Entrelec**\n- **Schneider Electric / Telemecanique**\n- **Allen-Bradley / Rockwell Automation**\n- **Siemens**\n\nThese are usually considered the safest choices for industrial panels, OEM equipment, and projects where long-term availability, certifications, and accessory support matter.\n\n### Especially strong by category\n- **Best overall ecosystem:** Phoenix Contact, Weidmüller\n- **Best spring-clamp / push-in reputation:** WAGO, Phoenix Contact\n- **Best screw-terminal legacy offerings:** Weidmüller, ABB Entrelec, Schneider\n- **Best for matching major automation platforms:** Siemens, Allen-Bradley, Schneider\n- **Best for broad global industrial acceptance:** Phoenix Contact, Weidmüller, WAGO\n\n### Also reputable\n- **Eaton**\n- **Legrand**\n- **Murrelektronik**\n- **Conta-Clip**\n- **Altech**\n- **IDEC**\n- **Omron** (more limited in terminal block breadth than the top specialists)\n\n### If you want the “best” in practice\nFor most buyers, the shortlist is:\n1. **Phoenix Contact**\n2. **Weidmüller**\n3. **WAGO**\n\nThose three are often the default premium choices.\n\n### What actually matters more than brand\nThe “best” brand depends on:\n- **Connection type:** screw, spring clamp, push-in\n- **Voltage/current rating**\n- **UL/IEC/CSA approvals**\n- **Short-circuit and creepage requirements**\n- **Availability of jumpers, end stops, markers, test plugs**\n- **Local distributor stock**\n- **Price and long-term replacement availability**\n\n### Simple recommendation\n- Choose **Phoenix Contact** or **Weidmüller** if you want a very safe all-around industrial standard.\n- Choose **WAGO** if you prefer excellent spring/push-in technology.\n- Choose **Siemens, Schneider, or Allen-Bradley** if you want terminal blocks aligned with the rest of your control hardware ecosystem.\n\nIf you want, I can also give you:\n- a **best brands by budget tier**\n- a **best brands for UL508A control panels**\n- or a **Phoenix vs Weidmüller vs WAGO** comparison.",
+      "modelName": "gpt-5.4-2026-03-05",
+      "latencyMs": 11881,
+      "mentions": [
+        {
+          "brandId": "phoenix",
+          "count": 7,
+          "firstIndex": 92,
+          "rank": 1
+        },
+        {
+          "brandId": "weidmuller",
+          "count": 7,
+          "firstIndex": 114,
+          "rank": 2
+        },
+        {
+          "brandId": "wago",
+          "count": 6,
+          "firstIndex": 131,
+          "rank": 3
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenix",
+          "start": 92,
+          "end": 107
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 114,
+          "end": 124
+        },
+        {
+          "brandId": "wago",
+          "start": 131,
+          "end": 135
+        },
+        {
+          "brandId": "phoenix",
+          "start": 497,
+          "end": 512
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 514,
+          "end": 524
+        },
+        {
+          "brandId": "wago",
+          "start": 571,
+          "end": 575
+        },
+        {
+          "brandId": "phoenix",
+          "start": 577,
+          "end": 592
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 637,
+          "end": 647
+        },
+        {
+          "brandId": "phoenix",
+          "start": 810,
+          "end": 825
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 827,
+          "end": 837
+        },
+        {
+          "brandId": "wago",
+          "start": 839,
+          "end": 843
+        },
+        {
+          "brandId": "phoenix",
+          "start": 1110,
+          "end": 1125
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 1133,
+          "end": 1143
+        },
+        {
+          "brandId": "wago",
+          "start": 1151,
+          "end": 1155
+        },
+        {
+          "brandId": "phoenix",
+          "start": 1617,
+          "end": 1632
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 1640,
+          "end": 1650
+        },
+        {
+          "brandId": "wago",
+          "start": 1720,
+          "end": 1724
+        },
+        {
+          "brandId": "phoenix",
+          "start": 2039,
+          "end": 2046
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 2050,
+          "end": 2060
+        },
+        {
+          "brandId": "wago",
+          "start": 2064,
+          "end": 2068
+        }
+      ]
+    },
+    {
+      "questionId": "q1",
+      "modelId": "gemini",
+      "status": "ok",
+      "answer": "When it comes to DIN rail terminal blocks, the market is dominated by a few highly reputable European and American manufacturers. These brands are industry standards because of their reliability, safety certifications (UL, CE, CSA, ATEX), and innovation in connection technologies.\n\nHere are the best DIN rail terminal block brands, categorized by their strengths.\n\n---\n\n### 1. The \"Big Three\" (Industry Gold Standards)\nThese three German manufacturers dominate the global market and are considered the absolute best for industrial automation, panel building, and heavy machinery.\n\n#### **Phoenix Contact**\n*   **The Reputation:** Often considered the inventor of the modern terminal block. They offer the most comprehensive catalog in the industry.\n*   **Key Strengths:** \n    *   **CLIPLINE complete system:** Allows you to use the same accessories (bridges, testing plugs, marking tags) across different connection technologies.\n    *   **PT Series (Push-in):** Highly regarded for fast, tool-free wiring.\n    *   **UT Series (Screw):** The industry standard for robust, high-torque screw connections.\n*   **Best For:** High-end industrial automation, process engineering, and projects requiring maximum reliability and global availability.\n\n#### **Wago**\n*   **The Reputation:** The pioneer and undisputed king of **spring-clamp (screwless) technology**. Wago revolutionized the industry with their patented CAGE CLAMP® system.\n*   **Key Strengths:**\n    *   **TOPJOB® S Series:** Their flagship push-in terminal blocks, which feature an open slot for easy tool operation or levers for tool-free wiring.\n    *   **Vibration Resistance:** Because they use spring tension rather than screws, Wago blocks never back out or loosen due to vibration. They are virtually maintenance-free.\n*   **Best For:** High-vibration environments (railway, marine, automotive), fast installation, and maintenance-free longevity.\n\n#### **Weidmüller**\n*   **The Reputation:** A direct competitor to Phoenix Contact, known for precision German engineering and incredibly robust designs.\n*   **Key Strengths:**\n    *   **Klippon® Connect:** Their premier line, divided into \"Universal\" and \"Application\" ranges (tailored for specific tasks like control voltage distribution or signal wiring).\n    *   **A-Series (Push-in) & W-Series (Screw):** Exceptionally durable plastics and metals.\n*   **Best For:** Heavy industry, power generation, hazardous areas (ATEX/IECEx), and cabinet builders who want highly organized, application-specific blocks.\n\n---\n\n### 2. Top-Tier Industrial Competitors\nThese brands are massive multinational electrical companies. Their terminal blocks are excellent and are often chosen to match the rest of the control gear in a cabinet.\n\n#### **ABB (Entrelec)**\n*   **The Reputation:** ABB acquired Entrelec, a legendary French terminal block brand. They are a staple in power distribution and marine applications.\n*   **Key Strengths:** \n    *   **SNK Series:** Known for smart design features like asymmetrical profiles to prevent mounting errors and 50% faster installation times.\n    *   Excellent high-current and power distribution blocks.\n*   **Best For:** Power distribution, marine/offshore, and projects already utilizing ABB switchgear.\n\n#### **Allen-Bradley / Rockwell Automation (1492 Series)**\n*   **The Reputation:** The standard for North American industrial automation. \n*   **Key Strengths:** \n    *   Seamless integration into Rockwell-designed systems.\n    *   Excellent documentation and local support in the USA and Canada.\n*   **Best For:** North American manufacturing plants, automotive plants, and systems built around Allen-Bradley PLCs.\n\n---\n\n### 3. Best Value / Budget Brand\nIf you are on a budget, building a home automation system, or working on a cost-sensitive OEM project, you don't need to pay premium German prices.\n\n#### **Dinkle**\n*   **The Reputation:** Based in Taiwan, Dinkle is the largest terminal block manufacturer in Asia. They make high-quality products at a fraction of the cost of Phoenix or Wago.\n*   **Key Strengths:**\n    *   **DP Series (Push-in) & DK Series (Screw):** Highly reliable, UL-approved, and physically compatible with many major brand accessories.\n    *   Widely available on major distributor sites like DigiKey and Mouser.\n*   **Best For:** Budget-conscious projects, hobbyists (e.g., home automation, 3D printers), and high-volume OEM machinery.\n\n---\n\n### Summary: Which should you choose?\n\n*   Choose **Wago** if you want the fastest installation, hate tightening screws, or are installing the panel in a high-vibration environment (like a vehicle or vibrating machine).\n*   Choose **Phoenix Contact** or **Weidmüller** if you want the absolute highest quality, need a massive variety of specialized blocks (fuse blocks, sensor/actuator blocks), or are designing for global markets.\n*   Choose **Dinkle** if you want reliable, UL-listed blocks but need to keep costs down.\n\n**A Note on Buying:** Always buy these brands from authorized distributors (like Mouser, DigiKey, Newark, or McMaster-Carr). Avoid buying \"unbranded\" or counterfeit terminal blocks on Amazon or eBay for critical applications, as poor-quality plastics and metals can lead to electrical fires.",
+      "modelName": "gemini-3.5-flash",
+      "latencyMs": 13131,
+      "mentions": [
+        {
+          "brandId": "phoenix",
+          "count": 4,
+          "firstIndex": 589,
+          "rank": 1
+        },
+        {
+          "brandId": "wago",
+          "count": 5,
+          "firstIndex": 1252,
+          "rank": 2
+        },
+        {
+          "brandId": "weidmuller",
+          "count": 2,
+          "firstIndex": 1922,
+          "rank": 3
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenix",
+          "start": 589,
+          "end": 604
+        },
+        {
+          "brandId": "wago",
+          "start": 1252,
+          "end": 1256
+        },
+        {
+          "brandId": "wago",
+          "start": 1359,
+          "end": 1363
+        },
+        {
+          "brandId": "wago",
+          "start": 1694,
+          "end": 1698
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 1922,
+          "end": 1932
+        },
+        {
+          "brandId": "phoenix",
+          "start": 1982,
+          "end": 1997
+        },
+        {
+          "brandId": "phoenix",
+          "start": 4035,
+          "end": 4042
+        },
+        {
+          "brandId": "wago",
+          "start": 4046,
+          "end": 4050
+        },
+        {
+          "brandId": "wago",
+          "start": 4478,
+          "end": 4482
+        },
+        {
+          "brandId": "phoenix",
+          "start": 4659,
+          "end": 4674
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 4682,
+          "end": 4692
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,457 @@
+{
+  "id": "run-2026-10-22-050200",
+  "createdAt": "2026-10-22T05:02:00.652Z",
+  "models": [
+    {
+      "id": "gpt",
+      "label": "GPT",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "model": "gemini-3.5-flash"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What are the best DIN rail terminal block brands?"
+    }
+  ],
+  "brands": [
+    {
+      "id": "altech",
+      "name": "Altech",
+      "self": false
+    },
+    {
+      "id": "automationdirectdinnectors",
+      "name": "AutomationDirect DINnectors",
+      "self": false
+    },
+    {
+      "id": "connectwell",
+      "name": "Connectwell",
+      "self": false
+    },
+    {
+      "id": "degson",
+      "name": "Degson",
+      "self": true
+    },
+    {
+      "id": "dinkle",
+      "name": "Dinkle",
+      "self": false
+    },
+    {
+      "id": "entrelec",
+      "name": "Entrelec",
+      "self": false
+    },
+    {
+      "id": "highquality",
+      "name": "High-Quality",
+      "self": false
+    },
+    {
+      "id": "molex",
+      "name": "Molex",
+      "self": false
+    },
+    {
+      "id": "phoenixcontact",
+      "name": "Phoenix Contact",
+      "self": false
+    },
+    {
+      "id": "schneiderelectric",
+      "name": "Schneider Electric",
+      "self": false
+    },
+    {
+      "id": "siemens",
+      "name": "Siemens",
+      "self": false
+    },
+    {
+      "id": "teconnectivity",
+      "name": "TE Connectivity",
+      "self": false
+    },
+    {
+      "id": "wago",
+      "name": "WAGO",
+      "self": false
+    },
+    {
+      "id": "weidmuller",
+      "name": "Weidmüller",
+      "self": false
+    },
+    {
+      "id": "wielandelectric",
+      "name": "Wieland Electric",
+      "self": false
+    }
+  ],
+  "results": [
+    {
+      "questionId": "q1",
+      "modelId": "gpt",
+      "status": "ok",
+      "answer": "If you mean **“best” as in the most trusted, widely used, and best-supported DIN-rail terminal block systems**, the names that come up most consistently are:\n\n- **Phoenix Contact**\n- **WAGO**\n- **Weidmüller**\n\nThose three are the closest thing to the industry’s “default premium tier,” and current market/industry roundup pages repeatedly place them at or near the top. Recent market overviews specifically highlight **WAGO** and **Phoenix Contact** as leading players, while practitioner discussions and roundup articles repeatedly group **Weidmüller** with them. ([futuremarketinsights.com](https://www.futuremarketinsights.com/competitive-analysis/din-rail-terminal-blocks-market?utm_source=openai))\n\nBut if you want a broader shortlist of **top reputable brands**, not just the best-known German three, the sources also repeatedly mention:\n\n- **Wieland Electric**\n- **Schneider Electric**\n- **TE Connectivity**\n- **Molex**\n- **ABB**\n- **Siemens**\n- **Degson / DEGSON**\n- **Dinkle**\n- **Connectwell**\n- **Altech**\n- **AutomationDirect** as a value option rather than a premium benchmark ([viox.com](https://viox.com/top-10-terminal-blocks-manufacturers/?utm_source=openai))\n\nA practical way to think about it:\n\n### Best premium / safest picks\n- **Phoenix Contact** — extremely common in control panels, broad accessory ecosystem, strong availability in industrial automation. ([sourcebyspec.com](https://www.sourcebyspec.com/news/terminal-block-suppliers-and-manufacturers-2026-supply-map.html?utm_source=openai))\n- **WAGO** — especially well known for push-in / spring-clamp style systems and fast wiring workflows. ([futuremarketinsights.com](https://www.futuremarketinsights.com/competitive-analysis/din-rail-terminal-blocks-market?utm_source=openai))\n- **Weidmüller** — highly regarded by panel builders for breadth of configurations and mature terminal system families. ([reddit.com](https://www.reddit.com/r/PLC/comments/141ii3u/which_terminal_blocks_are_the_best_right_now_and/?utm_source=openai))\n\n### Strong alternatives also worth considering\n- **Wieland Electric** — regularly cited in DIN-rail terminal market coverage and industrial writeups. ([pmarketresearch.com](https://pmarketresearch.com/worldwide-din-rail-terminal-blocks-market-research/?utm_source=openai))\n- **Schneider Electric** — often chosen when buyers want terminal blocks integrated into a broader panel/control hardware ecosystem. ([futuremarketinsights.com](https://www.futuremarketinsights.com/competitive-analysis/din-rail-terminal-blocks-market?utm_source=openai))\n- **Connectwell** — commonly mentioned as a solid industrial option, especially in price-sensitive control panel work. ([switchgeardeals.com](https://switchgeardeals.com/blog-guides-to-buying-and-selling-switchgear/degson-phoenix-connectwell-terminal-blocks/?utm_source=openai))\n- **DEGSON** and **Dinkle** — frequently show up in current manufacturer roundups and market summaries as credible global suppliers, especially for OEM and sourcing-oriented buyers. ([futuremarketinsights.com](https://www.futuremarketinsights.com/competitive-analysis/din-rail-terminal-blocks-market?utm_source=openai))\n\n### If you care most about value\n- **Connectwell**\n- **DEGSON**\n- **Dinkle**\n- **AutomationDirect DINnectors**  \nThese tend to come up when users want acceptable performance at lower cost, though they are not usually treated as the top premium benchmark. ([switchgeardeals.com](https://switchgeardeals.com/blog-guides-to-buying-and-selling-switchgear/degson-phoenix-connectwell-terminal-blocks/?utm_source=openai))\n\n### My concise recommendation\nIf you just want the **best brands to start with**, I’d shortlist:\n\n1. **Phoenix Contact**\n2. **WAGO**\n3. **Weidmüller**\n4. **Wieland Electric**\n5. **Schneider Electric**\n6. **Connectwell**\n7. **DEGSON**\n8. **Dinkle** ([futuremarketinsights.com](https://www.futuremarketinsights.com/competitive-analysis/din-rail-terminal-blocks-market?utm_source=openai))\n\nOne important note: with DIN terminal blocks, the “best” brand is often the one with the **best accessory ecosystem for your exact application**—jumpers, end plates, markers, disconnect/fuse variants, test plugs, and local availability. Multiple sources note that these accessories are brand-specific enough that once you choose a family, you usually want to stay within it. ([cballast.com](https://cballast.com/documents/din-rail-terminal-blocks-guide?utm_source=openai))\n\nIf you want, I can also give you:\n- a **best brands by budget tier** list,\n- a **best brands for UL/North American panel building** list, or\n- a **Phoenix vs WAGO vs Weidmüller** comparison.",
+      "modelName": "gpt-5.4-2026-03-05",
+      "latencyMs": 17948,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 4,
+          "firstIndex": 163,
+          "rank": 1
+        },
+        {
+          "brandId": "wago",
+          "brandName": "WAGO",
+          "count": 4,
+          "firstIndex": 185,
+          "rank": 2
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 4,
+          "firstIndex": 196,
+          "rank": 3
+        },
+        {
+          "brandId": "wielandelectric",
+          "brandName": "Wieland Electric",
+          "count": 3,
+          "firstIndex": 849,
+          "rank": 4
+        },
+        {
+          "brandId": "schneiderelectric",
+          "brandName": "Schneider Electric",
+          "count": 3,
+          "firstIndex": 872,
+          "rank": 5
+        },
+        {
+          "brandId": "teconnectivity",
+          "brandName": "TE Connectivity",
+          "count": 1,
+          "firstIndex": 897,
+          "rank": 6
+        },
+        {
+          "brandId": "molex",
+          "brandName": "Molex",
+          "count": 1,
+          "firstIndex": 919,
+          "rank": 7
+        },
+        {
+          "brandId": "siemens",
+          "brandName": "Siemens",
+          "count": 1,
+          "firstIndex": 941,
+          "rank": 8
+        },
+        {
+          "brandId": "degson",
+          "brandName": "Degson",
+          "count": 7,
+          "firstIndex": 955,
+          "rank": 9
+        },
+        {
+          "brandId": "dinkle",
+          "brandName": "Dinkle",
+          "count": 4,
+          "firstIndex": 977,
+          "rank": 10
+        },
+        {
+          "brandId": "connectwell",
+          "brandName": "Connectwell",
+          "count": 4,
+          "firstIndex": 990,
+          "rank": 11
+        },
+        {
+          "brandId": "altech",
+          "brandName": "Altech",
+          "count": 1,
+          "firstIndex": 1008,
+          "rank": 12
+        },
+        {
+          "brandId": "automationdirectdinnectors",
+          "brandName": "AutomationDirect DINnectors",
+          "count": 2,
+          "firstIndex": 1021,
+          "rank": 13
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 163,
+          "end": 178
+        },
+        {
+          "brandId": "wago",
+          "start": 185,
+          "end": 189
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 196,
+          "end": 206
+        },
+        {
+          "brandId": "wago",
+          "start": 419,
+          "end": 423
+        },
+        {
+          "brandId": "phoenixcontact",
+          "start": 432,
+          "end": 447
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 541,
+          "end": 551
+        },
+        {
+          "brandId": "wielandelectric",
+          "start": 849,
+          "end": 865
+        },
+        {
+          "brandId": "schneiderelectric",
+          "start": 872,
+          "end": 890
+        },
+        {
+          "brandId": "teconnectivity",
+          "start": 897,
+          "end": 912
+        },
+        {
+          "brandId": "molex",
+          "start": 919,
+          "end": 924
+        },
+        {
+          "brandId": "siemens",
+          "start": 941,
+          "end": 948
+        },
+        {
+          "brandId": "degson",
+          "start": 955,
+          "end": 961
+        },
+        {
+          "brandId": "degson",
+          "start": 964,
+          "end": 970
+        },
+        {
+          "brandId": "dinkle",
+          "start": 977,
+          "end": 983
+        },
+        {
+          "brandId": "connectwell",
+          "start": 990,
+          "end": 1001
+        },
+        {
+          "brandId": "altech",
+          "start": 1008,
+          "end": 1014
+        },
+        {
+          "brandId": "automationdirectdinnectors",
+          "start": 1021,
+          "end": 1037
+        },
+        {
+          "brandId": "phoenixcontact",
+          "start": 1250,
+          "end": 1265
+        },
+        {
+          "brandId": "wago",
+          "start": 1521,
+          "end": 1525
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 1762,
+          "end": 1772
+        },
+        {
+          "brandId": "wielandelectric",
+          "start": 2060,
+          "end": 2076
+        },
+        {
+          "brandId": "schneiderelectric",
+          "start": 2286,
+          "end": 2304
+        },
+        {
+          "brandId": "connectwell",
+          "start": 2557,
+          "end": 2568
+        },
+        {
+          "brandId": "degson",
+          "start": 2768,
+          "end": 2774
+        },
+        {
+          "brandId": "degson",
+          "start": 2836,
+          "end": 2842
+        },
+        {
+          "brandId": "dinkle",
+          "start": 2851,
+          "end": 2857
+        },
+        {
+          "brandId": "connectwell",
+          "start": 3190,
+          "end": 3201
+        },
+        {
+          "brandId": "degson",
+          "start": 3208,
+          "end": 3214
+        },
+        {
+          "brandId": "dinkle",
+          "start": 3221,
+          "end": 3227
+        },
+        {
+          "brandId": "automationdirectdinnectors",
+          "start": 3234,
+          "end": 3261
+        },
+        {
+          "brandId": "degson",
+          "start": 3504,
+          "end": 3510
+        },
+        {
+          "brandId": "phoenixcontact",
+          "start": 3672,
+          "end": 3687
+        },
+        {
+          "brandId": "wago",
+          "start": 3695,
+          "end": 3699
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 3707,
+          "end": 3717
+        },
+        {
+          "brandId": "wielandelectric",
+          "start": 3725,
+          "end": 3741
+        },
+        {
+          "brandId": "schneiderelectric",
+          "start": 3749,
+          "end": 3767
+        },
+        {
+          "brandId": "connectwell",
+          "start": 3775,
+          "end": 3786
+        },
+        {
+          "brandId": "degson",
+          "start": 3794,
+          "end": 3800
+        },
+        {
+          "brandId": "dinkle",
+          "start": 3808,
+          "end": 3814
+        }
+      ]
+    },
+    {
+      "questionId": "q1",
+      "modelId": "gemini",
+      "status": "ok",
+      "answer": "When selecting DIN rail terminal blocks for industrial automation, control panels, or electrical distribution, choosing the right brand is critical to ensuring long-term reliability, safety, and ease of installation. \n\nBased on industry roundups, distributor catalogs, and professional feedback, the best DIN rail terminal block brands are categorized below by their market position and strengths:\n\n---\n\n### 1. The \"Big Three\" Premium German Leaders\nThese three manufacturers set the global benchmark for industrial connectivity. They are the go-to choices for safety-critical panels, complex automation, and high-vibration environments.\n\n*   **Phoenix Contact (Germany):** Widely considered the gold standard in connection technology. They offer an incredibly cohesive and extensive product portfolio. They are highly praised for their **Push-In Technology (PT series)**, which features a distinct orange release button that prevents spring damage during wire insertion or removal.\n*   **WAGO (Germany):** The pioneer of spring-clamp connection technology. WAGO is famous for its **CAGE CLAMP®** and push-in systems, which provide maintenance-free, gas-tight, and highly vibration-resistant connections without the need for screws. \n*   **Weidmüller (Germany):** A massive name in panel building and industrial connectivity. Their **Klippon® Connect** range is highly regarded, and they offer innovative connection methods including traditional screw clamp, tension clamp, PUSH IN, and their tool-free **SNAP IN** technology.\n\n---\n\n### 2. Reputable Global & European Alternatives\nIf you are looking for premium engineering outside of the \"Big Three,\" these brands offer exceptional quality and are widely supported by global distributors.\n\n*   **TE Connectivity / Entrelec (Switzerland/Global):** TE Connectivity acquired the highly respected **Entrelec** brand, combining Entrelec's deep history in DIN rail terminal blocks with TE's massive global distribution network. They are known for their robust SNK series and Buchanan lines.\n*   **Wieland Electric (Germany):** Established in 1910, Wieland is highly favored by European machine builders. Their **selos** (screw connection) and **fasis** (spring clamp) DIN rail terminal block ranges are known for their ruggedness and reliability.\n*   **Conta-Clip (Germany):** A highly respected specialist in connection technology. They offer a comprehensive range of screw, tension-spring, push-in, and stud-type terminal blocks, alongside excellent cable management and entry systems.\n*   **Altech Corporation (USA):** Altech is a major supplier of European-style DIN rail terminal blocks in the North American market. They offer highly reliable, standard-compliant blocks that are widely used by panel builders looking for a dependable alternative to the larger German brands.\n\n---\n\n### 3. High-Quality, Cost-Effective & OEM Brands\nFor high-volume manufacturing, commercial projects, or applications where budget is a primary constraint, these brands offer excellent reliability and international certifications (like UL and VDE) at a lower price point.\n\n*   **Dinkle (Taiwan):** One of the largest terminal block manufacturers in Asia. Dinkle is highly regarded for producing excellent, UL-listed screw and push-in terminal blocks (such as the popular DK series) that offer a great balance of quality and affordability.\n*   **DEGSON (China):** A major global supplier with highly advanced laboratory and testing facilities. DEGSON terminal blocks are widely used in industrial automation and renewable energy, offering a vast catalog of DIN rail options with global safety approvals.\n*   **DIFVAN (China):** Highly rated as a factory-direct OEM partner. They are a preferred choice for electrical wholesalers, distributors, and private-label buyers who need high flexibility, custom labeling, and competitive pricing.\n\n---\n\n### 4. Notable Industrial Electronics Giants\nThese multi-national conglomerates are household names in electrical engineering and offer highly reliable DIN rail terminal blocks as part of their broader power and control portfolios.\n\n*   **Molex (USA):** While globally dominant in PCB and electronic connectors, Molex also manufactures high-quality industrial DIN rail terminal blocks and test plugs designed to handle demanding industrial environments.\n*   **Eaton (USA):** A global leader in power management. Eaton offers robust, heavy-duty terminal blocks designed for power distribution, motor control, and industrial switchgear.\n\n### Summary: Which should you choose?\n*   **For maximum reliability, speed, and premium features:** Go with **Phoenix Contact** (especially for push-in) or **WAGO** (for spring-clamp).\n*   **For traditional panel building and robust European engineering:** Look to **Weidmüller**, **Wieland**, or **Entrelec (TE)**.\n*   **For the best balance of cost and quality (especially in volume):** Standardize on **Dinkle** or **DEGSON**.",
+      "modelName": "gemini-3.5-flash",
+      "latencyMs": 21276,
+      "mentions": [
+        {
+          "brandId": "entrelec",
+          "brandName": "Entrelec",
+          "count": 1,
+          "firstIndex": 1846,
+          "rank": 1
+        },
+        {
+          "brandId": "highquality",
+          "brandName": "High-Quality",
+          "count": 1,
+          "firstIndex": 2839,
+          "rank": 2
+        },
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 3,
+          "firstIndex": 3376,
+          "rank": 3
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "entrelec",
+          "start": 1846,
+          "end": 1854
+        },
+        {
+          "brandId": "highquality",
+          "start": 2839,
+          "end": 2851
+        },
+        {
+          "brandId": "degson",
+          "start": 3376,
+          "end": 3382
+        },
+        {
+          "brandId": "degson",
+          "start": 3474,
+          "end": 3480
+        },
+        {
+          "brandId": "degson",
+          "start": 4930,
+          "end": 4936
+        }
+      ]
+    }
+  ]
+}

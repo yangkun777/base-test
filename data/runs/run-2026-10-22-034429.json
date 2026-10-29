@@ -1,0 +1,427 @@
+{
+  "id": "run-2026-10-22-034429",
+  "createdAt": "2026-10-22T03:44:29.696Z",
+  "models": [
+    {
+      "id": "gpt",
+      "label": "GPT",
+      "model": "gpt-5.4"
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "model": "gemini-3.5-flash"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What are the best DIN rail terminal block brands?"
+    }
+  ],
+  "brands": [
+    {
+      "id": "allenbradley",
+      "name": "Allen-Bradley",
+      "self": false
+    },
+    {
+      "id": "buchanan",
+      "name": "Buchanan",
+      "self": false
+    },
+    {
+      "id": "contaclip",
+      "name": "Conta-Clip",
+      "self": false
+    },
+    {
+      "id": "dinkle",
+      "name": "Dinkle",
+      "self": false
+    },
+    {
+      "id": "eaton",
+      "name": "Eaton",
+      "self": false
+    },
+    {
+      "id": "entrelec",
+      "name": "Entrelec",
+      "self": false
+    },
+    {
+      "id": "europe",
+      "name": "Europe",
+      "self": false
+    },
+    {
+      "id": "klipponconnect",
+      "name": "Klippon Connect",
+      "self": false
+    },
+    {
+      "id": "murrelektronik",
+      "name": "Murrelektronik",
+      "self": false
+    },
+    {
+      "id": "northamerica",
+      "name": "North America",
+      "self": false
+    },
+    {
+      "id": "phoenixcontact",
+      "name": "Phoenix Contact",
+      "self": false
+    },
+    {
+      "id": "rockwellautomation",
+      "name": "Rockwell Automation",
+      "self": false
+    },
+    {
+      "id": "schneiderelectric",
+      "name": "Schneider Electric",
+      "self": false
+    },
+    {
+      "id": "teconnectivity",
+      "name": "TE Connectivity",
+      "self": false
+    },
+    {
+      "id": "topjobs",
+      "name": "TOPJOB S",
+      "self": false
+    },
+    {
+      "id": "wago",
+      "name": "WAGO",
+      "self": false
+    },
+    {
+      "id": "weidmuller",
+      "name": "Weidmüller",
+      "self": false
+    }
+  ],
+  "results": [
+    {
+      "questionId": "q1",
+      "modelId": "gpt",
+      "status": "ok",
+      "answer": "Top DIN rail terminal block brands, especially for industrial reliability, are generally:\n\n1. **Phoenix Contact**\n   - Very widely used\n   - Excellent quality and accessory ecosystem\n   - Strong push-in and screw terminal options\n\n2. **Weidmüller**\n   - Premium industrial brand\n   - Known for robust terminals and good marking/accessories\n   - Strong in control panel and automation applications\n\n3. **WAGO**\n   - Famous for spring-clamp / push-in connection technology\n   - Very reliable and installer-friendly\n   - Popular where vibration resistance and fast wiring matter\n\n4. **ABB / Entrelec**\n   - Well-established in industrial power and control\n   - Good reputation for durability and global availability\n\n5. **Schneider Electric**\n   - Solid industrial option\n   - Often chosen when standardizing on Schneider components\n\n6. **Allen-Bradley**\n   - Common in North American industrial systems\n   - Often selected for compatibility with Rockwell/AB environments\n\n7. **Eaton**\n   - Good quality, especially in power distribution/control panels\n   - Strong support in North America\n\n8. **TE Connectivity / Buchanan**\n   - Known brand with broad terminal connection products\n   - More common in some OEM and machine-building contexts\n\n9. **Murrelektronik**\n   - Good quality, especially in automation-focused systems\n   - Less universal than the top three, but respected\n\n10. **Conta-Clip**\n   - Strong terminal block specialist\n   - Good European industrial reputation\n\n## If you want the “best” overall\nFor most applications, the top three are usually:\n\n- **Phoenix Contact**\n- **Weidmüller**\n- **WAGO**\n\nThese are often considered the safest premium choices for:\n- reliability\n- accessory availability\n- global support\n- standards compliance\n\n## Quick recommendations by priority\n- **Best overall industrial standard:** Phoenix Contact\n- **Best for spring/push-in technology:** WAGO\n- **Best for broad industrial panel-building ecosystem:** Weidmüller\n- **Best if you already use Rockwell:** Allen-Bradley\n- **Best for power/control integration:** ABB or Eaton\n\n## What matters more than brand\nThe “best” brand also depends on:\n- **connection type:** screw, spring clamp, push-in\n- **current/voltage rating**\n- **UL/CSA/IEC approvals**\n- **available jumpers, markers, end stops, test plugs**\n- **wire size range**\n- **vibration environment**\n- **local distributor availability**\n\n## Brands to be cautious with\nLow-cost generic/import terminal blocks can be fine for light-duty use, but for industrial panels it’s usually better to stick with recognized brands because:\n- ratings are more trustworthy\n- plastics and metal parts are better\n- accessories fit correctly\n- long-term replacement availability is better\n\nIf you want, I can also give you:\n1. a **tier list**,  \n2. the **best brands by budget**, or  \n3. the **best DIN terminal blocks for UL 508A control panels**.",
+      "modelName": "gpt-5.4-2026-03-05",
+      "latencyMs": 13238,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 2,
+          "firstIndex": 96,
+          "rank": 1
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 3,
+          "firstIndex": 236,
+          "rank": 2
+        },
+        {
+          "brandId": "wago",
+          "brandName": "WAGO",
+          "count": 2,
+          "firstIndex": 403,
+          "rank": 3
+        },
+        {
+          "brandId": "entrelec",
+          "brandName": "Entrelec",
+          "count": 1,
+          "firstIndex": 588,
+          "rank": 4
+        },
+        {
+          "brandId": "schneiderelectric",
+          "brandName": "Schneider Electric",
+          "count": 1,
+          "firstIndex": 719,
+          "rank": 5
+        },
+        {
+          "brandId": "allenbradley",
+          "brandName": "Allen-Bradley",
+          "count": 2,
+          "firstIndex": 836,
+          "rank": 6
+        },
+        {
+          "brandId": "eaton",
+          "brandName": "Eaton",
+          "count": 1,
+          "firstIndex": 975,
+          "rank": 7
+        },
+        {
+          "brandId": "teconnectivity",
+          "brandName": "TE Connectivity",
+          "count": 1,
+          "firstIndex": 1093,
+          "rank": 8
+        },
+        {
+          "brandId": "buchanan",
+          "brandName": "Buchanan",
+          "count": 1,
+          "firstIndex": 1111,
+          "rank": 9
+        },
+        {
+          "brandId": "murrelektronik",
+          "brandName": "Murrelektronik",
+          "count": 1,
+          "firstIndex": 1244,
+          "rank": 10
+        },
+        {
+          "brandId": "contaclip",
+          "brandName": "Conta-Clip",
+          "count": 1,
+          "firstIndex": 1382,
+          "rank": 11
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 96,
+          "end": 111
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 236,
+          "end": 246
+        },
+        {
+          "brandId": "wago",
+          "start": 403,
+          "end": 407
+        },
+        {
+          "brandId": "entrelec",
+          "start": 588,
+          "end": 596
+        },
+        {
+          "brandId": "schneiderelectric",
+          "start": 719,
+          "end": 737
+        },
+        {
+          "brandId": "allenbradley",
+          "start": 836,
+          "end": 849
+        },
+        {
+          "brandId": "eaton",
+          "start": 975,
+          "end": 980
+        },
+        {
+          "brandId": "teconnectivity",
+          "start": 1093,
+          "end": 1108
+        },
+        {
+          "brandId": "buchanan",
+          "start": 1111,
+          "end": 1119
+        },
+        {
+          "brandId": "murrelektronik",
+          "start": 1244,
+          "end": 1258
+        },
+        {
+          "brandId": "contaclip",
+          "start": 1382,
+          "end": 1392
+        },
+        {
+          "brandId": "phoenixcontact",
+          "start": 1564,
+          "end": 1579
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 1586,
+          "end": 1596
+        },
+        {
+          "brandId": "wago",
+          "start": 1603,
+          "end": 1607
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 1948,
+          "end": 1960
+        },
+        {
+          "brandId": "allenbradley",
+          "start": 1999,
+          "end": 2014
+        }
+      ]
+    },
+    {
+      "questionId": "q1",
+      "modelId": "gemini",
+      "status": "ok",
+      "answer": "When it comes to DIN rail terminal blocks, the market is dominated by a few highly reputable German and global manufacturers. These brands are known for their reliability, safety certifications, innovation, and ease of use. \n\nHere are the best DIN rail terminal block brands, categorized by their market position and strengths.\n\n---\n\n### 1. The \"Big Three\" (Industry Gold Standards)\nThese three German manufacturers are the undisputed leaders in the industry. You cannot go wrong with any of them, as they offer the highest quality, widest product ranges, and best international certifications (UL, CE, ATEX, etc.).\n\n*   **Phoenix Contact**\n    *   **Reputation:** The pioneer of the modern terminal block. They offer arguably the largest catalog of electrical connection technology in the world.\n    *   **Key Series:** **CLIPLINE complete** system (includes UT screw clamp, PT push-in, and ST spring cage).\n    *   **Best For:** Overall versatility, high-end industrial automation, and push-in technology (their PT series is industry-leading for speed of installation).\n*   **WAGO**\n    *   **Reputation:** The inventor of spring-pressure connection technology (screwless). WAGO is synonymous with vibration-proof, maintenance-free connections.\n    *   **Key Series:** **TOPJOB S** (push-in cage clamp).\n    *   **Best For:** High-vibration environments (railway, marine, heavy machinery) and building automation. If you want to eliminate screw-tightening and maintenance, WAGO is the top choice.\n*   **Weidmüller**\n    *   **Reputation:** A massive player in industrial connectivity, known for precision engineering and extremely rugged designs.\n    *   **Key Series:** **Klippon Connect** (A-Series push-in, W-Series screw).\n    *   **Best For:** Process industries (oil & gas, chemical), power distribution, and heavy industrial applications.\n\n---\n\n### 2. Top-Tier Industrial Giants\nThese brands are massive multinational automation companies. Their terminal blocks are exceptionally high quality and are often chosen because they integrate seamlessly with the rest of the brand's control cabinet ecosystem.\n\n*   **ABB (Entrelec)**\n    *   **Reputation:** ABB acquired Entrelec, a legendary French terminal block manufacturer. They offer highly reliable blocks with excellent global availability.\n    *   **Key Series:** **SNK Series** (available in PI-Spring, screw clamp, and pluggable).\n    *   **Best For:** Marine applications, hazardous areas, and integration into ABB-specified control panels.\n*   **Allen-Bradley / Rockwell Automation**\n    *   **Reputation:** The dominant brand in North American industrial automation. While some of their blocks are manufactured via partnerships, they are built to strict Rockwell standards.\n    *   **Key Series:** **1492 Series**.\n    *   **Best For:** North American manufacturing plants that standardize on Rockwell/Allen-Bradley control systems.\n\n---\n\n### 3. Best Budget & OEM Brands\nIf you are building panels on a budget, or doing high-volume OEM manufacturing where cost-per-unit is critical, these brands offer excellent reliability at a fraction of the cost of the \"Big Three.\"\n\n*   **Dinkle**\n    *   **Reputation:** Based in Taiwan, Dinkle is one of the largest terminal block manufacturers in the world. They often manufacture blocks that are rebranded by other major Western companies.\n    *   **Key Series:** **DP Series** (Push-in), **DK Series** (Screw).\n    *   **Best For:** Excellent value for money, hobbyists, and cost-sensitive OEM machinery. They are UL-recognized and highly reliable despite the lower price.\n*   **ASI (Automation Systems Interconnect)**\n    *   **Reputation:** A US-based supplier that offers high-quality, Italian-made terminal blocks at very competitive prices.\n    *   **Best For:** US buyers looking for a cost-effective alternative to Phoenix Contact without sacrificing European manufacturing quality.\n\n---\n\n### How to Choose the Right Brand for Your Project\n\n1.  **Connection Technology:**\n    *   **Screw Clamp (e.g., Phoenix UT, Weidmüller W):** Best for heavy-gauge wires and traditionalists. Requires periodic retightening in high-vibration environments.\n    *   **Push-In (e.g., Phoenix PT, WAGO TOPJOB S, ABB SNK):** The modern standard. Fastest to wire (you just push the ferruled wire in) and highly vibration-resistant.\n2.  **Environment:**\n    *   If your panel will be on a boat, train, or vibrating machine, go with **WAGO** or **Phoenix Contact (Push-in)**.\n    *   If your panel is in a hazardous (Ex/ATEX) area, **Weidmüller** and **Phoenix Contact** have the most robust certified lineups.\n3.  **Availability:**\n    *   In **North America**, Allen-Bradley and Phoenix Contact are the easiest to source quickly.\n    *   In **Europe**, WAGO, Phoenix Contact, and Weidmüller are available at almost every electrical distributor.",
+      "modelName": "gemini-3.5-flash",
+      "latencyMs": 16988,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 2,
+          "firstIndex": 623,
+          "rank": 1
+        },
+        {
+          "brandId": "wago",
+          "brandName": "WAGO",
+          "count": 2,
+          "firstIndex": 1078,
+          "rank": 2
+        },
+        {
+          "brandId": "topjobs",
+          "brandName": "TOPJOB S",
+          "count": 1,
+          "firstIndex": 1273,
+          "rank": 3
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 2,
+          "firstIndex": 1505,
+          "rank": 4
+        },
+        {
+          "brandId": "klipponconnect",
+          "brandName": "Klippon Connect",
+          "count": 1,
+          "firstIndex": 1675,
+          "rank": 5
+        },
+        {
+          "brandId": "allenbradley",
+          "brandName": "Allen-Bradley",
+          "count": 1,
+          "firstIndex": 2512,
+          "rank": 6
+        },
+        {
+          "brandId": "rockwellautomation",
+          "brandName": "Rockwell Automation",
+          "count": 1,
+          "firstIndex": 2528,
+          "rank": 7
+        },
+        {
+          "brandId": "dinkle",
+          "brandName": "Dinkle",
+          "count": 1,
+          "firstIndex": 3144,
+          "rank": 8
+        },
+        {
+          "brandId": "northamerica",
+          "brandName": "North America",
+          "count": 1,
+          "firstIndex": 4640,
+          "rank": 9
+        },
+        {
+          "brandId": "europe",
+          "brandName": "Europe",
+          "count": 1,
+          "firstIndex": 4739,
+          "rank": 10
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 623,
+          "end": 638
+        },
+        {
+          "brandId": "wago",
+          "start": 1078,
+          "end": 1082
+        },
+        {
+          "brandId": "topjobs",
+          "start": 1273,
+          "end": 1281
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 1505,
+          "end": 1515
+        },
+        {
+          "brandId": "klipponconnect",
+          "start": 1675,
+          "end": 1690
+        },
+        {
+          "brandId": "allenbradley",
+          "start": 2512,
+          "end": 2525
+        },
+        {
+          "brandId": "rockwellautomation",
+          "start": 2528,
+          "end": 2547
+        },
+        {
+          "brandId": "dinkle",
+          "start": 3144,
+          "end": 3150
+        },
+        {
+          "brandId": "wago",
+          "start": 4429,
+          "end": 4433
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 4528,
+          "end": 4538
+        },
+        {
+          "brandId": "phoenixcontact",
+          "start": 4547,
+          "end": 4562
+        },
+        {
+          "brandId": "northamerica",
+          "start": 4640,
+          "end": 4653
+        },
+        {
+          "brandId": "europe",
+          "start": 4739,
+          "end": 4745
+        }
+      ]
+    }
+  ]
+}

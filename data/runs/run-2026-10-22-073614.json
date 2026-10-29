@@ -1,0 +1,384 @@
+{
+  "id": "run-2026-10-22-073614",
+  "createdAt": "2026-10-22T07:36:14.580Z",
+  "models": [
+    {
+      "id": "gpt",
+      "label": "GPT",
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "model": "gemini-3.5-flash"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Which Type 2 AC charging cable brands with CE and TUV certification are recommended for European residential EV chargers?"
+    },
+    {
+      "id": "q22",
+      "text": "What CE & TÜV certified Type 2 AC charging cables are recommended for residential wallbox EV chargers sold to Czech household buyers?"
+    },
+    {
+      "id": "q23",
+      "text": "Which IP67-rated e-bike charging port connectors with CE and RoHS certification are recommended for European e-bike OEM factories exporting to the Czech Republic?"
+    }
+  ],
+  "brands": [
+    {
+      "id": "blaupunkt",
+      "name": "Blaupunkt",
+      "self": false
+    },
+    {
+      "id": "chogori",
+      "name": "Chogori",
+      "self": false
+    },
+    {
+      "id": "degson",
+      "name": "Degson",
+      "self": true
+    },
+    {
+      "id": "evmotions",
+      "name": "EVMOTIONS",
+      "self": false
+    },
+    {
+      "id": "greencell",
+      "name": "Green Cell",
+      "self": false
+    },
+    {
+      "id": "harting",
+      "name": "Harting",
+      "self": false
+    },
+    {
+      "id": "higo",
+      "name": "Higo",
+      "self": false
+    },
+    {
+      "id": "julet",
+      "name": "Julet",
+      "self": false
+    },
+    {
+      "id": "lapp",
+      "name": "Lapp",
+      "self": false
+    },
+    {
+      "id": "mennekes",
+      "name": "Mennekes",
+      "self": false
+    },
+    {
+      "id": "phoenixcontact",
+      "name": "Phoenix Contact",
+      "self": false
+    },
+    {
+      "id": "singatron",
+      "name": "Singatron",
+      "self": false
+    },
+    {
+      "id": "voldt",
+      "name": "Voldt",
+      "self": false
+    },
+    {
+      "id": "zencar",
+      "name": "Zencar",
+      "self": false
+    }
+  ],
+  "results": [
+    {
+      "questionId": "q1",
+      "modelId": "gpt",
+      "status": "ok",
+      "answer": "- **EVMOTIONS** ([evmotions.eu](https://evmotions.eu/type2/ecvt2tot232a_spiralsigma-ev-charger/?utm_source=openai))\n- **Voldt** ([voldt.eu](https://voldt.eu/collections/type-2?utm_source=openai))\n- **Zencar** ([zencar-evse.net](https://zencar-evse.net/wp-content/uploads/2025/09/Zencar-product-catalog-2025.pdf?utm_source=openai))",
+      "modelName": "gpt-5.6-sol",
+      "latencyMs": 8390,
+      "mentions": [
+        {
+          "brandId": "evmotions",
+          "brandName": "EVMOTIONS",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "voldt",
+          "brandName": "Voldt",
+          "count": 1,
+          "firstIndex": 120,
+          "rank": 2
+        },
+        {
+          "brandId": "zencar",
+          "brandName": "Zencar",
+          "count": 1,
+          "firstIndex": 200,
+          "rank": 3
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "evmotions",
+          "start": 4,
+          "end": 13
+        },
+        {
+          "brandId": "voldt",
+          "start": 120,
+          "end": 125
+        },
+        {
+          "brandId": "zencar",
+          "start": 200,
+          "end": 206
+        }
+      ],
+      "usage": {
+        "inputTokens": 12588,
+        "outputTokens": 330,
+        "totalTokens": 12918,
+        "reasoningTokens": 255,
+        "cachedTokens": 4364,
+        "searchQueries": [
+          "Which Type 2 AC charging cable brands with CE and TUV certification are recommended for European residential EV chargers?"
+        ]
+      }
+    },
+    {
+      "questionId": "q1",
+      "modelId": "gemini",
+      "status": "ok",
+      "answer": "Recommended Type 2 AC charging cable brands for European residential EV chargers that carry CE and TÜV certifications include:\n\n* **Mennekes**: The pioneer of the Type 2 standard, offering highly durable, premium European-certified cables.\n* **Phoenix Contact**: A leading German manufacturer known for robust, high-quality AC charging cables with strict safety compliance.\n* **Lapp**: A prominent German cable specialist providing highly flexible, reliable, and certified EV charging solutions.\n* **Harting**: A trusted industrial brand offering premium, certified Type 2 cables designed for longevity.\n* **Blaupunkt**: A well-known consumer brand offering widely compatible, certified residential charging cables.\n* **Green Cell**: A popular choice in Europe for budget-friendly, fully certified, and reliable Type 2 cables.",
+      "modelName": "gemini-3.5-flash",
+      "latencyMs": 5769,
+      "mentions": [
+        {
+          "brandId": "mennekes",
+          "brandName": "Mennekes",
+          "count": 1,
+          "firstIndex": 132,
+          "rank": 1
+        },
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 244,
+          "rank": 2
+        },
+        {
+          "brandId": "lapp",
+          "brandName": "Lapp",
+          "count": 1,
+          "firstIndex": 378,
+          "rank": 3
+        },
+        {
+          "brandId": "harting",
+          "brandName": "Harting",
+          "count": 1,
+          "firstIndex": 500,
+          "rank": 4
+        },
+        {
+          "brandId": "blaupunkt",
+          "brandName": "Blaupunkt",
+          "count": 1,
+          "firstIndex": 608,
+          "rank": 5
+        },
+        {
+          "brandId": "greencell",
+          "brandName": "Green Cell",
+          "count": 1,
+          "firstIndex": 720,
+          "rank": 6
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "mennekes",
+          "start": 132,
+          "end": 140
+        },
+        {
+          "brandId": "phoenixcontact",
+          "start": 244,
+          "end": 259
+        },
+        {
+          "brandId": "lapp",
+          "start": 378,
+          "end": 382
+        },
+        {
+          "brandId": "harting",
+          "start": 500,
+          "end": 507
+        },
+        {
+          "brandId": "blaupunkt",
+          "start": 608,
+          "end": 617
+        },
+        {
+          "brandId": "greencell",
+          "start": 720,
+          "end": 730
+        }
+      ],
+      "usage": {
+        "inputTokens": 80,
+        "outputTokens": 216,
+        "totalTokens": 296,
+        "searchQueries": [
+          "Type 2 AC charging cable brands CE TUV certification Europe",
+          "\"Type 2\" EV charging cable brands Europe CE TUV Phoenix Contact Mennekes Lapp"
+        ]
+      }
+    },
+    {
+      "questionId": "q22",
+      "modelId": "gpt",
+      "status": "ok",
+      "answer": "- **EVMOTIONS** ([evmotions.org](https://evmotions.org/faq-en/?utm_source=openai))",
+      "modelName": "gpt-5.6-sol",
+      "latencyMs": 7728,
+      "mentions": [
+        {
+          "brandId": "evmotions",
+          "brandName": "EVMOTIONS",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "evmotions",
+          "start": 4,
+          "end": 13
+        }
+      ],
+      "usage": {
+        "inputTokens": 12940,
+        "outputTokens": 354,
+        "totalTokens": 13294,
+        "reasoningTokens": 327,
+        "cachedTokens": 4364,
+        "searchQueries": [
+          "What CE & TÜV certified Type 2 AC charging cables are recommended for residential wallbox EV chargers sold to Czech household buyers?"
+        ]
+      }
+    },
+    {
+      "questionId": "q22",
+      "modelId": "gemini",
+      "status": "error",
+      "error": "fetch failed"
+    },
+    {
+      "questionId": "q23",
+      "modelId": "gpt",
+      "status": "error",
+      "error": "GPT 没有返回有效内容。"
+    },
+    {
+      "questionId": "q23",
+      "modelId": "gemini",
+      "status": "ok",
+      "answer": "For European e-bike OEM factories exporting to the Czech Republic, the following manufacturer brands are highly recommended for IP67-rated, CE, and RoHS-certified charging port connectors:\n\n* **Higo**\n  * Industry-standard, compact circular waterproof connectors widely used across European e-bike systems.\n* **Chogori**\n  * Features heavy-duty mechanical locks, hybrid power/signal designs, and full European compliance.\n* **Degson**\n  * Offers specialized EBBH/EBBR battery and charging connector series with tool-less locking.\n* **Singatron**\n  * Provides robust LEV waterproof connectors (SGConn® series) certified for global safety and environmental standards.\n* **Julet**\n  * A major supplier of cost-effective, widely compatible waterproof e-bike cable and connector assemblies.",
+      "modelName": "gemini-3.5-flash",
+      "latencyMs": 6904,
+      "mentions": [
+        {
+          "brandId": "higo",
+          "brandName": "Higo",
+          "count": 1,
+          "firstIndex": 194,
+          "rank": 1
+        },
+        {
+          "brandId": "chogori",
+          "brandName": "Chogori",
+          "count": 1,
+          "firstIndex": 311,
+          "rank": 2
+        },
+        {
+          "brandId": "degson",
+          "brandName": "Degson",
+          "count": 1,
+          "firstIndex": 426,
+          "rank": 3
+        },
+        {
+          "brandId": "singatron",
+          "brandName": "Singatron",
+          "count": 1,
+          "firstIndex": 534,
+          "rank": 4
+        },
+        {
+          "brandId": "julet",
+          "brandName": "Julet",
+          "count": 1,
+          "firstIndex": 670,
+          "rank": 5
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "higo",
+          "start": 194,
+          "end": 198
+        },
+        {
+          "brandId": "chogori",
+          "start": 311,
+          "end": 318
+        },
+        {
+          "brandId": "degson",
+          "start": 426,
+          "end": 432
+        },
+        {
+          "brandId": "singatron",
+          "start": 534,
+          "end": 543
+        },
+        {
+          "brandId": "julet",
+          "start": 670,
+          "end": 675
+        }
+      ],
+      "usage": {
+        "inputTokens": 90,
+        "outputTokens": 276,
+        "totalTokens": 366,
+        "searchQueries": [
+          "IP67 ebike charging port connector CE RoHS OEM",
+          "\"Higo\" ebike connector IP67 CE RoHS",
+          "\"Chogori\" ebike connector IP67 CE RoHS",
+          "\"Singatron\" ebike connector IP67 CE RoHS"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "degson",
+    "name": "Degson",
+    "self": true,
+    "aliases": [
+      { "pattern": "degson", "flags": "i" },
+      { "pattern": "高松", "flags": "" }
+    ]
+  },
+  {
+    "id": "te",
+    "name": "TE Connectivity",
+    "aliases": [
+      { "pattern": "te[\\s-]+connectivity", "flags": "i" },
+      { "pattern": "tyco\\s+electronics", "flags": "i" },
+      { "pattern": "\\bTE\\b", "flags": "" }
+    ]
+  },
+  {
+    "id": "phoenix",
+    "name": "Phoenix Contact",
+    "aliases": [
+      { "pattern": "phoenix\\s+contact", "flags": "i" },
+      { "pattern": "\\bPhoenix\\b", "flags": "" }
+    ]
+  },
+  {
+    "id": "wago",
+    "name": "WAGO",
+    "aliases": [
+      { "pattern": "\\bwago\\b", "flags": "i" }
+    ]
+  },
+  {
+    "id": "weidmuller",
+    "name": "Weidmüller",
+    "aliases": [
+      { "pattern": "weidm(?:ü|u|ue)ller", "flags": "i" }
+    ]
+  }
+]
