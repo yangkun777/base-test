@@ -22,12 +22,13 @@ const rows = computed(() =>
         top3: agg?.top3 || 0
       }
     })
-    .sort((a, b) => b.total - a.total)
+    .sort((a, b) => b.total - a.total || a.name.localeCompare(b.name))
+    .slice(0, 12)
 )
 
 function pct(count: number): string {
-  if (props.agg.slotCount === 0) return '—'
-  return `${Math.round(count / props.agg.slotCount * 100)}%`
+  if (props.agg.okCount === 0) return '—'
+  return `${Math.round(count / props.agg.okCount * 100)}%`
 }
 </script>
 
@@ -55,11 +56,11 @@ function pct(count: number): string {
           :key="`${row.id}-${model.id}`"
           class="num"
           :data-label="model.label"
-        >{{ agg.byBrand[row.id]?.byModel[model.id] || 0 }} / {{ agg.questionCount }}</td>
-        <td class="num" data-label="合计">{{ row.total }} / {{ agg.slotCount }}</td>
+        >{{ agg.byBrand[row.id]?.byModel[model.id] || 0 }} / {{ agg.okByModel[model.id] || 0 }}</td>
+        <td class="num" data-label="合计">{{ row.total }} / {{ agg.okCount }}</td>
         <td class="num" data-label="综合提及率">
           <div class="share-cell">
-            <span class="share-value">{{ row.share.toFixed(1) }}%</span>
+            <span class="share-value">{{ agg.okCount ? row.share.toFixed(1) + '%' : '—' }}</span>
             <span class="share-bar">
               <span class="share-fill" :style="{ width: `${Math.min(row.share, 100)}%`, background: row.color }"></span>
             </span>

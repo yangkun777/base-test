@@ -2,15 +2,13 @@
 import { computed, ref } from 'vue'
 import { useRun } from '../composables/useRun'
 
-const { state, addQuestion, removeQuestion } = useRun()
+const { state, addQuestion, removeQuestion, clearQuestions } = useRun()
 
 const text = ref('')
 const error = ref('')
 const saving = ref(false)
 
 const bank = computed(() => state.meta?.questions || [])
-const max = computed(() => state.meta?.maxQuestions || 50)
-const full = computed(() => bank.value.length >= max.value)
 
 const runQuestions = computed(() => {
   const run = state.currentRun
@@ -30,7 +28,7 @@ const viewingPast = computed(() => {
 const questions = computed(() => viewingPast.value && runQuestions.value ? runQuestions.value : bank.value)
 
 async function onAdd() {
-  if (saving.value || full.value || state.running) return
+  if (saving.value || state.running) return
   error.value = ''
   saving.value = true
   try {
@@ -55,6 +53,19 @@ async function onRemove(id: string) {
     saving.value = false
   }
 }
+
+async function onClear() {
+  if (saving.value || state.running || !bank.value.length) return
+  error.value = ''
+  saving.value = true
+  try {
+    await clearQuestions()
+  } catch (err) {
+    error.value = err instanceof Error ? err.message : String(err)
+  } finally {
+    saving.value = false
+  }
+}
 </script>
 
 <template>
@@ -62,9 +73,9 @@ async function onRemove(id: string) {
     <div class="bank-head">
       <div>
         <div class="card-title">评测问题</div>
-        <div class="card-sub">{{ viewingPast ? '这是所选评测当时提交的题目' : `本地给出的题目将依次提交给两大模型（先后顺序），最多 ${max} 条` }}</div>
+        <div class="card-sub">{{ viewingPast ? '这是所选评测当时提交的题目' : '本地给出的题目将依次提交给所选模型（先后顺序）' }}</div>
       </div>
-      <span class="count">{{ viewingPast ? `${questions.length} 题` : `${bank.length} / ${max}` }}</span>
+      <span class="count">{{ questions.length }} 题</span>
     </div>
 
     <ol class="list">
@@ -85,7 +96,10 @@ async function onRemove(id: string) {
     <div v-if="viewingPast" class="next-bank">
       <div class="next-head">
         <span>下一轮题库</span>
-        <span>{{ bank.length }} / {{ max }}</span>
+        <div class="next-actions">
+          <span>{{ bank.length }} 题</span>
+          <button type="button" class="clear" :disabled="saving || state.running || !bank.length" @click="onClear">一键清空</button>
+        </div>
       </div>
       <ol v-if="bank.length" class="list next-list">
         <li v-for="(question, index) in bank" :key="`next-${question.id}`">
@@ -99,12 +113,11 @@ async function onRemove(id: string) {
 
     <form class="add" @submit.prevent="onAdd">
       <div class="composer">
-        <textarea v-model="text" rows="1" maxlength="2000" :disabled="full || saving || state.running" placeholder="输入新的评测问题，按 Enter 快速添加" @keydown.enter.exact.prevent="onAdd"></textarea>
+        <textarea v-model="text" rows="1" maxlength="2000" :disabled="saving || state.running" placeholder="输入新的评测问题，按 Enter 快速添加" @keydown.enter.exact.prevent="onAdd"></textarea>
         <span class="counter">{{ text.length }}/2000</span>
-        <button type="submit" :disabled="full || saving || state.running || !text.trim()">添加问题</button>
+        <button type="submit" :disabled="saving || state.running || !text.trim()">添加问题</button>
       </div>
       <p v-if="error" class="err">{{ error }}</p>
-      <p v-else-if="full" class="hint">已达 {{ max }} 条上限，删除后再添加</p>
     </form>
   </section>
 </template>
@@ -193,6 +206,10 @@ async function onRemove(id: string) {
   font-size: 13px;
   font-weight: 650;
 }
+
+.next-actions { display: flex; align-items: center; gap: 12px; }
+.clear { border: 0; background: transparent; color: var(--bad); font: inherit; font-size: 12px; cursor: pointer; }
+.clear:disabled { opacity: 0.4; cursor: default; }
 
 .next-list { max-height: 140px; }
 

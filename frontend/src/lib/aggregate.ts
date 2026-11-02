@@ -18,6 +18,8 @@ export interface RunAgg {
   modelCount: number
   slotCount: number
   okCount: number
+  okByModel: Record<string, number>
+  completeQuestionCount: number
   total: number
   models: { id: string; label: string }[]
 }
@@ -57,7 +59,17 @@ export function aggregate(run: Run, brands: Brand[]): RunAgg {
     : [...new Set(run.results.map(result => result.modelId))].map(id => ({ id, label: id })))
   const modelCount = models.length
   const slotCount = questionCount * modelCount
-  const okResults = run.results.filter(result => result.status === 'ok')
+  const okResults = run.results.filter(result => result.status === 'ok' && !!result.mentions?.length)
+  const eligible = new Set(okResults.map(result => result.questionId))
+  const okByModel: Record<string, number> = Object.fromEntries(models.map(model => [model.id, 0]))
+  for (const result of okResults) {
+    if (result.modelId in okByModel) okByModel[result.modelId] += 1
+  }
+  const completeQuestionCount = questionIds.filter(questionId => eligible.has(questionId) &&
+    models.every(model => run.results.some(result =>
+      result.questionId === questionId && result.modelId === model.id && result.status === 'ok' && !!result.mentions?.length
+    ))
+  ).length
 
   for (const result of okResults) {
     const seen = new Set<string>()
@@ -80,19 +92,22 @@ export function aggregate(run: Run, brands: Brand[]): RunAgg {
     modelCount,
     slotCount,
     okCount: okResults.length,
+    okByModel,
+    completeQuestionCount,
     total: run.results.length,
     models
   }
 }
 
 export function sharePct(agg: RunAgg, brandId: string): number {
-  if (agg.slotCount === 0) return 0
-  return (agg.byBrand[brandId]?.total || 0) / agg.slotCount * 100
+  if (agg.okCount === 0) return 0
+  return (agg.byBrand[brandId]?.total || 0) / agg.okCount * 100
 }
 
 export function modelSharePct(agg: RunAgg, brandId: string, modelId: string): number {
-  if (agg.questionCount === 0) return 0
-  return (agg.byBrand[brandId]?.byModel[modelId] || 0) / agg.questionCount * 100
+  const valid = agg.okByModel[modelId] || 0
+  if (valid === 0) return 0
+  return (agg.byBrand[brandId]?.byModel[modelId] || 0) / valid * 100
 }
 
 function isDegsonMention(mention: { brandId?: string; brandName?: string }) {
@@ -100,10 +115,12 @@ function isDegsonMention(mention: { brandId?: string; brandName?: string }) {
 }
 
 export interface DegsonModelCell {
+  noBrand: boolean
   mentioned: boolean
   rank: number | null
   before: string[]
   error: boolean
+  notRun: boolean
 }
 
 export interface DegsonRankRow {
@@ -126,6 +143,7 @@ export function degsonReport(run: Run): DegsonReport {
     ? run.models.map(model => ({ id: model.id, label: model.label }))
     : [...new Set(run.results.map(result => result.modelId))].map(id => ({ id, label: id })))
   const hits: Record<string, number> = Object.fromEntries(models.map(model => [model.id, 0]))
+  const valid: Record<string, number> = Object.fromEntries(models.map(model => [model.id, 0]))
   const rows: DegsonRankRow[] = []
 
   for (const questionId of questionIds) {
@@ -134,6 +152,7 @@ export function degsonReport(run: Run): DegsonReport {
     let any = false
     for (const model of models) {
       const result = run.results.find(item => item.questionId === questionId && item.modelId === model.id)
+      if (result?.status === 'ok' && result.mentions?.length) valid[model.id] += 1
       const mentions = result?.status === 'ok' ? result.mentions || [] : []
       const mention = mentions.find(isDegsonMention)
       if (mention) {
@@ -141,6 +160,7 @@ export function degsonReport(run: Run): DegsonReport {
         any = true
       }
       byModel[model.id] = {
+        noBrand: result?.status === 'ok' && !result.mentions?.length,
         mentioned: !!mention,
         rank: mention?.rank ?? null,
         before: mention
@@ -149,7 +169,8 @@ export function degsonReport(run: Run): DegsonReport {
             .sort((a, b) => a.rank - b.rank)
             .map(item => item.brandName || item.brandId)
           : [],
-        error: !result || result.status !== 'ok'
+        error: result?.status === 'error',
+        notRun: !result
       }
     }
     if (any) rows.push({ questionId, text, byModel })
@@ -163,8 +184,8 @@ export function degsonReport(run: Run): DegsonReport {
       return {
         ...model,
         hits: count,
-        denom: questionCount,
-        pct: questionCount ? count / questionCount * 100 : 0
+        denom: valid[model.id],
+        pct: valid[model.id] ? count / valid[model.id] * 100 : 0
       }
     }),
     rows

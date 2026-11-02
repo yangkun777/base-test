@@ -1,0 +1,788 @@
+{
+  "id": "run-2026-10-30-024527",
+  "createdAt": "2026-10-30T02:45:27.217Z",
+  "regionId": "eu",
+  "regionLabel": "欧洲（德国柏林）",
+  "models": [
+    {
+      "id": "gpt",
+      "label": "GPT",
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "model": "gemini-3.5-flash"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q24",
+      "text": "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?"
+    },
+    {
+      "id": "q25",
+      "text": "Which UL-certified PCB terminal blocks are recommended for 24V industrial PLC controllers?"
+    },
+    {
+      "id": "q26",
+      "text": "Which Chinese connector manufacturers offer complete DIN rail + PCB + feed-through terminal solutions with CE and UL dual certification?"
+    },
+    {
+      "id": "q27",
+      "text": "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?"
+    },
+    {
+      "id": "q28",
+      "text": "Which Chinese EV charging cable brands have obtained both CE and TUV certifications?"
+    }
+  ],
+  "brands": [
+    {
+      "id": "amphenol",
+      "name": "Amphenol",
+      "self": false
+    },
+    {
+      "id": "chinaevse",
+      "name": "CHINAEVSE",
+      "self": false
+    },
+    {
+      "id": "degson",
+      "name": "Degson Electronics",
+      "self": true
+    },
+    {
+      "id": "dinkle",
+      "name": "Dinkle",
+      "self": false
+    },
+    {
+      "id": "eaton",
+      "name": "Eaton",
+      "self": false
+    },
+    {
+      "id": "feyree",
+      "name": "Feyree",
+      "self": false
+    },
+    {
+      "id": "jguang",
+      "name": "J-GUANG",
+      "self": false
+    },
+    {
+      "id": "joinect",
+      "name": "Joinect",
+      "self": false
+    },
+    {
+      "id": "langchi",
+      "name": "Langchi",
+      "self": false
+    },
+    {
+      "id": "molex",
+      "name": "Molex",
+      "self": false
+    },
+    {
+      "id": "ningbomaxelectronictechnology",
+      "name": "Ningbo MAX Electronic Technology",
+      "self": false
+    },
+    {
+      "id": "phoenixcontact",
+      "name": "Phoenix Contact",
+      "self": false
+    },
+    {
+      "id": "sipunelectric",
+      "name": "Sipun Electric",
+      "self": false
+    },
+    {
+      "id": "sunkean",
+      "name": "Sunkean",
+      "self": false
+    },
+    {
+      "id": "teconnectivity",
+      "name": "TE Connectivity",
+      "self": false
+    },
+    {
+      "id": "wago",
+      "name": "WAGO",
+      "self": false
+    },
+    {
+      "id": "wanjieelectronic",
+      "name": "Wanjie Electronic",
+      "self": false
+    },
+    {
+      "id": "weidmuller",
+      "name": "Weidmüller",
+      "self": false
+    },
+    {
+      "id": "wonkeelectric",
+      "name": "Wonke Electric",
+      "self": false
+    }
+  ],
+  "results": [
+    {
+      "questionId": "q24",
+      "modelId": "gpt",
+      "regionId": "eu",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Phoenix Contact**\n- **Weidmüller**\n- **Eaton**\n- **DEGSON**",
+      "modelName": "gpt-5.6-sol",
+      "latencyMs": 8188,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 1,
+          "firstIndex": 26,
+          "rank": 2
+        },
+        {
+          "brandId": "eaton",
+          "brandName": "Eaton",
+          "count": 1,
+          "firstIndex": 43,
+          "rank": 3
+        },
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 1,
+          "firstIndex": 55,
+          "rank": 4
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 4,
+          "end": 19
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 26,
+          "end": 36
+        },
+        {
+          "brandId": "eaton",
+          "start": 43,
+          "end": 48
+        },
+        {
+          "brandId": "degson",
+          "start": 55,
+          "end": 61
+        }
+      ],
+      "usage": {
+        "inputTokens": 12954,
+        "outputTokens": 147,
+        "totalTokens": 13101,
+        "reasoningTokens": 118,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?"
+        ]
+      }
+    },
+    {
+      "questionId": "q24",
+      "modelId": "gemini",
+      "regionId": "eu",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Phoenix Contact**\n- **WAGO**\n- **Weidmüller**\n- **TE Connectivity**\n- **Dinkle**\n- **DEGSON**\n- **Amphenol**\n- **Molex**",
+      "modelName": "gemini-3.5-flash",
+      "latencyMs": 4514,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "wago",
+          "brandName": "WAGO",
+          "count": 1,
+          "firstIndex": 26,
+          "rank": 2
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 1,
+          "firstIndex": 37,
+          "rank": 3
+        },
+        {
+          "brandId": "teconnectivity",
+          "brandName": "TE Connectivity",
+          "count": 1,
+          "firstIndex": 54,
+          "rank": 4
+        },
+        {
+          "brandId": "dinkle",
+          "brandName": "Dinkle",
+          "count": 1,
+          "firstIndex": 76,
+          "rank": 5
+        },
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 1,
+          "firstIndex": 89,
+          "rank": 6
+        },
+        {
+          "brandId": "amphenol",
+          "brandName": "Amphenol",
+          "count": 1,
+          "firstIndex": 102,
+          "rank": 7
+        },
+        {
+          "brandId": "molex",
+          "brandName": "Molex",
+          "count": 1,
+          "firstIndex": 117,
+          "rank": 8
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 4,
+          "end": 19
+        },
+        {
+          "brandId": "wago",
+          "start": 26,
+          "end": 30
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 37,
+          "end": 47
+        },
+        {
+          "brandId": "teconnectivity",
+          "start": 54,
+          "end": 69
+        },
+        {
+          "brandId": "dinkle",
+          "start": 76,
+          "end": 82
+        },
+        {
+          "brandId": "degson",
+          "start": 89,
+          "end": 95
+        },
+        {
+          "brandId": "amphenol",
+          "start": 102,
+          "end": 110
+        },
+        {
+          "brandId": "molex",
+          "start": 117,
+          "end": 122
+        }
+      ],
+      "usage": {
+        "inputTokens": 95,
+        "outputTokens": 49,
+        "totalTokens": 144,
+        "searchQueries": []
+      }
+    },
+    {
+      "questionId": "q25",
+      "modelId": "gpt",
+      "regionId": "eu",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Phoenix Contact**\n- **Weidmüller**\n- **Eaton**\n- **IDEC**\n- **DEGSON**",
+      "modelName": "gpt-5.6-sol",
+      "latencyMs": 5887,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 1,
+          "firstIndex": 26,
+          "rank": 2
+        },
+        {
+          "brandId": "eaton",
+          "brandName": "Eaton",
+          "count": 1,
+          "firstIndex": 43,
+          "rank": 3
+        },
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 1,
+          "firstIndex": 66,
+          "rank": 4
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 4,
+          "end": 19
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 26,
+          "end": 36
+        },
+        {
+          "brandId": "eaton",
+          "start": 43,
+          "end": 48
+        },
+        {
+          "brandId": "degson",
+          "start": 66,
+          "end": 72
+        }
+      ],
+      "usage": {
+        "inputTokens": 12716,
+        "outputTokens": 184,
+        "totalTokens": 12900,
+        "reasoningTokens": 150,
+        "cachedTokens": 4393,
+        "searchQueries": [
+          "Which UL-certified PCB terminal blocks are recommended for 24V industrial PLC controllers?"
+        ]
+      }
+    },
+    {
+      "questionId": "q25",
+      "modelId": "gemini",
+      "regionId": "eu",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Phoenix Contact**\n- **WAGO**\n- **TE Connectivity**\n- **Weidmüller**\n- **Molex**\n- **Degson**\n- **Amphenol**",
+      "modelName": "gemini-3.5-flash",
+      "latencyMs": 2756,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "wago",
+          "brandName": "WAGO",
+          "count": 1,
+          "firstIndex": 26,
+          "rank": 2
+        },
+        {
+          "brandId": "teconnectivity",
+          "brandName": "TE Connectivity",
+          "count": 1,
+          "firstIndex": 37,
+          "rank": 3
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 1,
+          "firstIndex": 59,
+          "rank": 4
+        },
+        {
+          "brandId": "molex",
+          "brandName": "Molex",
+          "count": 1,
+          "firstIndex": 76,
+          "rank": 5
+        },
+        {
+          "brandId": "degson",
+          "brandName": "Degson",
+          "count": 1,
+          "firstIndex": 88,
+          "rank": 6
+        },
+        {
+          "brandId": "amphenol",
+          "brandName": "Amphenol",
+          "count": 1,
+          "firstIndex": 101,
+          "rank": 7
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 4,
+          "end": 19
+        },
+        {
+          "brandId": "wago",
+          "start": 26,
+          "end": 30
+        },
+        {
+          "brandId": "teconnectivity",
+          "start": 37,
+          "end": 52
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 59,
+          "end": 69
+        },
+        {
+          "brandId": "molex",
+          "start": 76,
+          "end": 81
+        },
+        {
+          "brandId": "degson",
+          "start": 88,
+          "end": 94
+        },
+        {
+          "brandId": "amphenol",
+          "start": 101,
+          "end": 109
+        }
+      ],
+      "usage": {
+        "inputTokens": 94,
+        "outputTokens": 43,
+        "totalTokens": 137,
+        "searchQueries": []
+      }
+    },
+    {
+      "questionId": "q26",
+      "modelId": "gpt",
+      "regionId": "eu",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **DEGSON**\n- **SUPU**\n- **J-GUANG**\n- **Joinect**",
+      "modelName": "gpt-5.6-sol",
+      "latencyMs": 7736,
+      "mentions": [
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "jguang",
+          "brandName": "J-GUANG",
+          "count": 1,
+          "firstIndex": 28,
+          "rank": 2
+        },
+        {
+          "brandId": "joinect",
+          "brandName": "Joinect",
+          "count": 1,
+          "firstIndex": 42,
+          "rank": 3
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "degson",
+          "start": 4,
+          "end": 10
+        },
+        {
+          "brandId": "jguang",
+          "start": 28,
+          "end": 35
+        },
+        {
+          "brandId": "joinect",
+          "start": 42,
+          "end": 49
+        }
+      ],
+      "usage": {
+        "inputTokens": 12875,
+        "outputTokens": 305,
+        "totalTokens": 13180,
+        "reasoningTokens": 276,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which Chinese connector manufacturers offer complete DIN rail + PCB + feed-through terminal solutions with CE and UL dual certification?"
+        ]
+      }
+    },
+    {
+      "questionId": "q26",
+      "modelId": "gemini",
+      "regionId": "eu",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Degson Electronics**\n- **J-GUANG (Ningbo J-Guang Electronics)**\n- **Wanjie Electronic**\n- **Wonke Electric**\n- **Ningbo MAX Electronic Technology**\n- **Sipun Electric**",
+      "modelName": "gemini-3.5-flash",
+      "latencyMs": 3129,
+      "mentions": [
+        {
+          "brandId": "degson",
+          "brandName": "Degson Electronics",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "wanjieelectronic",
+          "brandName": "Wanjie Electronic",
+          "count": 1,
+          "firstIndex": 72,
+          "rank": 2
+        },
+        {
+          "brandId": "wonkeelectric",
+          "brandName": "Wonke Electric",
+          "count": 1,
+          "firstIndex": 96,
+          "rank": 3
+        },
+        {
+          "brandId": "ningbomaxelectronictechnology",
+          "brandName": "Ningbo MAX Electronic Technology",
+          "count": 1,
+          "firstIndex": 117,
+          "rank": 4
+        },
+        {
+          "brandId": "sipunelectric",
+          "brandName": "Sipun Electric",
+          "count": 1,
+          "firstIndex": 156,
+          "rank": 5
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "degson",
+          "start": 4,
+          "end": 22
+        },
+        {
+          "brandId": "wanjieelectronic",
+          "start": 72,
+          "end": 89
+        },
+        {
+          "brandId": "wonkeelectric",
+          "start": 96,
+          "end": 110
+        },
+        {
+          "brandId": "ningbomaxelectronictechnology",
+          "start": 117,
+          "end": 149
+        },
+        {
+          "brandId": "sipunelectric",
+          "start": 156,
+          "end": 170
+        }
+      ],
+      "usage": {
+        "inputTokens": 99,
+        "outputTokens": 53,
+        "totalTokens": 152,
+        "searchQueries": []
+      }
+    },
+    {
+      "questionId": "q27",
+      "modelId": "gpt",
+      "regionId": "eu",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **DEGSON**",
+      "modelName": "gpt-5.6-sol",
+      "latencyMs": 5147,
+      "mentions": [
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "degson",
+          "start": 4,
+          "end": 10
+        }
+      ],
+      "usage": {
+        "inputTokens": 12816,
+        "outputTokens": 57,
+        "totalTokens": 12873,
+        "reasoningTokens": 47,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?"
+        ]
+      }
+    },
+    {
+      "questionId": "q27",
+      "modelId": "gemini",
+      "regionId": "eu",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **DEGSON**",
+      "modelName": "gemini-3.5-flash",
+      "latencyMs": 3479,
+      "mentions": [
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "degson",
+          "start": 4,
+          "end": 10
+        }
+      ],
+      "usage": {
+        "inputTokens": 106,
+        "outputTokens": 5,
+        "totalTokens": 111,
+        "searchQueries": []
+      }
+    },
+    {
+      "questionId": "q28",
+      "modelId": "gpt",
+      "regionId": "eu",
+      "status": "error",
+      "error": "GPT 没有返回有效内容。"
+    },
+    {
+      "questionId": "q28",
+      "modelId": "gemini",
+      "regionId": "eu",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **APEKS**\n- **Feyree**\n- **CHINAEVSE**\n- **Langchi**\n- **Sunkean**",
+      "modelName": "gemini-3.5-flash",
+      "latencyMs": 3863,
+      "mentions": [
+        {
+          "brandId": "feyree",
+          "brandName": "Feyree",
+          "count": 1,
+          "firstIndex": 16,
+          "rank": 1
+        },
+        {
+          "brandId": "chinaevse",
+          "brandName": "CHINAEVSE",
+          "count": 1,
+          "firstIndex": 29,
+          "rank": 2
+        },
+        {
+          "brandId": "langchi",
+          "brandName": "Langchi",
+          "count": 1,
+          "firstIndex": 45,
+          "rank": 3
+        },
+        {
+          "brandId": "sunkean",
+          "brandName": "Sunkean",
+          "count": 1,
+          "firstIndex": 59,
+          "rank": 4
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "feyree",
+          "start": 16,
+          "end": 22
+        },
+        {
+          "brandId": "chinaevse",
+          "start": 29,
+          "end": 38
+        },
+        {
+          "brandId": "langchi",
+          "start": 45,
+          "end": 52
+        },
+        {
+          "brandId": "sunkean",
+          "start": 59,
+          "end": 66
+        }
+      ],
+      "usage": {
+        "inputTokens": 91,
+        "outputTokens": 69,
+        "totalTokens": 160,
+        "searchQueries": [
+          "Chinese EV charging cable brands CE TUV certification"
+        ]
+      }
+    }
+  ]
+}

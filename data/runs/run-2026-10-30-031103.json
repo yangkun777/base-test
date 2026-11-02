@@ -1,0 +1,549 @@
+{
+  "id": "run-2026-10-30-031103",
+  "createdAt": "2026-10-30T03:11:03.169Z",
+  "regionId": "us",
+  "regionLabel": "美国（纽约）",
+  "models": [
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "model": "gemini-3.8-flash"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q24",
+      "text": "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?"
+    },
+    {
+      "id": "q25",
+      "text": "Which UL-certified PCB terminal blocks are recommended for 24V industrial PLC controllers?"
+    },
+    {
+      "id": "q26",
+      "text": "Which Chinese connector manufacturers offer complete DIN rail + PCB + feed-through terminal solutions with CE and UL dual certification?"
+    },
+    {
+      "id": "q27",
+      "text": "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?"
+    },
+    {
+      "id": "q28",
+      "text": "Which Chinese EV charging cable brands have obtained both CE and TUV certifications?"
+    }
+  ],
+  "brands": [
+    {
+      "id": "amphenol",
+      "name": "Amphenol",
+      "self": false
+    },
+    {
+      "id": "amphenolanytek",
+      "name": "Amphenol Anytek",
+      "self": false
+    },
+    {
+      "id": "degson",
+      "name": "Degson",
+      "self": true
+    },
+    {
+      "id": "dinkle",
+      "name": "Dinkle",
+      "self": false
+    },
+    {
+      "id": "henghuicable",
+      "name": "Henghui Cable",
+      "self": false
+    },
+    {
+      "id": "jiangnancable",
+      "name": "Jiangnan Cable",
+      "self": false
+    },
+    {
+      "id": "jonhon",
+      "name": "Jonhon",
+      "self": false
+    },
+    {
+      "id": "kaifengelectronics",
+      "name": "Kaifeng Electronics",
+      "self": false
+    },
+    {
+      "id": "molex",
+      "name": "Molex",
+      "self": false
+    },
+    {
+      "id": "phoenixcontact",
+      "name": "Phoenix Contact",
+      "self": false
+    },
+    {
+      "id": "sanco",
+      "name": "Sanco",
+      "self": false
+    },
+    {
+      "id": "staubli",
+      "name": "Stäubli",
+      "self": false
+    },
+    {
+      "id": "supuelectronics",
+      "name": "Supu Electronics",
+      "self": false
+    },
+    {
+      "id": "teconnectivity",
+      "name": "TE Connectivity",
+      "self": false
+    },
+    {
+      "id": "triumphcable",
+      "name": "Triumph Cable",
+      "self": false
+    },
+    {
+      "id": "wago",
+      "name": "WAGO",
+      "self": false
+    },
+    {
+      "id": "weidmuller",
+      "name": "Weidmüller",
+      "self": false
+    },
+    {
+      "id": "wielandelectric",
+      "name": "Wieland Electric",
+      "self": false
+    }
+  ],
+  "results": [
+    {
+      "questionId": "q24",
+      "modelId": "gemini",
+      "regionId": "us",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Phoenix Contact**\n- **WAGO**\n- **Weidmüller**\n- **TE Connectivity**\n- **Wieland Electric**\n- **Degson**",
+      "modelName": "gemini-3.8-flash",
+      "latencyMs": 8101,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "wago",
+          "brandName": "WAGO",
+          "count": 1,
+          "firstIndex": 26,
+          "rank": 2
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 1,
+          "firstIndex": 37,
+          "rank": 3
+        },
+        {
+          "brandId": "teconnectivity",
+          "brandName": "TE Connectivity",
+          "count": 1,
+          "firstIndex": 54,
+          "rank": 4
+        },
+        {
+          "brandId": "wielandelectric",
+          "brandName": "Wieland Electric",
+          "count": 1,
+          "firstIndex": 76,
+          "rank": 5
+        },
+        {
+          "brandId": "degson",
+          "brandName": "Degson",
+          "count": 1,
+          "firstIndex": 99,
+          "rank": 6
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 4,
+          "end": 19
+        },
+        {
+          "brandId": "wago",
+          "start": 26,
+          "end": 30
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 37,
+          "end": 47
+        },
+        {
+          "brandId": "teconnectivity",
+          "start": 54,
+          "end": 69
+        },
+        {
+          "brandId": "wielandelectric",
+          "start": 76,
+          "end": 92
+        },
+        {
+          "brandId": "degson",
+          "start": 99,
+          "end": 105
+        }
+      ],
+      "usage": {
+        "inputTokens": 118,
+        "outputTokens": 39,
+        "totalTokens": 157,
+        "searchQueries": [
+          "Which UL certified PCB terminal blocks would you recommend for 24V industrial PLC controllers"
+        ]
+      }
+    },
+    {
+      "questionId": "q25",
+      "modelId": "gemini",
+      "regionId": "us",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Phoenix Contact**\n- **WAGO**\n- **Weidmüller**\n- **TE Connectivity**\n- **Amphenol Anytek**\n- **Molex**\n- **Dinkle**",
+      "modelName": "gemini-3.8-flash",
+      "latencyMs": 10872,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "wago",
+          "brandName": "WAGO",
+          "count": 1,
+          "firstIndex": 26,
+          "rank": 2
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 1,
+          "firstIndex": 37,
+          "rank": 3
+        },
+        {
+          "brandId": "teconnectivity",
+          "brandName": "TE Connectivity",
+          "count": 1,
+          "firstIndex": 54,
+          "rank": 4
+        },
+        {
+          "brandId": "amphenolanytek",
+          "brandName": "Amphenol Anytek",
+          "count": 1,
+          "firstIndex": 76,
+          "rank": 5
+        },
+        {
+          "brandId": "molex",
+          "brandName": "Molex",
+          "count": 1,
+          "firstIndex": 98,
+          "rank": 6
+        },
+        {
+          "brandId": "dinkle",
+          "brandName": "Dinkle",
+          "count": 1,
+          "firstIndex": 110,
+          "rank": 7
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 4,
+          "end": 19
+        },
+        {
+          "brandId": "wago",
+          "start": 26,
+          "end": 30
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 37,
+          "end": 47
+        },
+        {
+          "brandId": "teconnectivity",
+          "start": 54,
+          "end": 69
+        },
+        {
+          "brandId": "amphenolanytek",
+          "start": 76,
+          "end": 91
+        },
+        {
+          "brandId": "molex",
+          "start": 98,
+          "end": 103
+        },
+        {
+          "brandId": "dinkle",
+          "start": 110,
+          "end": 116
+        }
+      ],
+      "usage": {
+        "inputTokens": 94,
+        "outputTokens": 45,
+        "totalTokens": 139,
+        "searchQueries": []
+      }
+    },
+    {
+      "questionId": "q26",
+      "modelId": "gemini",
+      "regionId": "us",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Dinkle**\n- **Degson**\n- **Supu Electronics**\n- **Cixi WanJie Electronic (Wanjie)**\n- **Kaifeng Electronics**",
+      "modelName": "gemini-3.8-flash",
+      "latencyMs": 5360,
+      "mentions": [
+        {
+          "brandId": "dinkle",
+          "brandName": "Dinkle",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "degson",
+          "brandName": "Degson",
+          "count": 1,
+          "firstIndex": 17,
+          "rank": 2
+        },
+        {
+          "brandId": "supuelectronics",
+          "brandName": "Supu Electronics",
+          "count": 1,
+          "firstIndex": 30,
+          "rank": 3
+        },
+        {
+          "brandId": "kaifengelectronics",
+          "brandName": "Kaifeng Electronics",
+          "count": 1,
+          "firstIndex": 91,
+          "rank": 4
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "dinkle",
+          "start": 4,
+          "end": 10
+        },
+        {
+          "brandId": "degson",
+          "start": 17,
+          "end": 23
+        },
+        {
+          "brandId": "supuelectronics",
+          "start": 30,
+          "end": 46
+        },
+        {
+          "brandId": "kaifengelectronics",
+          "start": 91,
+          "end": 110
+        }
+      ],
+      "usage": {
+        "inputTokens": 122,
+        "outputTokens": 39,
+        "totalTokens": 161,
+        "searchQueries": [
+          "Chinese connector manufacturers complete DIN rail PCB feed through terminal solutions CE UL certification"
+        ]
+      }
+    },
+    {
+      "questionId": "q27",
+      "modelId": "gemini",
+      "regionId": "us",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Amphenol**\n- **Phoenix Contact**\n- **TE Connectivity**\n- **Stäubli**\n- **Jonhon**\n- **Sanco**",
+      "modelName": "gemini-3.8-flash",
+      "latencyMs": 4919,
+      "mentions": [
+        {
+          "brandId": "amphenol",
+          "brandName": "Amphenol",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 19,
+          "rank": 2
+        },
+        {
+          "brandId": "teconnectivity",
+          "brandName": "TE Connectivity",
+          "count": 1,
+          "firstIndex": 41,
+          "rank": 3
+        },
+        {
+          "brandId": "staubli",
+          "brandName": "Stäubli",
+          "count": 1,
+          "firstIndex": 63,
+          "rank": 4
+        },
+        {
+          "brandId": "jonhon",
+          "brandName": "Jonhon",
+          "count": 1,
+          "firstIndex": 77,
+          "rank": 5
+        },
+        {
+          "brandId": "sanco",
+          "brandName": "Sanco",
+          "count": 1,
+          "firstIndex": 90,
+          "rank": 6
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "amphenol",
+          "start": 4,
+          "end": 12
+        },
+        {
+          "brandId": "phoenixcontact",
+          "start": 19,
+          "end": 34
+        },
+        {
+          "brandId": "teconnectivity",
+          "start": 41,
+          "end": 56
+        },
+        {
+          "brandId": "staubli",
+          "start": 63,
+          "end": 70
+        },
+        {
+          "brandId": "jonhon",
+          "start": 77,
+          "end": 83
+        },
+        {
+          "brandId": "sanco",
+          "start": 90,
+          "end": 95
+        }
+      ],
+      "usage": {
+        "inputTokens": 129,
+        "outputTokens": 36,
+        "totalTokens": 165,
+        "searchQueries": [
+          "energy storage connector brands UL4128 TUV dual certified 50A 600A"
+        ]
+      }
+    },
+    {
+      "questionId": "q28",
+      "modelId": "gemini",
+      "regionId": "us",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **APEKS**\n- **Triumph Cable**\n- **Henghui Cable**\n- **Jiangnan Cable**",
+      "modelName": "gemini-3.8-flash",
+      "latencyMs": 9958,
+      "mentions": [
+        {
+          "brandId": "triumphcable",
+          "brandName": "Triumph Cable",
+          "count": 1,
+          "firstIndex": 16,
+          "rank": 1
+        },
+        {
+          "brandId": "henghuicable",
+          "brandName": "Henghui Cable",
+          "count": 1,
+          "firstIndex": 36,
+          "rank": 2
+        },
+        {
+          "brandId": "jiangnancable",
+          "brandName": "Jiangnan Cable",
+          "count": 1,
+          "firstIndex": 56,
+          "rank": 3
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "triumphcable",
+          "start": 16,
+          "end": 29
+        },
+        {
+          "brandId": "henghuicable",
+          "start": 36,
+          "end": 49
+        },
+        {
+          "brandId": "jiangnancable",
+          "start": 56,
+          "end": 70
+        }
+      ],
+      "usage": {
+        "inputTokens": 114,
+        "outputTokens": 55,
+        "totalTokens": 169,
+        "searchQueries": [
+          "Chinese EV charging cable brands have obtained both CE and TUV certifications"
+        ]
+      }
+    }
+  ]
+}

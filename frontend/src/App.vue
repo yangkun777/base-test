@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRun } from './composables/useRun'
 import { aggregate, brandsFromRun, degsonReport, type DegsonModelCell } from './lib/aggregate'
 import SovBars from './components/SovBars.vue'
@@ -7,14 +7,19 @@ import RankTable from './components/RankTable.vue'
 import Inspector from './components/Inspector.vue'
 import RunProgress from './components/RunProgress.vue'
 import QuestionBank from './components/QuestionBank.vue'
+import AnalysisReport from './components/AnalysisReport.vue'
+const analysisPanel = ref<InstanceType<typeof AnalysisReport> | null>(null)
 
-const { state, init, selectRun, startRun } = useRun()
+const { state, init, selectRun, startRun, stopRun, progressDone } = useRun()
 
 onMounted(init)
 
 const report = computed(() => state.currentRun ? degsonReport(state.currentRun) : null)
 const runBrands = computed(() => state.currentRun ? brandsFromRun(state.currentRun) : [])
 const agg = computed(() => state.currentRun ? aggregate(state.currentRun, runBrands.value) : null)
+const failedResults = computed(() => (state.currentRun?.results || []).filter(result => result.status === 'error'))
+const noBrandResults = computed(() => (state.currentRun?.results || []).filter(result => result.status === 'ok' && !result.mentions?.length))
+const plannedCount = computed(() => state.currentRun?.plannedCount ?? ((state.currentRun?.questions?.length || 0) * (state.currentRun?.models.length || 0)))
 const selectedModelCount = computed(() => state.meta?.models.filter(model => model.configured && state.selectedModelIds.includes(model.id)).length || 0)
 const plannedRequests = computed(() => (state.meta?.questions.length || 0) * selectedModelCount.value)
 
@@ -31,10 +36,10 @@ function rateOf(run: NonNullable<typeof state.currentRun>) {
   const summary = degsonReport(run)
   const brands = brandsFromRun(run)
   const stats = aggregate(run, brands)
-  const slot = stats.slotCount || 0
-  const questions = stats.questionCount || 0
-  const mention = slot ? (stats.byBrand.degson?.total || 0) / slot : 0
-  const first = slot ? (stats.byBrand.degson?.top1 || 0) / slot : 0
+  const valid = stats.okCount
+  const questions = stats.completeQuestionCount
+  const mention = valid ? (stats.byBrand.degson?.total || 0) / valid : 0
+  const first = valid ? (stats.byBrand.degson?.top1 || 0) / valid : 0
   const models = summary.models.map(model => model.id)
   const agreed = questions
     ? summary.rows.filter(row => models.every(id => row.byModel[id]?.mentioned)).length / questions
@@ -44,7 +49,8 @@ function rateOf(run: NonNullable<typeof state.currentRun>) {
 
 const score = computed(() => state.currentRun ? rateOf(state.currentRun) : 0)
 const scoreDelta = computed(() => {
-  if (!state.currentRun || !state.previousRun?.results?.length) return null
+  if (!state.currentRun || !agg.value?.okCount || !state.previousRun?.results?.length) return null
+  if (state.currentRun.regionId !== state.previousRun.regionId) return null
   return score.value - rateOf(state.previousRun)
 })
 
@@ -54,13 +60,14 @@ const covered = computed(() => {
   if (!run || !summary) return { ok: 0, total: 0 }
   const questions = run.questions?.map(item => item.id) || [...new Set(run.results.map(item => item.questionId))]
   const models = summary.models.map(model => model.id)
-  const ok = questions.filter(questionId => models.every(modelId =>
+  const attempted = questions.filter(questionId => models.every(modelId =>
+    run.results.some(item => item.questionId === questionId && item.modelId === modelId)
+  ))
+  const ok = attempted.filter(questionId => models.every(modelId =>
     run.results.some(item => item.questionId === questionId && item.modelId === modelId && item.status === 'ok')
   )).length
-  return { ok, total: questions.length }
+  return { ok, total: attempted.length }
 })
-
-const callCount = computed(() => state.currentRun?.results.length || plannedRequests.value)
 
 function resultNote(row: { byModel: Record<string, DegsonModelCell> }) {
   const named = report.value?.models.filter(model => row.byModel[model.id]?.mentioned).map(model => model.label) || []
@@ -70,7 +77,9 @@ function resultNote(row: { byModel: Record<string, DegsonModelCell> }) {
 
 function rankLabel(cell: DegsonModelCell | undefined) {
   if (!cell) return '—'
+  if (cell.notRun) return '未测试（已停止）'
   if (cell.error) return '调用失败'
+  if (cell.noBrand) return '未提及任何品牌（不计入）'
   if (!cell.mentioned || cell.rank == null) return '未提及'
   if (!cell.before.length) return `第 ${cell.rank} 位`
   return `第 ${cell.rank} 位（${cell.before.join('、')} 之后）`
@@ -92,7 +101,7 @@ function exportDocx() {
     <nav class="nav" aria-label="主导航">
       <div class="nav-brand"><span>D</span>Degson</div>
       <div class="nav-links">
-        <span class="nav-link active">GEO 追踪</span>
+        <span class="nav-link active">GEO 基线测试</span>
         <span class="nav-link" title="当前版本未接入">声量对称</span>
         <span class="nav-link" title="当前版本未接入">关键词分析</span>
         <span class="nav-link" title="当前版本未接入">竞品监控</span>
@@ -102,34 +111,55 @@ function exportDocx() {
 
     <div class="page">
     <header class="topbar">
+      <div class="header-intro">
       <div class="brand">
         <div class="logo">D</div>
         <div>
-          <h1>Degson · 海外 GEO 追踪</h1>
+          <h1>GEO 基线测试</h1>
           <p class="subtitle">工业连接器品牌提及 / GPT / Gemini 双模型可见性分析</p>
         </div>
       </div>
-      <div class="actions">
-        <select v-if="state.runs.length" class="run-select" :value="state.currentRun?.id" @change="onSelectRun">
+      <div class="actions history-actions">
+        <span v-if="state.runs.length && !state.running" class="control-label">历史记录</span>
+        <select v-if="state.runs.length && !state.running" class="run-select history-select" aria-label="查看历史测试记录" :value="state.currentRun?.id" @change="onSelectRun">
           <option v-for="run in state.runs" :key="run.id" :value="run.id">
-            {{ new Date(run.createdAt).toLocaleString('zh-CN', { hour12: false }) }}
+            {{ new Date(run.createdAt).toLocaleString('zh-CN', { hour12: false }) }} · {{ run.regionLabel || '未指定地区' }}{{ run.stoppedByUser ? ' · 主动停止' : '' }}{{ run.hasReport ? ' · 已有报告' : '' }}
           </option>
         </select>
         <button class="export-btn" :disabled="!state.currentRun || state.running || state.loading" @click="exportDocx">导出 Word</button>
+        <button class="export-btn analysis-report-btn" :aria-busy="analysisPanel?.busy || false" :title="analysisPanel?.hasContent ? '查看已生成的报告，不消耗 Key' : '用项目现有 GPT Key 生成分析报告'" :disabled="!state.currentRun || state.running || state.loading || !analysisPanel || analysisPanel.busy || analysisPanel.loading" @click="analysisPanel?.activate()"><span v-if="analysisPanel?.busy" class="analysis-button-spinner" aria-hidden="true"></span>{{ analysisPanel?.label || '生成分析报告' }}</button>
+        <button v-if="analysisPanel?.busy" class="export-btn" :disabled="analysisPanel.stopping" title="停止后保留已完成内容；已发出的请求仍可能计费" @click="analysisPanel?.stop()">{{ analysisPanel.stopping ? '正在停止…' : '停止生成' }}</button>
+        <p v-if="analysisPanel?.feedback" class="analysis-feedback" :class="{ failed: analysisPanel.failed }" :role="analysisPanel.failed ? 'alert' : 'status'">{{ analysisPanel?.feedback }}</p>
+      </div>
+      </div>
+      <div class="test-settings">
+        <label v-if="state.meta" class="region-picker">
+          <span>测试地区</span>
+          <select v-model="state.selectedRegionId" class="run-select" :disabled="state.running" aria-label="本轮测试地区">
+            <option value="" disabled>请选择地区</option>
+            <option v-for="region in state.meta.regions" :key="region.id" :value="region.id">{{ region.label }}</option>
+          </select>
+        </label>
         <div v-if="state.meta" class="model-picker" role="group" aria-label="本轮评测模型">
+          <span class="control-label">测试模型</span>
           <label v-for="model in state.meta.models" :key="model.id" class="model-option" :class="{ on: state.selectedModelIds.includes(model.id), unavailable: !model.configured }">
             <input v-model="state.selectedModelIds" type="checkbox" :value="model.id" :disabled="state.running || !model.configured" />
             <span>{{ model.label }}</span>
           </label>
         </div>
+        <div class="launch-actions">
         <button
           class="run-btn"
-          :disabled="state.running || state.loading || !state.meta?.questions.length || !selectedModelCount"
+          :disabled="state.running || state.loading || !state.selectedRegionId || !state.meta?.questions.length || !selectedModelCount"
           @click="startRun"
         >{{ state.running ? '评测中…' : '发起新一轮评测' }}</button>
+        <button v-if="state.running" class="stop-btn" :disabled="state.stopRequested || progressDone === state.progress.length" @click="stopRun">
+          {{ state.stopRequested ? '正在停止…' : '停止并查看本轮结果' }}
+        </button>
+        </div>
       </div>
       <p v-if="state.meta && !state.loading" class="run-estimate">
-        {{ state.currentRun ? '本轮' : '预计' }} {{ state.currentRun?.questions?.length || state.meta.questions.length }} 题 · {{ state.currentRun?.models.length || selectedModelCount }} 模型 · {{ callCount }} 次调研
+        <span>本轮设置：{{ state.meta.questions.length }} 题 · {{ selectedModelCount }} 个模型 · 预计 {{ plannedRequests }} 次调用</span><span v-if="state.currentRun">当前结果：{{ state.currentRun.regionLabel || '未指定地区' }} · {{ state.currentRun.results.length }} 条回答</span>
       </p>
     </header>
 
@@ -141,30 +171,53 @@ function exportDocx() {
         <QuestionBank />
         <RunProgress v-if="state.running" />
 
-        <template v-if="state.currentRun && report && agg">
+        <template v-if="!state.running && state.currentRun && report && agg">
+          <AnalysisReport ref="analysisPanel" :run="state.currentRun" />
+          <div v-if="state.currentRun.stoppedByUser" class="stopped-banner" role="status">
+            用户中途主动停止：本轮实际完成 {{ state.currentRun.results.length }} / 原计划 {{ state.currentRun.plannedCount || state.currentRun.results.length }} 条调用。以下统计仅依据实际完成的结果；失败作答不计入提及率分母。
+          </div>
+          <section class="card">
+            <div class="card-title">调用覆盖与统计说明</div>
+            <p>计划 {{ plannedCount }} 次；成功 {{ state.currentRun.results.filter(r => r.status === 'ok').length }} 次；失败 {{ failedResults.length }} 次；未运行 {{ Math.max(0, plannedCount - state.currentRun.results.length) }} 次。排除不涉及品牌的问题后，{{ agg.okCount }} 条成功回答计入品牌提及率。</p>
+            <p>顺位为已识别品牌在全文中的首次出现顺序，背景文字也可能计入，并不代表推荐排名。</p>
+            <p v-if="state.currentRun.analysis?.reanalyzed">当前展示按解析规则 v{{ state.currentRun.analysis.parserVersion }} 重新解析；原始记录未修改。</p>
+            <details v-if="failedResults.length">
+              <summary>查看全部失败调用（{{ failedResults.length }}）</summary>
+              <ul><li v-for="(result, index) in failedResults" :key="index">{{ state.currentRun.questions?.find(q => q.id === result.questionId)?.text || result.questionId }} · {{ state.currentRun.models.find(m => m.id === result.modelId)?.label || result.modelId }}：{{ result.error || '未知错误' }}</li></ul>
+            </details>
+          </section>
+          <section v-if="noBrandResults.length" class="card" aria-label="未提及任何品牌的回答">
+            <div class="card-title">以下回答不计入品牌提及率</div>
+            <p class="card-sub">这些成功回答中未识别到任何品牌，因此不计入品牌提及率分母。按每个模型的回答分别判断；提到竞品但未提到 DEGSON 的回答仍计入。原始回答保留在下方。</p>
+            <ul>
+              <li v-for="result in noBrandResults" :key="`${result.questionId}-${result.modelId}`">{{ state.currentRun.questions?.find(q => q.id === result.questionId)?.text || result.questionId }} <span class="quiet">（{{ state.currentRun.models.find(m => m.id === result.modelId)?.label || result.modelId }} · 未提及任何品牌）</span></li>
+            </ul>
+          </section>
+          <p v-if="agg.okCount === 0" class="card" role="status">本轮没有可计入品牌统计的成功回答，品牌提及率和得分不适用；以下原始回答仍可查看。</p>
           <section class="metrics" aria-label="本轮概览">
             <article class="metric">
               <div class="metric-icon green">%</div>
               <div>
-                <div class="metric-label">Degson 提及率</div>
-                <div class="metric-value">{{ mentionHits }}<span> / {{ agg.slotCount }}</span> <em>{{ agg.slotCount ? (mentionHits / agg.slotCount * 100).toFixed(1) : '0.0' }}%</em></div>
-                <p>同一回答多次只计 1，GPT 与 Gemini 分开计</p>
+                <div class="metric-label">Degson 提及率（失败作答不计入总题数）</div>
+                <div class="metric-value">{{ mentionHits }}<span> / {{ agg.okCount }}</span> <em>{{ agg.okCount ? (mentionHits / agg.okCount * 100).toFixed(1) + '%' : '—' }}</em></div>
+                <p>仅统计成功且提及任意品牌的回答；同一回答多次只计 1</p>
+                <p>本轮 {{ noBrandResults.length }} 条成功回答未提及任何品牌，不计入分母。</p>
               </div>
               <ul>
-                <li v-for="item in report.rates" :key="item.id"><span>{{ item.label }}</span><b>{{ item.hits }} / {{ item.denom }}</b></li>
+                <li v-for="item in report.rates" :key="item.id"><span>{{ item.label }}</span><b>{{ item.hits }} / {{ item.denom }}（{{ item.denom ? item.pct.toFixed(1) + '%' : '—' }}）</b></li>
               </ul>
             </article>
             <article class="metric">
               <div class="metric-icon violet">1</div>
               <div>
                 <div class="metric-label">首次提及次数</div>
-                <div class="metric-value">{{ firstHits }}<span> / {{ agg.slotCount }}</span> <em>{{ agg.slotCount ? (firstHits / agg.slotCount * 100).toFixed(1) : '0.0' }}%</em></div>
+                <div class="metric-value">{{ firstHits }}<span> / {{ agg.okCount }}</span> <em>{{ agg.okCount ? (firstHits / agg.okCount * 100).toFixed(1) + '%' : '—' }}</em></div>
                 <p>Degson 排在第 1 位的回答次数</p>
               </div>
               <ul>
                 <li v-for="model in report.models" :key="model.id">
                   <span>{{ model.label }}</span>
-                  <b>{{ report.rows.filter(row => row.byModel[model.id]?.rank === 1).length }} / {{ report.questionCount }}</b>
+                  <b>{{ report.rows.filter(row => row.byModel[model.id]?.rank === 1).length }} / {{ agg.okByModel[model.id] || 0 }}</b>
                 </li>
               </ul>
             </article>
@@ -172,7 +225,7 @@ function exportDocx() {
               <div class="metric-icon gold">★</div>
               <div>
                 <div class="metric-label">品牌综合得分</div>
-                <div class="metric-value">{{ score }}<span> / 100</span> <em v-if="scoreDelta != null" :class="scoreDelta >= 0 ? 'up' : 'down'">{{ scoreDelta >= 0 ? '+' : '' }}{{ scoreDelta }}</em></div>
+                <div class="metric-value">{{ agg.okCount ? score : '—' }}<span> / 100</span> <em v-if="scoreDelta != null" :class="scoreDelta >= 0 ? 'up' : 'down'">{{ scoreDelta >= 0 ? '+' : '' }}{{ scoreDelta }}</em></div>
                 <p>提及率、第 1 位占比、双模型同时提及</p>
               </div>
             </article>
@@ -222,9 +275,9 @@ function exportDocx() {
               <div class="section-head">
                 <div>
                   <div class="card-title">各品牌提及率</div>
-                  <div class="card-sub">在所有问题的 GPT / Gemini 回答中，统计各品牌被提及的次数与占比。</div>
+                  <div class="card-sub">仅统计成功回答中的品牌提及，调用失败不计入分母。</div>
                 </div>
-                <strong class="section-stat">{{ mentionHits }} / {{ agg.slotCount }} 提及及 {{ agg.slotCount ? (mentionHits / agg.slotCount * 100).toFixed(1) : '0.0' }}%</strong>
+                <strong class="section-stat">{{ mentionHits }} / {{ agg.okCount }} 提及，{{ agg.okCount ? (mentionHits / agg.okCount * 100).toFixed(1) + '%' : '—' }}</strong>
               </div>
               <SovBars :brands="runBrands" :agg="agg" />
             </section>
@@ -232,7 +285,7 @@ function exportDocx() {
               <div class="section-head">
                 <div>
                   <div class="card-title">各品牌首次提及及排名</div>
-                  <div class="card-sub">GPT / Gemini 分别计算，合计是两个模型的槽位之和。</div>
+                  <div class="card-sub">按提及总次数排序，只显示前 12 位；GPT / Gemini 分别计算。</div>
                 </div>
               </div>
               <RankTable :brands="runBrands" :agg="agg" />
@@ -248,7 +301,7 @@ function exportDocx() {
 
         <div v-else-if="!state.running" class="empty card">
           <h2>尚无评测数据</h2>
-          <p>在上方维护问题后，点击「发起新一轮评测」。系统会按当前题库和所选模型串行评测，模型会先联网搜索再作答，再统计回答里抽出的品牌曝光。联网后整轮会更久，请稍候。</p>
+          <p>在上方选择测试地区和模型后，点击「发起新一轮评测」。系统会按所选地区重新测试全部问题，再统计回答中的品牌曝光。</p>
         </div>
       </template>
     </main>
@@ -289,16 +342,24 @@ function exportDocx() {
 }
 
 .topbar {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 10px 0 4px;
 }
+.header-intro{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.control-label{font-size:12px;color:var(--muted);white-space:nowrap}
+.history-actions{min-width:0;flex:0 1 auto}
+.history-select{width:328px;min-width:0;max-width:100%}
+.test-settings{display:flex;align-items:center;gap:24px;flex-wrap:wrap;padding-top:16px;border-top:1px solid var(--border)}
+.launch-actions{display:flex;align-items:center;gap:8px;margin-left:auto;flex-wrap:wrap}
 
 .brand {
   display: flex;
   align-items: center;
   gap: var(--space-3);
+  min-width:260px;
+  flex:1 0 260px;
 }
 
 .logo {
@@ -312,9 +373,10 @@ function exportDocx() {
   font-size: 16px;
   font-weight: 700;
   color: #fff;
+  flex-shrink:0;
 }
 
-h1 { font-size: 18px; letter-spacing: 0; }
+h1 { font-size: 20px; letter-spacing: 0; white-space:nowrap; line-height:1.4; }
 
 .subtitle {
   margin: 1px 0 0;
@@ -323,11 +385,12 @@ h1 { font-size: 18px; letter-spacing: 0; }
 }
 
 .model-picker { display: flex; align-items: center; gap: 8px; }
+.region-picker { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); font-size: 13px; white-space: nowrap; }
 .model-option { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: 8px; background: #fff; color: var(--ink-2); font-size: 13px; cursor: pointer; }
 .model-option.on { border-color: #bfd0fb; background: var(--accent-soft); color: var(--accent); font-weight: 650; }
 .model-option.unavailable { opacity: 0.5; cursor: default; }
 .model-option input { margin: 0; accent-color: var(--accent); }
-.run-estimate { grid-column: 2; margin: 0; color: var(--muted); font-size: 12px; text-align: right; }
+.run-estimate { display:flex;justify-content:space-between;gap:8px 24px;flex-wrap:wrap;margin:0;color:var(--muted);font-size:12px;line-height:1.6; }
 .actions { display: flex; align-items: center; gap: 8px; justify-content: flex-end; flex-wrap: wrap; }
 
 .run-select, .export-btn, .run-btn { height: 34px; border-radius: 8px; font-size: 13px; }
@@ -349,6 +412,12 @@ h1 { font-size: 18px; letter-spacing: 0; }
 
 .export-btn:hover:not(:disabled) { border-color: var(--accent); }
 .export-btn:disabled { opacity: 0.45; cursor: default; }
+.analysis-feedback{flex-basis:100%;margin:6px 0;padding:10px 12px;border:1px solid #cbd5e1;border-radius:8px;background:#f8fafc;color:#475569;font-size:13px;line-height:1.65;overflow-wrap:anywhere;text-align:left}.analysis-feedback.failed{background:#fff1f2;border-color:#fecdd3;color:#b91c1c}
+.export-btn.analysis-report-btn{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:650;box-shadow:0 3px 10px #2563eb26}
+.export-btn.analysis-report-btn:hover:not(:disabled){opacity:.9}
+.export-btn.analysis-report-btn:focus-visible{outline:3px solid #bfd0fb;outline-offset:3px}
+.export-btn.analysis-report-btn:disabled{background:#e2e8f0;border-color:#cbd5e1;color:#64748b;box-shadow:none;opacity:1}
+.analysis-button-spinner{display:inline-block;width:12px;height:12px;margin-right:7px;vertical-align:middle;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:analysis-button-spin 1s linear infinite}@keyframes analysis-button-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.analysis-button-spinner{animation:none}}
 
 .run-btn {
   background: var(--accent);
@@ -360,6 +429,9 @@ h1 { font-size: 18px; letter-spacing: 0; }
 
 .run-btn:hover:not(:disabled) { opacity: 0.88; }
 .run-btn:disabled { opacity: 0.5; cursor: default; }
+.stop-btn { height: 34px; padding: 0 12px; border: 1px solid var(--bad); border-radius: 8px; background: #fff; color: var(--bad); font: inherit; font-size: 13px; font-weight: 650; cursor: pointer; }
+.stop-btn:disabled { opacity: 0.5; cursor: default; }
+.stopped-banner { padding: 12px 16px; border: 1px solid #f3c9c9; border-radius: 10px; background: #fff5f5; color: #8a2e2e; font-size: 13px; line-height: 1.5; }
 
 .content { display: flex; flex-direction: column; gap: 14px; }
 .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
@@ -478,8 +550,8 @@ h1 { font-size: 18px; letter-spacing: 0; }
 }
 
 @media (max-width: 1100px) {
-  .metrics, .split, .topbar { grid-template-columns: 1fr; }
-  .run-estimate, .actions { grid-column: auto; text-align: left; justify-content: flex-start; }
+  .metrics, .split { grid-template-columns: 1fr; }
   .nav-links { display: none; }
 }
+@media(max-width:720px){.header-intro{gap:16px}.brand{min-width:0;flex-basis:100%}.history-actions{width:100%;justify-content:flex-start;flex-wrap:nowrap}.history-select{flex:1;width:auto}.test-settings{gap:14px 20px}.launch-actions{margin-left:0;flex-basis:100%}.run-estimate{flex-direction:column;gap:4px}.subtitle{line-height:1.6}}
 </style>

@@ -1,0 +1,784 @@
+{
+  "id": "run-2026-10-30-031604",
+  "createdAt": "2026-10-30T03:16:04.984Z",
+  "regionId": "cn",
+  "regionLabel": "中国（上海）",
+  "models": [
+    {
+      "id": "gpt",
+      "label": "GPT",
+      "model": "gpt-6.1-terra"
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "model": "gemini-3.8-flash"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q24",
+      "text": "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?"
+    },
+    {
+      "id": "q25",
+      "text": "Which UL-certified PCB terminal blocks are recommended for 24V industrial PLC controllers?"
+    },
+    {
+      "id": "q26",
+      "text": "Which Chinese connector manufacturers offer complete DIN rail + PCB + feed-through terminal solutions with CE and UL dual certification?"
+    },
+    {
+      "id": "q27",
+      "text": "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?"
+    },
+    {
+      "id": "q28",
+      "text": "Which Chinese EV charging cable brands have obtained both CE and TUV certifications?"
+    }
+  ],
+  "brands": [
+    {
+      "id": "amphenol",
+      "name": "Amphenol",
+      "self": false
+    },
+    {
+      "id": "amphenolanytek",
+      "name": "Amphenol Anytek",
+      "self": false
+    },
+    {
+      "id": "degson",
+      "name": "DEGSON",
+      "self": true
+    },
+    {
+      "id": "dinkle",
+      "name": "Dinkle",
+      "self": false
+    },
+    {
+      "id": "eaton",
+      "name": "Eaton",
+      "self": false
+    },
+    {
+      "id": "jguang",
+      "name": "J-GUANG",
+      "self": false
+    },
+    {
+      "id": "molex",
+      "name": "Molex",
+      "self": false
+    },
+    {
+      "id": "phoenixcontact",
+      "name": "Phoenix Contact",
+      "self": false
+    },
+    {
+      "id": "sanlo",
+      "name": "Sanlo",
+      "self": false
+    },
+    {
+      "id": "staubli",
+      "name": "Stäubli",
+      "self": false
+    },
+    {
+      "id": "supuelectronics",
+      "name": "Supu Electronics",
+      "self": false
+    },
+    {
+      "id": "teconnectivity",
+      "name": "TE Connectivity",
+      "self": false
+    },
+    {
+      "id": "triumphcable",
+      "name": "Triumph Cable",
+      "self": false
+    },
+    {
+      "id": "wago",
+      "name": "WAGO",
+      "self": false
+    },
+    {
+      "id": "wanjieelectronic",
+      "name": "Wanjie Electronic",
+      "self": false
+    },
+    {
+      "id": "weidmuller",
+      "name": "Weidmüller",
+      "self": false
+    }
+  ],
+  "results": [
+    {
+      "questionId": "q24",
+      "modelId": "gpt",
+      "regionId": "cn",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Phoenix Contact**\n- **Weidmüller**\n- **WAGO**\n- **Eaton**\n- **DEGSON**",
+      "modelName": "gpt-6.1-terra",
+      "latencyMs": 23387,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 1,
+          "firstIndex": 26,
+          "rank": 2
+        },
+        {
+          "brandId": "wago",
+          "brandName": "WAGO",
+          "count": 1,
+          "firstIndex": 43,
+          "rank": 3
+        },
+        {
+          "brandId": "eaton",
+          "brandName": "Eaton",
+          "count": 1,
+          "firstIndex": 54,
+          "rank": 4
+        },
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 1,
+          "firstIndex": 66,
+          "rank": 5
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 4,
+          "end": 19
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 26,
+          "end": 36
+        },
+        {
+          "brandId": "wago",
+          "start": 43,
+          "end": 47
+        },
+        {
+          "brandId": "eaton",
+          "start": 54,
+          "end": 59
+        },
+        {
+          "brandId": "degson",
+          "start": 66,
+          "end": 72
+        }
+      ],
+      "usage": {
+        "inputTokens": 12831,
+        "outputTokens": 117,
+        "totalTokens": 12948,
+        "reasoningTokens": 83,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?"
+        ]
+      }
+    },
+    {
+      "questionId": "q24",
+      "modelId": "gemini",
+      "regionId": "cn",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Phoenix Contact**\n- **WAGO**\n- **Weidmüller**\n- **TE Connectivity**\n- **Molex**\n- **Degson**",
+      "modelName": "gemini-3.8-flash",
+      "latencyMs": 4889,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "wago",
+          "brandName": "WAGO",
+          "count": 1,
+          "firstIndex": 26,
+          "rank": 2
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 1,
+          "firstIndex": 37,
+          "rank": 3
+        },
+        {
+          "brandId": "teconnectivity",
+          "brandName": "TE Connectivity",
+          "count": 1,
+          "firstIndex": 54,
+          "rank": 4
+        },
+        {
+          "brandId": "molex",
+          "brandName": "Molex",
+          "count": 1,
+          "firstIndex": 76,
+          "rank": 5
+        },
+        {
+          "brandId": "degson",
+          "brandName": "Degson",
+          "count": 1,
+          "firstIndex": 88,
+          "rank": 6
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 4,
+          "end": 19
+        },
+        {
+          "brandId": "wago",
+          "start": 26,
+          "end": 30
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 37,
+          "end": 47
+        },
+        {
+          "brandId": "teconnectivity",
+          "start": 54,
+          "end": 69
+        },
+        {
+          "brandId": "molex",
+          "start": 76,
+          "end": 81
+        },
+        {
+          "brandId": "degson",
+          "start": 88,
+          "end": 94
+        }
+      ],
+      "usage": {
+        "inputTokens": 118,
+        "outputTokens": 37,
+        "totalTokens": 155,
+        "searchQueries": [
+          "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers"
+        ]
+      }
+    },
+    {
+      "questionId": "q25",
+      "modelId": "gpt",
+      "regionId": "cn",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Phoenix Contact**\n- **Weidmüller**\n- **WAGO**\n- **Eaton**\n- **IDEC**\n- **DEGSON**",
+      "modelName": "gpt-6.1-terra",
+      "latencyMs": 7953,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 1,
+          "firstIndex": 26,
+          "rank": 2
+        },
+        {
+          "brandId": "wago",
+          "brandName": "WAGO",
+          "count": 1,
+          "firstIndex": 43,
+          "rank": 3
+        },
+        {
+          "brandId": "eaton",
+          "brandName": "Eaton",
+          "count": 1,
+          "firstIndex": 54,
+          "rank": 4
+        },
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 1,
+          "firstIndex": 77,
+          "rank": 5
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 4,
+          "end": 19
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 26,
+          "end": 36
+        },
+        {
+          "brandId": "wago",
+          "start": 43,
+          "end": 47
+        },
+        {
+          "brandId": "eaton",
+          "start": 54,
+          "end": 59
+        },
+        {
+          "brandId": "degson",
+          "start": 77,
+          "end": 83
+        }
+      ],
+      "usage": {
+        "inputTokens": 12926,
+        "outputTokens": 152,
+        "totalTokens": 13078,
+        "reasoningTokens": 113,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which UL-certified PCB terminal blocks are recommended for 24V industrial PLC controllers?"
+        ]
+      }
+    },
+    {
+      "questionId": "q25",
+      "modelId": "gemini",
+      "regionId": "cn",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Phoenix Contact**\n- **WAGO**\n- **Weidmüller**\n- **TE Connectivity**\n- **Amphenol Anytek**\n- **Molex**\n- **Dinkle**",
+      "modelName": "gemini-3.8-flash",
+      "latencyMs": 8609,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "wago",
+          "brandName": "WAGO",
+          "count": 1,
+          "firstIndex": 26,
+          "rank": 2
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 1,
+          "firstIndex": 37,
+          "rank": 3
+        },
+        {
+          "brandId": "teconnectivity",
+          "brandName": "TE Connectivity",
+          "count": 1,
+          "firstIndex": 54,
+          "rank": 4
+        },
+        {
+          "brandId": "amphenolanytek",
+          "brandName": "Amphenol Anytek",
+          "count": 1,
+          "firstIndex": 76,
+          "rank": 5
+        },
+        {
+          "brandId": "molex",
+          "brandName": "Molex",
+          "count": 1,
+          "firstIndex": 98,
+          "rank": 6
+        },
+        {
+          "brandId": "dinkle",
+          "brandName": "Dinkle",
+          "count": 1,
+          "firstIndex": 110,
+          "rank": 7
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 4,
+          "end": 19
+        },
+        {
+          "brandId": "wago",
+          "start": 26,
+          "end": 30
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 37,
+          "end": 47
+        },
+        {
+          "brandId": "teconnectivity",
+          "start": 54,
+          "end": 69
+        },
+        {
+          "brandId": "amphenolanytek",
+          "start": 76,
+          "end": 91
+        },
+        {
+          "brandId": "molex",
+          "start": 98,
+          "end": 103
+        },
+        {
+          "brandId": "dinkle",
+          "start": 110,
+          "end": 116
+        }
+      ],
+      "usage": {
+        "inputTokens": 117,
+        "outputTokens": 45,
+        "totalTokens": 162,
+        "searchQueries": [
+          "Which UL-certified PCB terminal blocks are recommended for 24V industrial PLC controllers?"
+        ]
+      }
+    },
+    {
+      "questionId": "q26",
+      "modelId": "gpt",
+      "regionId": "cn",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **DEGSON**\n- **J-GUANG**\n- **JOINECT**",
+      "modelName": "gpt-6.1-terra",
+      "latencyMs": 8635,
+      "mentions": [
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "jguang",
+          "brandName": "J-GUANG",
+          "count": 1,
+          "firstIndex": 17,
+          "rank": 2
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "degson",
+          "start": 4,
+          "end": 10
+        },
+        {
+          "brandId": "jguang",
+          "start": 17,
+          "end": 24
+        }
+      ],
+      "usage": {
+        "inputTokens": 13003,
+        "outputTokens": 68,
+        "totalTokens": 13071,
+        "reasoningTokens": 68,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which Chinese connector manufacturers offer complete DIN rail + PCB + feed-through terminal solutions with CE and UL dual certification?"
+        ]
+      }
+    },
+    {
+      "questionId": "q26",
+      "modelId": "gemini",
+      "regionId": "cn",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **DEGSON**\n- **Dinkle**\n- **Supu Electronics**\n- **Sanlo**\n- **Wanjie Electronic**",
+      "modelName": "gemini-3.8-flash",
+      "latencyMs": 9446,
+      "mentions": [
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "dinkle",
+          "brandName": "Dinkle",
+          "count": 1,
+          "firstIndex": 17,
+          "rank": 2
+        },
+        {
+          "brandId": "supuelectronics",
+          "brandName": "Supu Electronics",
+          "count": 1,
+          "firstIndex": 30,
+          "rank": 3
+        },
+        {
+          "brandId": "sanlo",
+          "brandName": "Sanlo",
+          "count": 1,
+          "firstIndex": 53,
+          "rank": 4
+        },
+        {
+          "brandId": "wanjieelectronic",
+          "brandName": "Wanjie Electronic",
+          "count": 1,
+          "firstIndex": 65,
+          "rank": 5
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "degson",
+          "start": 4,
+          "end": 10
+        },
+        {
+          "brandId": "dinkle",
+          "start": 17,
+          "end": 23
+        },
+        {
+          "brandId": "supuelectronics",
+          "start": 30,
+          "end": 46
+        },
+        {
+          "brandId": "sanlo",
+          "start": 53,
+          "end": 58
+        },
+        {
+          "brandId": "wanjieelectronic",
+          "start": 65,
+          "end": 82
+        }
+      ],
+      "usage": {
+        "inputTokens": 122,
+        "outputTokens": 32,
+        "totalTokens": 154,
+        "searchQueries": [
+          "Chinese connector manufacturers complete DIN rail PCB feed through terminal CE UL dual certification"
+        ]
+      }
+    },
+    {
+      "questionId": "q27",
+      "modelId": "gpt",
+      "regionId": "cn",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **DEGSON**",
+      "modelName": "gpt-6.1-terra",
+      "latencyMs": 4974,
+      "mentions": [
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "degson",
+          "start": 4,
+          "end": 10
+        }
+      ],
+      "usage": {
+        "inputTokens": 12897,
+        "outputTokens": 71,
+        "totalTokens": 12968,
+        "reasoningTokens": 59,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?"
+        ]
+      }
+    },
+    {
+      "questionId": "q27",
+      "modelId": "gemini",
+      "regionId": "cn",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Amphenol**\n- **TE Connectivity**\n- **Phoenix Contact**\n- **HARTING**\n- **Stäubli**",
+      "modelName": "gemini-3.8-flash",
+      "latencyMs": 3505,
+      "mentions": [
+        {
+          "brandId": "amphenol",
+          "brandName": "Amphenol",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "teconnectivity",
+          "brandName": "TE Connectivity",
+          "count": 1,
+          "firstIndex": 19,
+          "rank": 2
+        },
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 41,
+          "rank": 3
+        },
+        {
+          "brandId": "staubli",
+          "brandName": "Stäubli",
+          "count": 1,
+          "firstIndex": 77,
+          "rank": 4
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "amphenol",
+          "start": 4,
+          "end": 12
+        },
+        {
+          "brandId": "teconnectivity",
+          "start": 19,
+          "end": 34
+        },
+        {
+          "brandId": "phoenixcontact",
+          "start": 41,
+          "end": 56
+        },
+        {
+          "brandId": "staubli",
+          "start": 77,
+          "end": 84
+        }
+      ],
+      "usage": {
+        "inputTokens": 129,
+        "outputTokens": 31,
+        "totalTokens": 160,
+        "searchQueries": [
+          "energy storage connector UL4128 TUV dual certified 50A 600A brands"
+        ]
+      }
+    },
+    {
+      "questionId": "q28",
+      "modelId": "gpt",
+      "regionId": "cn",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **MIDA**\n- **AUPINS**\n- **Slocable**\n- **ZENCAR**",
+      "modelName": "gpt-6.1-terra",
+      "latencyMs": 8976,
+      "mentions": [],
+      "matches": [],
+      "usage": {
+        "inputTokens": 12857,
+        "outputTokens": 311,
+        "totalTokens": 13168,
+        "reasoningTokens": 283,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which Chinese EV charging cable brands have obtained both CE and TUV certifications?"
+        ]
+      }
+    },
+    {
+      "questionId": "q28",
+      "modelId": "gemini",
+      "regionId": "cn",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **BESEN**\n- **APEKS**\n- **Triumph Cable**",
+      "modelName": "gemini-3.8-flash",
+      "latencyMs": 3507,
+      "mentions": [
+        {
+          "brandId": "triumphcable",
+          "brandName": "Triumph Cable",
+          "count": 1,
+          "firstIndex": 28,
+          "rank": 1
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "triumphcable",
+          "start": 28,
+          "end": 41
+        }
+      ],
+      "usage": {
+        "inputTokens": 114,
+        "outputTokens": 18,
+        "totalTokens": 132,
+        "searchQueries": [
+          "Which Chinese EV charging cable brands have obtained both CE and TUV certifications"
+        ]
+      }
+    }
+  ]
+}

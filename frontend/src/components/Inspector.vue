@@ -70,6 +70,7 @@ function markStyle(brandId: string) {
         <div v-for="result in group.results" :key="`${result.questionId}-${result.modelId}`" class="model-line">
           <span class="model-name" :class="result.modelId">{{ modelLabel(result.modelId) }}</span>
           <span v-if="result.status === 'ok'" class="meta-info">
+            <span v-if="result.reusedFromRunId" class="reused-label" :title="`${result.reusedFromRunId} · ${result.modelName || ''}`">沿用旧回复</span>
             <span
               v-for="mention in result.mentions"
               :key="mention.brandId"
@@ -78,7 +79,7 @@ function markStyle(brandId: string) {
             >
               <i>{{ mention.rank }}</i>{{ brandName(mention.brandId, mention.brandName) }}
             </span>
-            <span v-if="!result.mentions?.length" class="no-mention">未抽到品牌</span>
+            <span v-if="!result.mentions?.length" class="no-mention">未提及任何品牌 · 不计入品牌提及率</span>
           </span>
           <span v-else class="error-info">调研失败：{{ result.error }}</span>
         </div>
@@ -86,6 +87,7 @@ function markStyle(brandId: string) {
       <div v-if="expanded[group.question.id]" class="full">
         <div v-for="result in group.results" :key="`full-${result.modelId}`" class="answer-body">
           <strong>{{ modelLabel(result.modelId) }}</strong>
+          <span v-if="result.reusedFromRunId" class="reused-detail">沿用 {{ result.reusedFromRunId }} · {{ result.modelName }}</span>
           <template v-if="result.status === 'ok'">
             <template v-for="(seg, i) in segments(result)" :key="i">
               <mark v-if="seg.brandId" :style="markStyle(seg.brandId)">{{ seg.text }}</mark>
@@ -124,6 +126,8 @@ function markStyle(brandId: string) {
 .model-name.gpt { color: var(--m-gpt); }
 .model-name.gemini { color: var(--m-gemini); }
 .meta-info { flex: 1; display: flex; flex-wrap: wrap; gap: 6px; }
+.reused-label { font-size: 12px; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 2px 8px; }
+.reused-detail { display: block; font-size: 12px; color: var(--muted); margin-bottom: 8px; }
 .mention-chip {
   display: inline-flex; align-items: center; gap: 4px;
   font-size: 12px; border-radius: 999px; padding: 2px 8px 2px 3px; white-space: nowrap;

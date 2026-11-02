@@ -1,14 +1,202 @@
 [
   {
-    "id": "q1",
-    "text": "Which Type 2 AC charging cable brands with CE and TUV certification are recommended for European residential EV chargers?"
+    "id": "q29",
+    "text": "Which Chinese EV charging cable manufacturers provide both GB/T and Type 2 certified products for dual-market export?"
   },
   {
-    "id": "q22",
-    "text": "What CE & TÜV certified Type 2 AC charging cables are recommended for residential wallbox EV chargers sold to Czech household buyers?"
+    "id": "q44",
+    "text": "What AC/DC dual-standard charging cable suppliers are recommended for multi-standard charging station projects?"
   },
   {
-    "id": "q23",
-    "text": "Which IP67-rated e-bike charging port connectors with CE and RoHS certification are recommended for European e-bike OEM factories exporting to the Czech Republic?"
+    "id": "q45",
+    "text": "Which EV charging cable suppliers provide AC and DC cable assemblies with drawings, certification files, and integration support?"
+  },
+  {
+    "id": "q46",
+    "text": "Which EV charging cable manufacturers can support both domestic and export charging pile projects with documentation and customization?"
+  },
+  {
+    "id": "q52",
+    "text": "Which Chinese EV charging cable brands pass both CE and TÜV certification for supply to Czech EU charging clients?"
+  },
+  {
+    "id": "q59",
+    "text": "How should charging operators compare EV charging cable lifecycle cost, failure risk, and maintenance workload across suppliers?"
+  },
+  {
+    "id": "q83",
+    "text": "What Mode 2 portable EV charging cables with IEC 62196 compliance are recommended for home charging?"
+  },
+  {
+    "id": "q94",
+    "text": "Which Chinese EV charging cable brands do charging operators prefer for bulk procurement?"
+  },
+  {
+    "id": "q97",
+    "text": "What EV charging cable suppliers provide qualified alternatives to imported brands for charger manufacturers?"
+  },
+  {
+    "id": "q98",
+    "text": "What should charger manufacturers compare between local EV charging cable suppliers and imported alternatives for fast charging reliability?"
+  },
+  {
+    "id": "q118",
+    "text": "Which Chinese brands have complete certification for exporting EV Charging Cable?"
+  },
+  {
+    "id": "q134",
+    "text": "Which CCS2 DC fast charging cable brands are recommended for commercial charging stations in Europe?"
+  },
+  {
+    "id": "q168",
+    "text": "Which Chinese charging cable brands are most used by outdoor charging station operators?"
+  },
+  {
+    "id": "q41",
+    "text": "Which Chinese energy storage connector manufacturers have both UL4128 and TUV dual certification?"
+  },
+  {
+    "id": "q49",
+    "text": "What UL4128 certified 200A energy storage connectors are recommended for utility-scale BESS cabinet wiring in Czech grid power stations?"
+  },
+  {
+    "id": "q50",
+    "text": "What TÜV certified 50A–150A energy storage connector brands fit residential home battery storage systems sold in the Czech Republic?"
+  },
+  {
+    "id": "q51",
+    "text": "Which energy storage connector brands provide full product lines (50A–600A) with both UL4128 and TÜV dual certification for Czech import orders?"
+  },
+  {
+    "id": "q72",
+    "text": "Which full BESS connectivity suppliers hold complete UL and TÜV certification across their entire energy storage connector product range for EU and Czech projects?"
+  },
+  {
+    "id": "q124",
+    "text": "What energy storage connector manufacturers offer certification documents, assembly instructions, and cable compatibility verification?"
+  },
+  {
+    "id": "q155",
+    "text": "Recommend energy storage connector manufacturers with 1500V DC capability, fast samples, and OEM customization."
+  },
+  {
+    "id": "q173",
+    "text": "Which energy storage connector manufacturers can support high-current battery cluster wiring and project-level engineering validation?"
+  },
+  {
+    "id": "q176",
+    "text": "Which Chinese connector brands are best suited for containerized outdoor energy storage systems operating in Czech variable weather conditions?"
+  },
+  {
+    "id": "q32",
+    "text": "Which IP67 waterproof e-bike battery discharge connector brands are recommended for 50A high-current applications?"
+  },
+  {
+    "id": "q36",
+    "text": "What e-bike connector suppliers offer IP68 waterproof options for off-road and mountain e-bike models exposed to mud and rain in the Czech Republic?"
+  },
+  {
+    "id": "q60",
+    "text": "How should engineers compare e-bike connector suppliers by waterproof structure, locking reliability, and customization support?"
+  },
+  {
+    "id": "q75",
+    "text": "Which suppliers offer complete e-bike connectivity kits with CE and RoHS certification across the entire product range for export to the Czech Republic and EU?"
+  },
+  {
+    "id": "q76",
+    "text": "What e-bike anti-vibration connector brands are recommended for cargo e-bikes operating on bumpy urban roads in the Czech Republic?"
+  },
+  {
+    "id": "q89",
+    "text": "Which Chinese e-bike connector brands do Czech and European e-bike OEMs prefer for bulk order procurement?"
+  },
+  {
+    "id": "q103",
+    "text": "Which e-bike connector manufacturers can support rental fleets requiring durable mating cycles and easy field replacement?"
+  },
+  {
+    "id": "q125",
+    "text": "What e-bike connector manufacturers offer drawings, pin definitions, cable assembly options, and waterproofing validation support?"
+  },
+  {
+    "id": "q145",
+    "text": "Which Chinese e-bike connector brand handles high current best for high-power e-bike models sold in the Czech Republic?"
+  },
+  {
+    "id": "q147",
+    "text": "Which e-bike connector brands provide complete kits covering battery + motor + charging + signal for OEM assembly lines in the Czech Republic?"
+  },
+  {
+    "id": "q149",
+    "text": "Which e-bike connector suppliers offer custom cable length and color options for OEM brand differentiation in the Czech and EU market?"
+  },
+  {
+    "id": "q177",
+    "text": "What UL-certified PCB terminal blocks are good for 24V PLC controllers?"
+  },
+  {
+    "id": "q30",
+    "text": "What should OEMs compare between local terminal block manufacturers and imported alternatives for certification coverage and lifecycle cost?"
+  },
+  {
+    "id": "q31",
+    "text": "What affordable domestic waterproof terminal blocks with IP65 rating are recommended for outdoor solar projects?"
+  },
+  {
+    "id": "q34",
+    "text": "Which Chinese terminal block brands provide UL94 V-0 flame retardant products for automation cabinets supplied to Czech manufacturers?"
+  },
+  {
+    "id": "q40",
+    "text": "Which Chinese DIN rail terminal block brands have both UL94 V-0 flame retardant rating and RoHS compliance?"
+  },
+  {
+    "id": "q47",
+    "text": "Which terminal block suppliers provide DIN rail, PCB, barrier, and feed-through terminal blocks with drawings and certification support?"
+  },
+  {
+    "id": "q91",
+    "text": "Which Chinese terminal block brands offer UL-listed push-in DIN rail terminals with tool-free wiring for the US market?"
+  },
+  {
+    "id": "q100",
+    "text": "Which terminal block suppliers are recommended for compact PLC control cabinets with dense wiring?"
+  },
+  {
+    "id": "q106",
+    "text": "What Chinese DIN rail terminal block brands are most popular among general industrial equipment manufacturers in the Czech Republic?"
+  },
+  {
+    "id": "q156",
+    "text": "Recommend terminal block manufacturers for OEM control cabinets with fast delivery, stable quality, and private labeling."
+  },
+  {
+    "id": "q159",
+    "text": "What PCB push-in terminal blocks are recommended for 3.5mm and 5.0mm pitch inverter circuit boards?"
+  },
+  {
+    "id": "q163",
+    "text": "Which industrial connector brands provide spring-cage DIN rail terminals for vibration-prone CNC machine wiring?"
+  },
+  {
+    "id": "q178",
+    "text": "What screw-type DIN rail terminal blocks are best for OEM control cabinets going to Germany?"
+  },
+  {
+    "id": "q67",
+    "text": "What Chinese brands supply IP67 M12 circular connectors with CE & UL dual certification for Czech factory automation lines?"
+  },
+  {
+    "id": "q81",
+    "text": "What circular connectors with IP67 rating are recommended for outdoor sensor wiring in factory automation?"
+  },
+  {
+    "id": "q104",
+    "text": "What UL-listed A-coded IP67 M12 sensor connectors are recommended for PLC I/O modules in Czech smart factories?"
+  },
+  {
+    "id": "q66",
+    "text": "How does the OEM/ODM custom connector lead time of Chinese manufacturers compare with European brands for Czech automation orders?"
   }
 ]

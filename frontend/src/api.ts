@@ -10,20 +10,23 @@ async function request<T>(url: string, init?: RequestInit): Promise<T> {
 export const api = {
   meta: () => request<Meta>('/api/meta'),
   addQuestion: (payload: { text: string }) =>
-    request<{ question: Question; questions: Question[]; maxQuestions: number }>('/api/questions', {
+    request<{ question: Question; questions: Question[] }>('/api/questions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     }),
   removeQuestion: (id: string) =>
-    request<{ questions: Question[]; maxQuestions: number }>(`/api/questions/${id}`, { method: 'DELETE' }),
-  ask: (questionId: string, modelId: string) =>
+    request<{ questions: Question[] }>(`/api/questions/${id}`, { method: 'DELETE' }),
+  clearQuestions: () =>
+    request<{ questions: Question[] }>('/api/questions', { method: 'DELETE' }),
+  ask: (questionId: string, modelId: string, regionId: string, signal?: AbortSignal) =>
     request<ResultItem>('/api/ask', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ questionId, modelId })
+      body: JSON.stringify({ questionId, modelId, regionId }),
+      signal
     }),
-  saveRun: (payload: Pick<Run, 'models' | 'questions' | 'results'>) =>
+  saveRun: (payload: Pick<Run, 'models' | 'questions' | 'results'> & { regionId: string; stoppedByUser: boolean }) =>
     request<{ id: string }>('/api/runs', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

@@ -1,0 +1,140 @@
+{
+  "id": "run-20261030033140735-0a9b38",
+  "createdAt": "2026-10-30T03:31:40.736Z",
+  "regionId": "eu",
+  "regionLabel": "欧洲（德国柏林）",
+  "models": [
+    {
+      "id": "gpt",
+      "label": "GPT",
+      "model": "gpt-6.1-terra"
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "model": "gemini-3.8-flash"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q24",
+      "text": "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?"
+    }
+  ],
+  "plannedCount": 10,
+  "stoppedByUser": true,
+  "stoppedAt": "2026-10-30T03:31:40.736Z",
+  "brands": [
+    {
+      "id": "degson",
+      "name": "DEGSON",
+      "self": true
+    },
+    {
+      "id": "eaton",
+      "name": "Eaton",
+      "self": false
+    },
+    {
+      "id": "phoenixcontact",
+      "name": "Phoenix Contact",
+      "self": false
+    },
+    {
+      "id": "wago",
+      "name": "WAGO",
+      "self": false
+    },
+    {
+      "id": "weidmuller",
+      "name": "Weidmüller",
+      "self": false
+    }
+  ],
+  "results": [
+    {
+      "questionId": "q24",
+      "modelId": "gpt",
+      "regionId": "eu",
+      "regionApplied": true,
+      "status": "ok",
+      "answer": "- **Phoenix Contact**\n- **Weidmüller**\n- **WAGO**\n- **Eaton**\n- **DEGSON**",
+      "modelName": "gpt-6.1-terra",
+      "latencyMs": 7726,
+      "mentions": [
+        {
+          "brandId": "phoenixcontact",
+          "brandName": "Phoenix Contact",
+          "count": 1,
+          "firstIndex": 4,
+          "rank": 1
+        },
+        {
+          "brandId": "weidmuller",
+          "brandName": "Weidmüller",
+          "count": 1,
+          "firstIndex": 26,
+          "rank": 2
+        },
+        {
+          "brandId": "wago",
+          "brandName": "WAGO",
+          "count": 1,
+          "firstIndex": 43,
+          "rank": 3
+        },
+        {
+          "brandId": "eaton",
+          "brandName": "Eaton",
+          "count": 1,
+          "firstIndex": 54,
+          "rank": 4
+        },
+        {
+          "brandId": "degson",
+          "brandName": "DEGSON",
+          "count": 1,
+          "firstIndex": 66,
+          "rank": 5
+        }
+      ],
+      "matches": [
+        {
+          "brandId": "phoenixcontact",
+          "start": 4,
+          "end": 19
+        },
+        {
+          "brandId": "weidmuller",
+          "start": 26,
+          "end": 36
+        },
+        {
+          "brandId": "wago",
+          "start": 43,
+          "end": 47
+        },
+        {
+          "brandId": "eaton",
+          "start": 54,
+          "end": 59
+        },
+        {
+          "brandId": "degson",
+          "start": 66,
+          "end": 72
+        }
+      ],
+      "usage": {
+        "inputTokens": 12964,
+        "outputTokens": 135,
+        "totalTokens": 13099,
+        "reasoningTokens": 101,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?"
+        ]
+      }
+    }
+  ]
+}

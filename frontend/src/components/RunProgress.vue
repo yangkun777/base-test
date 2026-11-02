@@ -9,7 +9,7 @@ const { state, progressDone } = useRun()
     <div class="progress-head">
       <div>
         <div class="card-title">评测执行中</div>
-        <div class="card-sub">串行调用，预计数分钟，请勿关闭页面。</div>
+        <div class="card-sub">{{ state.stopRequested ? '正在取消当前请求并保存已完成的结果…' : '正在按所选地区逐题测试；停止后按实际完成量生成报告。已发出的当前请求仍可能计费。' }}</div>
       </div>
       <div class="counter">{{ progressDone }} / {{ state.progress.length }}</div>
     </div>

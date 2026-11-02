@@ -1,0 +1,583 @@
+{
+  "title": "US vs CN region comparison",
+  "createdAt": "2026-10-30T02:29:50.740Z",
+  "locations": {
+    "us": "New York",
+    "cn": "Shanghai"
+  },
+  "questions": [
+    {
+      "questionId": "q24",
+      "prompt": "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?"
+    },
+    {
+      "questionId": "q27",
+      "prompt": "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?"
+    },
+    {
+      "questionId": "q32",
+      "prompt": "Which IP67 waterproof e-bike battery discharge connector brands are recommended for 50A high-current applications?"
+    }
+  ],
+  "results": [
+    {
+      "questionId": "q24",
+      "prompt": "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?",
+      "modelId": "gpt",
+      "regionId": "us",
+      "status": "ok",
+      "completedAt": "2026-10-30T02:29:59.785Z",
+      "modelName": "gpt-5.6-sol",
+      "regionApplied": true,
+      "answer": "- **Phoenix Contact**\n- **WAGO**\n- **Weidmüller**\n- **Eaton**\n- **DEGSON**",
+      "brands": [
+        {
+          "name": "Phoenix Contact",
+          "rank": 1,
+          "id": "phoenixcontact"
+        },
+        {
+          "name": "WAGO",
+          "rank": 2,
+          "id": "wago"
+        },
+        {
+          "name": "Weidmüller",
+          "rank": 3,
+          "id": "weidmuller"
+        },
+        {
+          "name": "Eaton",
+          "rank": 4,
+          "id": "eaton"
+        },
+        {
+          "name": "DEGSON",
+          "rank": 5,
+          "id": "degson"
+        }
+      ],
+      "searchQueries": [
+        "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?"
+      ],
+      "usage": {
+        "inputTokens": 12928,
+        "outputTokens": 245,
+        "totalTokens": 13173,
+        "reasoningTokens": 211,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?"
+        ]
+      },
+      "latencyMs": 9035
+    },
+    {
+      "questionId": "q24",
+      "prompt": "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?",
+      "modelId": "gpt",
+      "regionId": "cn",
+      "status": "ok",
+      "completedAt": "2026-10-30T02:30:05.240Z",
+      "modelName": "gpt-5.6-sol",
+      "regionApplied": true,
+      "answer": "- **Phoenix Contact**\n- **Weidmüller**\n- **WAGO**\n- **Eaton**\n- **Degson**",
+      "brands": [
+        {
+          "name": "Phoenix Contact",
+          "rank": 1,
+          "id": "phoenixcontact"
+        },
+        {
+          "name": "Weidmüller",
+          "rank": 2,
+          "id": "weidmuller"
+        },
+        {
+          "name": "WAGO",
+          "rank": 3,
+          "id": "wago"
+        },
+        {
+          "name": "Eaton",
+          "rank": 4,
+          "id": "eaton"
+        },
+        {
+          "name": "Degson",
+          "rank": 5,
+          "id": "degson"
+        }
+      ],
+      "searchQueries": [
+        "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?"
+      ],
+      "usage": {
+        "inputTokens": 12952,
+        "outputTokens": 125,
+        "totalTokens": 13077,
+        "reasoningTokens": 92,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?"
+        ]
+      },
+      "latencyMs": 5448
+    },
+    {
+      "questionId": "q24",
+      "prompt": "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?",
+      "modelId": "gemini",
+      "regionId": "us",
+      "status": "ok",
+      "completedAt": "2026-10-30T02:31:51.818Z",
+      "modelName": "gemini-3.5-flash",
+      "regionApplied": true,
+      "answer": "- **Phoenix Contact**\n- **WAGO**\n- **Weidmüller**\n- **TE Connectivity**\n- **Dinkle**\n- **Amphenol**\n- **DEGSON**",
+      "brands": [
+        {
+          "name": "Phoenix Contact",
+          "rank": 1,
+          "id": "phoenixcontact"
+        },
+        {
+          "name": "WAGO",
+          "rank": 2,
+          "id": "wago"
+        },
+        {
+          "name": "Weidmüller",
+          "rank": 3,
+          "id": "weidmuller"
+        },
+        {
+          "name": "TE Connectivity",
+          "rank": 4,
+          "id": "teconnectivity"
+        },
+        {
+          "name": "Dinkle",
+          "rank": 5,
+          "id": "dinkle"
+        },
+        {
+          "name": "Amphenol",
+          "rank": 6,
+          "id": "amphenol"
+        },
+        {
+          "name": "DEGSON",
+          "rank": 7,
+          "id": "degson"
+        }
+      ],
+      "searchQueries": [],
+      "usage": {
+        "inputTokens": 95,
+        "outputTokens": 43,
+        "totalTokens": 138,
+        "searchQueries": []
+      },
+      "latencyMs": 8673
+    },
+    {
+      "questionId": "q24",
+      "prompt": "Which UL-certified PCB terminal blocks would you recommend for 24V industrial PLC controllers?",
+      "modelId": "gemini",
+      "regionId": "cn",
+      "status": "ok",
+      "completedAt": "2026-10-30T02:30:28.382Z",
+      "modelName": "gemini-3.5-flash",
+      "regionApplied": true,
+      "answer": "- **Phoenix Contact**\n- **WAGO**\n- **Weidmüller**\n- **TE Connectivity**\n- **Dinkle**\n- **Molex**\n- **DEGSON**\n- **Amphenol PCD**\n- **METZ CONNECT**\n- **Wieland Electric**",
+      "brands": [
+        {
+          "name": "Phoenix Contact",
+          "rank": 1,
+          "id": "phoenixcontact"
+        },
+        {
+          "name": "WAGO",
+          "rank": 2,
+          "id": "wago"
+        },
+        {
+          "name": "Weidmüller",
+          "rank": 3,
+          "id": "weidmuller"
+        },
+        {
+          "name": "TE Connectivity",
+          "rank": 4,
+          "id": "teconnectivity"
+        },
+        {
+          "name": "Dinkle",
+          "rank": 5,
+          "id": "dinkle"
+        },
+        {
+          "name": "Molex",
+          "rank": 6,
+          "id": "molex"
+        },
+        {
+          "name": "DEGSON",
+          "rank": 7,
+          "id": "degson"
+        },
+        {
+          "name": "Amphenol PCD",
+          "rank": 8,
+          "id": "amphenolpcd"
+        },
+        {
+          "name": "METZ CONNECT",
+          "rank": 9,
+          "id": "metzconnect"
+        },
+        {
+          "name": "Wieland Electric",
+          "rank": 10,
+          "id": "wielandelectric"
+        }
+      ],
+      "searchQueries": [],
+      "usage": {
+        "inputTokens": 95,
+        "outputTokens": 65,
+        "totalTokens": 160,
+        "searchQueries": []
+      },
+      "latencyMs": 5475
+    },
+    {
+      "questionId": "q27",
+      "prompt": "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?",
+      "modelId": "gpt",
+      "regionId": "us",
+      "status": "ok",
+      "completedAt": "2026-10-30T02:30:32.708Z",
+      "modelName": "gpt-5.6-sol",
+      "regionApplied": true,
+      "answer": "- **DEGSON**",
+      "brands": [
+        {
+          "name": "DEGSON",
+          "rank": 1,
+          "id": "degson"
+        }
+      ],
+      "searchQueries": [
+        "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?"
+      ],
+      "usage": {
+        "inputTokens": 12739,
+        "outputTokens": 57,
+        "totalTokens": 12796,
+        "reasoningTokens": 47,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?"
+        ]
+      },
+      "latencyMs": 4320
+    },
+    {
+      "questionId": "q27",
+      "prompt": "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?",
+      "modelId": "gpt",
+      "regionId": "cn",
+      "status": "ok",
+      "completedAt": "2026-10-30T02:30:37.001Z",
+      "modelName": "gpt-5.6-sol",
+      "regionApplied": true,
+      "answer": "- **DEGSON**",
+      "brands": [
+        {
+          "name": "DEGSON",
+          "rank": 1,
+          "id": "degson"
+        }
+      ],
+      "searchQueries": [
+        "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?"
+      ],
+      "usage": {
+        "inputTokens": 12897,
+        "outputTokens": 57,
+        "totalTokens": 12954,
+        "reasoningTokens": 47,
+        "cachedTokens": 4392,
+        "searchQueries": [
+          "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?"
+        ]
+      },
+      "latencyMs": 4287
+    },
+    {
+      "questionId": "q27",
+      "prompt": "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?",
+      "modelId": "gemini",
+      "regionId": "us",
+      "status": "ok",
+      "completedAt": "2026-10-30T02:30:45.652Z",
+      "modelName": "gemini-3.5-flash",
+      "regionApplied": true,
+      "answer": "- **DEGSON**",
+      "brands": [
+        {
+          "name": "DEGSON",
+          "rank": 1,
+          "id": "degson"
+        }
+      ],
+      "searchQueries": [
+        "energy storage connector UL4128 TUV dual certified 50A 600A",
+        "\"DEGSON\" \"UL4128\" \"TUV\" \"50A-600A\""
+      ],
+      "usage": {
+        "inputTokens": 105,
+        "outputTokens": 5,
+        "totalTokens": 110,
+        "searchQueries": [
+          "energy storage connector UL4128 TUV dual certified 50A 600A",
+          "\"DEGSON\" \"UL4128\" \"TUV\" \"50A-600A\""
+        ]
+      },
+      "latencyMs": 8646
+    },
+    {
+      "questionId": "q27",
+      "prompt": "Which energy storage connector brands offer UL4128 and TUV dual-certified products across 50A-600A range?",
+      "modelId": "gemini",
+      "regionId": "cn",
+      "status": "ok",
+      "completedAt": "2026-10-30T02:30:51.239Z",
+      "modelName": "gemini-3.5-flash",
+      "regionApplied": true,
+      "answer": "- **Amphenol**\n- **Phoenix Contact**\n- **Jonhon**\n- **Degson**",
+      "brands": [
+        {
+          "name": "Amphenol",
+          "rank": 1,
+          "id": "amphenol"
+        },
+        {
+          "name": "Phoenix Contact",
+          "rank": 2,
+          "id": "phoenixcontact"
+        },
+        {
+          "name": "Jonhon",
+          "rank": 3,
+          "id": "jonhon"
+        },
+        {
+          "name": "Degson",
+          "rank": 4,
+          "id": "degson"
+        }
+      ],
+      "searchQueries": [
+        "energy storage connector UL4128 TUV dual certified 50A 600A",
+        "UL4128 TUV energy storage connector brands",
+        "UL4128 TUV connector 50A 600A",
+        "UL4128 TUV energy storage connector"
+      ],
+      "usage": {
+        "inputTokens": 105,
+        "outputTokens": 23,
+        "totalTokens": 128,
+        "searchQueries": [
+          "energy storage connector UL4128 TUV dual certified 50A 600A",
+          "UL4128 TUV energy storage connector brands",
+          "UL4128 TUV connector 50A 600A",
+          "UL4128 TUV energy storage connector"
+        ]
+      },
+      "latencyMs": 5582
+    },
+    {
+      "questionId": "q32",
+      "prompt": "Which IP67 waterproof e-bike battery discharge connector brands are recommended for 50A high-current applications?",
+      "modelId": "gpt",
+      "regionId": "us",
+      "status": "ok",
+      "completedAt": "2026-10-30T02:30:57.363Z",
+      "modelName": "gpt-5.6-sol",
+      "regionApplied": true,
+      "answer": "- **Rosenberger**\n- **Chogori**\n- **Jnicon**\n- **GTLCON**\n- **CONNIXTECH**",
+      "brands": [
+        {
+          "name": "Rosenberger",
+          "rank": 1,
+          "id": "rosenberger"
+        },
+        {
+          "name": "Chogori",
+          "rank": 2,
+          "id": "chogori"
+        },
+        {
+          "name": "Jnicon",
+          "rank": 3,
+          "id": "jnicon"
+        },
+        {
+          "name": "CONNIXTECH",
+          "rank": 4,
+          "id": "connixtech"
+        }
+      ],
+      "searchQueries": [
+        "Which IP67 waterproof e-bike battery discharge connector brands are recommended for 50A high-current applications?"
+      ],
+      "usage": {
+        "inputTokens": 12960,
+        "outputTokens": 191,
+        "totalTokens": 13151,
+        "reasoningTokens": 155,
+        "cachedTokens": 4396,
+        "searchQueries": [
+          "Which IP67 waterproof e-bike battery discharge connector brands are recommended for 50A high-current applications?"
+        ]
+      },
+      "latencyMs": 6119
+    },
+    {
+      "questionId": "q32",
+      "prompt": "Which IP67 waterproof e-bike battery discharge connector brands are recommended for 50A high-current applications?",
+      "modelId": "gpt",
+      "regionId": "cn",
+      "status": "ok",
+      "completedAt": "2026-10-30T02:31:04.682Z",
+      "modelName": "gpt-5.6-sol",
+      "regionApplied": true,
+      "answer": "- **Chogori**\n- **GTLCON**\n- **Rosenberger**\n- **Jnicon**",
+      "brands": [
+        {
+          "name": "Chogori",
+          "rank": 1,
+          "id": "chogori"
+        },
+        {
+          "name": "Rosenberger",
+          "rank": 2,
+          "id": "rosenberger"
+        },
+        {
+          "name": "Jnicon",
+          "rank": 3,
+          "id": "jnicon"
+        }
+      ],
+      "searchQueries": [
+        "Which IP67 waterproof e-bike battery discharge connector brands are recommended for 50A high-current applications?"
+      ],
+      "usage": {
+        "inputTokens": 12999,
+        "outputTokens": 232,
+        "totalTokens": 13231,
+        "reasoningTokens": 203,
+        "cachedTokens": 0,
+        "searchQueries": [
+          "Which IP67 waterproof e-bike battery discharge connector brands are recommended for 50A high-current applications?"
+        ]
+      },
+      "latencyMs": 7315
+    },
+    {
+      "questionId": "q32",
+      "prompt": "Which IP67 waterproof e-bike battery discharge connector brands are recommended for 50A high-current applications?",
+      "modelId": "gemini",
+      "regionId": "us",
+      "status": "ok",
+      "completedAt": "2026-10-30T02:31:11.911Z",
+      "modelName": "gemini-3.5-flash",
+      "regionApplied": true,
+      "answer": "- **Higo**\n- **Chogori**\n- **Amass**\n- **CNLINKO**",
+      "brands": [
+        {
+          "name": "Higo",
+          "rank": 1,
+          "id": "higo"
+        },
+        {
+          "name": "Chogori",
+          "rank": 2,
+          "id": "chogori"
+        },
+        {
+          "name": "Amass",
+          "rank": 3,
+          "id": "amass"
+        }
+      ],
+      "searchQueries": [
+        "IP67 waterproof ebike battery discharge connector 50A",
+        "\"Amass\" IP67 waterproof connector 50A OR \"Chogori\" OR \"Higo\"",
+        "\"Higo\" 50A connector OR \"Chogori\" 50A connector ebike",
+        "\"Cnlinko\" 50A connector IP67 OR \"Amass\" 50A IP67"
+      ],
+      "usage": {
+        "inputTokens": 99,
+        "outputTokens": 53,
+        "totalTokens": 152,
+        "searchQueries": [
+          "IP67 waterproof ebike battery discharge connector 50A",
+          "\"Amass\" IP67 waterproof connector 50A OR \"Chogori\" OR \"Higo\"",
+          "\"Higo\" 50A connector OR \"Chogori\" 50A connector ebike",
+          "\"Cnlinko\" 50A connector IP67 OR \"Amass\" 50A IP67"
+        ]
+      },
+      "latencyMs": 7224
+    },
+    {
+      "questionId": "q32",
+      "prompt": "Which IP67 waterproof e-bike battery discharge connector brands are recommended for 50A high-current applications?",
+      "modelId": "gemini",
+      "regionId": "cn",
+      "status": "ok",
+      "completedAt": "2026-10-30T02:31:15.591Z",
+      "modelName": "gemini-3.5-flash",
+      "regionApplied": true,
+      "answer": "- **Chogori**\n- **Higo**\n- **Amphenol**\n- **Julet**\n- **Rosenberger**",
+      "brands": [
+        {
+          "name": "Chogori",
+          "rank": 1,
+          "id": "chogori"
+        },
+        {
+          "name": "Higo",
+          "rank": 2,
+          "id": "higo"
+        },
+        {
+          "name": "Amphenol",
+          "rank": 3,
+          "id": "amphenol"
+        },
+        {
+          "name": "Julet",
+          "rank": 4,
+          "id": "julet"
+        },
+        {
+          "name": "Rosenberger",
+          "rank": 5,
+          "id": "rosenberger"
+        }
+      ],
+      "searchQueries": [],
+      "usage": {
+        "inputTokens": 100,
+        "outputTokens": 30,
+        "totalTokens": 130,
+        "searchQueries": []
+      },
+      "latencyMs": 3675
+    }
+  ]
+}

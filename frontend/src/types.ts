@@ -1,4 +1,5 @@
 export interface Question {
+  excludeFromBrandEvaluation?: boolean
   id: string
   topic?: string
   text: string
@@ -19,9 +20,9 @@ export interface ModelInfo {
 
 export interface Meta {
   questions: Question[]
-  maxQuestions: number
   brands: Brand[]
   models: ModelInfo[]
+  regions: { id: string; label: string; detail: string }[]
 }
 
 export interface Mention {
@@ -50,6 +51,8 @@ export interface ResultUsage {
 export interface ResultItem {
   questionId: string
   modelId: string
+  regionId?: string
+  regionApplied?: boolean
   status: 'ok' | 'error'
   answer?: string
   modelName?: string
@@ -58,20 +61,34 @@ export interface ResultItem {
   matches?: MatchRange[]
   usage?: ResultUsage
   error?: string
+  reusedFromRunId?: string
+  reusedFromCreatedAt?: string
 }
 
 export interface Run {
   id: string
   createdAt: string
+  regionId?: string
+  regionLabel?: string
+  stoppedByUser?: boolean
+  stoppedAt?: string
+  plannedCount?: number
   models: { id: string; label: string; model: string }[]
   questions?: Question[]
   brands?: Brand[]
   results: ResultItem[]
+  reusedBaselineId?: string
+  analysis?: { parserVersion: string; reanalyzed: boolean }
 }
 
 export interface RunSummary {
   id: string
   createdAt: string
+  regionId?: string
+  regionLabel?: string
+  stoppedByUser?: boolean
+  plannedCount?: number
   okCount: number
   total: number
+  hasReport?: boolean
 }

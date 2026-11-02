@@ -18,6 +18,8 @@ const state = reactive({
   loading: true,
   loadError: '',
   running: false,
+  stopRequested: false,
+  selectedRegionId: 'eu',
   selectedModelIds: [] as string[],
   progress: [] as ProgressItem[]
 })
@@ -30,7 +32,9 @@ async function init() {
     state.meta = meta
     state.selectedModelIds = meta.models.filter(m => m.configured).map(m => m.id)
     state.runs = runs
-    if (runs.length > 0) await selectRun(runs[0].id)
+    const requested = new URLSearchParams(window.location.search).get('run')
+    const initial = requested && runs.some(run => run.id === requested) ? requested : runs[0]?.id
+    if (initial) await selectRun(initial)
   } catch (error) {
     state.loadError = error instanceof Error ? error.message : String(error)
   } finally {
@@ -39,6 +43,13 @@ async function init() {
 }
 
 let selectionId = 0
+let activeRequest: AbortController | null = null
+
+function stopRun() {
+  if (!state.running || state.stopRequested || progressDone.value === state.progress.length) return
+  state.stopRequested = true
+  activeRequest?.abort()
+}
 
 async function selectRun(id: string) {
   const requestId = ++selectionId
@@ -60,11 +71,17 @@ async function selectRun(id: string) {
 
 // 仅对选中的已配置模型逐题串行执行，逐项更新进度
 async function startRun() {
-  if (!state.meta || state.running || state.meta.questions.length === 0) return
+  if (!state.meta || state.running || !state.selectedRegionId || state.meta.questions.length === 0) return
   const models = state.meta.models.filter(m => m.configured && state.selectedModelIds.includes(m.id))
   if (models.length === 0) return
+  const regionId = state.selectedRegionId
+  const questions = [...state.meta.questions]
   state.running = true
-  state.progress = state.meta.questions.flatMap(q =>
+  state.stopRequested = false
+  state.currentRun = null
+  state.previousRun = null
+  state.loadError = ''
+  state.progress = questions.flatMap(q =>
     models.map(m => ({
       questionId: q.id,
       modelId: m.id,
@@ -74,23 +91,32 @@ async function startRun() {
   )
   const results: ResultItem[] = []
   for (const item of state.progress) {
+    if (state.stopRequested) break
     item.status = 'running'
+    const controller = new AbortController()
+    activeRequest = controller
     try {
-      const result = await api.ask(item.questionId, item.modelId)
+      const result = await api.ask(item.questionId, item.modelId, regionId, controller.signal)
+      if (state.stopRequested) { item.status = 'pending'; break }
       results.push(result)
       item.status = result.status
       if (result.status === 'error') item.error = result.error
     } catch (error) {
+      if (state.stopRequested) { item.status = 'pending'; break }
       const message = error instanceof Error ? error.message : String(error)
-      results.push({ questionId: item.questionId, modelId: item.modelId, status: 'error', error: message })
+      results.push({ questionId: item.questionId, modelId: item.modelId, regionId, status: 'error', error: message })
       item.status = 'error'
       item.error = message
+    } finally {
+      activeRequest = null
     }
   }
   try {
     const { id } = await api.saveRun({
+      regionId,
+      stoppedByUser: state.stopRequested,
       models: models.map(m => ({ id: m.id, label: m.label, model: m.model })),
-      questions: state.meta.questions,
+      questions,
       results
     })
     state.runs = await api.runs()
@@ -99,6 +125,7 @@ async function startRun() {
     state.loadError = error instanceof Error ? error.message : String(error)
   } finally {
     state.running = false
+    state.stopRequested = false
   }
 }
 
@@ -108,16 +135,20 @@ async function addQuestion(text: string) {
   if (!state.meta || state.running) return
   const data = await api.addQuestion({ text })
   state.meta.questions = data.questions
-  state.meta.maxQuestions = data.maxQuestions
 }
 
 async function removeQuestion(id: string) {
   if (!state.meta || state.running) return
   const data = await api.removeQuestion(id)
   state.meta.questions = data.questions
-  state.meta.maxQuestions = data.maxQuestions
+}
+
+async function clearQuestions() {
+  if (!state.meta || state.running) return
+  const data = await api.clearQuestions()
+  state.meta.questions = data.questions
 }
 
 export function useRun() {
-  return { state, init, selectRun, startRun, addQuestion, removeQuestion, progressDone }
+  return { state, init, selectRun, startRun, stopRun, addQuestion, removeQuestion, clearQuestions, progressDone }
 }

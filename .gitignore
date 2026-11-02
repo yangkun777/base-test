@@ -3,3 +3,4 @@ frontend/dist/
 .dlp-artifact-backup-*/
 data/results.json
 .env
+data/server-*.log

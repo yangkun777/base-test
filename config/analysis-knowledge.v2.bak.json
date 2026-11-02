@@ -1,0 +1,14 @@
+{
+  "version": "2026-10-30-v1",
+  "note": "本地参考快照；不实时读取工作台。公司事实表为空，不能把草稿或模型回答当成已核实事实。官网资料为厂家公开自述，不等于独立证书审查。",
+  "sources": [
+    { "id": "K1", "source": "D:/DEGSON-GEO-Workspace/knowledge/company/claims.csv", "capturedAt": "2026-10-30", "status": "needs-verification", "content": "公司事实表目前只有表头，没有可直接使用的已审核公司事实。不得编造成立年份、规模、认证、客户或产能。" },
+    { "id": "K2", "source": "D:/DEGSON-GEO-Workspace/knowledge/geo/methodology.md", "capturedAt": "2026-10-30", "status": "methodology", "content": "工作台的方法覆盖抓取与索引、页面身份、语义、结构化事实、证据、内部链接与测评；强调同类页面/地区比较、保留证据和规则版本、不能从短期趋势推断因果。" },
+    { "id": "K3", "source": "D:/DEGSON-GEO-Workspace/knowledge/products/taxonomy.md", "capturedAt": "2026-10-30", "status": "draft", "content": "工作台产品分类是暂定信息架构，并非现网或CMS的已核实产品目录。" },
+    { "id": "K4", "source": "https://www.degson.com/", "capturedAt": "2026-10-30", "status": "manufacturer-statement", "content": "官网导航列有端子台、DIN导轨端子、圆形连接器、重载连接器、电子产品、EV充电、EBIKE、储能、光伏等产品类别。服务入口含定制、实验室、下载、合规及联系页面。" },
+    { "id": "K5", "source": "https://www.degson.com/product/typelist20_4438063.html?lang=en", "capturedAt": "2026-10-30", "status": "manufacturer-statement", "content": "储能分类页自述：高防护单芯系列50A–450A、1500V DC、IP67，并提及UL4128与TUV 2PfG2740。不可扩展成全部产品/600A均获双认证；须核对具体型号与证书。" },
+    { "id": "K6", "source": "https://degson.com/content/details_552_5206203.html", "capturedAt": "2026-10-30", "status": "manufacturer-statement", "content": "EV实例：MEAC-S-032A-V22P22-03-5.0M-10A(H) 页面列Type 2、32A/250V AC、5m、工作温度-40至50℃，有CE/CB/TUV相关文件下载。证书有效性和覆盖范围未独立核验；不能扩展到全部EV产品，也不能据此证明竞品性能更差。" },
+    { "id": "K7", "source": "https://www.degson.com/content/details_552_5195665.html?lang=en", "capturedAt": "2026-10-30", "status": "manufacturer-statement", "content": "端子实例：DG247-5.0-04P 页面列Push-in、5mm间距、4位、线径0.2–1.5mm²、UL参数10A/300V、IEC额定电流9A以及CAD/3D/数据手册下载。UL与IEC参数必须区分，不能把标准名称当成独立证书核验结果。" },
+    { "id": "K8", "source": "https://degson.com/content/details_472_5322288.html", "capturedAt": "2026-10-30", "status": "manufacturer-statement", "content": "电动自行车实例：EBBLA圆形电源连接器文章自述2个50A电源针与4个2A信号针、110V DC、插合IP67、机械寿命至少3000次、-40至105℃。该材料是厂家文章；持续/峰值电流、测试条件与适用型号仍须产品文件核实，不可泛化到全部e-bike连接器。" }
+  ]
+}

@@ -23,7 +23,7 @@ const maxShare = computed(() => Math.max(1, ...rows.value.map(row => row.share))
     <div v-for="row in rows" :key="row.id" class="share-row" :class="{ self: row.self }">
       <div class="share-details">
         <span class="brand-name"><span class="dot" :style="{ background: row.color }"></span>{{ row.name }}</span>
-        <span class="share-values">{{ row.total }} / {{ agg.slotCount }} 条回答 <strong>{{ row.share.toFixed(1) }}%</strong></span>
+        <span class="share-values">{{ row.total }} / {{ agg.okCount }} 条成功回答 <strong>{{ agg.okCount ? row.share.toFixed(1) + '%' : '—' }}</strong></span>
       </div>
       <div class="track" aria-hidden="true">
         <div class="fill" :style="{ width: `${row.share / maxShare * 100}%`, background: row.color }"></div>

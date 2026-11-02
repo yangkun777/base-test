@@ -1,0 +1,1081 @@
+{
+  "version": "taxonomy-v1",
+  "updatedAt": "2026-11-02T00:05:05.172Z",
+  "source": "rule",
+  "questions": {
+    "q24": {
+      "category": "其他及跨品类",
+      "intent": "选型方法",
+      "source": "llm",
+      "updatedAt": "2026-10-30T09:00:30.698Z"
+    },
+    "q1": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-10-30T09:05:44.046Z"
+    },
+    "q22": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-10-30T09:05:44.046Z"
+    },
+    "q23": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-10-30T09:05:44.046Z"
+    },
+    "q2": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q3": {
+      "category": "电动自行车连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q4": {
+      "category": "储能连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q5": {
+      "category": "EV 充电连接器",
+      "intent": "OEM定制",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q6": {
+      "category": "EV 充电连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q7": {
+      "category": "储能连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q8": {
+      "category": "储能连接器",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q9": {
+      "category": "EV 充电连接器",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q10": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q11": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q12": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q13": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q14": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q15": {
+      "category": "电动自行车连接器",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q16": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q17": {
+      "category": "EV 充电连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q18": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q19": {
+      "category": "电动自行车连接器",
+      "intent": "OEM定制",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q20": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q21": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q25": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q26": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q27": {
+      "category": "储能连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q28": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q29": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q30": {
+      "category": "端子台",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q31": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q32": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q33": {
+      "category": "储能连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q34": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q35": {
+      "category": "EV 充电连接器",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q36": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q37": {
+      "category": "重载连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q38": {
+      "category": "EV 充电连接器",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q39": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q40": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q41": {
+      "category": "储能连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q42": {
+      "category": "储能连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q43": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q44": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q45": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q46": {
+      "category": "EV 充电连接器",
+      "intent": "OEM定制",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q47": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q48": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q49": {
+      "category": "储能连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q50": {
+      "category": "储能连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q51": {
+      "category": "储能连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q52": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q53": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q54": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q55": {
+      "category": "电动自行车连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q56": {
+      "category": "电动自行车连接器",
+      "intent": "其他",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q57": {
+      "category": "端子台",
+      "intent": "OEM定制",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q58": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q59": {
+      "category": "EV 充电连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q60": {
+      "category": "电动自行车连接器",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q61": {
+      "category": "端子台",
+      "intent": "OEM定制",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q62": {
+      "category": "储能连接器",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q63": {
+      "category": "EV 充电连接器",
+      "intent": "其他",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q64": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q65": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q66": {
+      "category": "其他及跨品类",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q67": {
+      "category": "圆形连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q68": {
+      "category": "其他及跨品类",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q69": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q70": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q71": {
+      "category": "储能连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q72": {
+      "category": "储能连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q73": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q74": {
+      "category": "电动自行车连接器",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q75": {
+      "category": "电动自行车连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q76": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q77": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q78": {
+      "category": "EV 充电连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q79": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q80": {
+      "category": "EV 充电连接器",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q81": {
+      "category": "圆形连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q82": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q83": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q84": {
+      "category": "电动自行车连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q85": {
+      "category": "端子台",
+      "intent": "OEM定制",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q86": {
+      "category": "EV 充电连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q87": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q88": {
+      "category": "EV 充电连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q89": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q90": {
+      "category": "电动自行车连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q91": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q92": {
+      "category": "EV 充电连接器",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q93": {
+      "category": "端子台",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q94": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q95": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q96": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q97": {
+      "category": "EV 充电连接器",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q98": {
+      "category": "EV 充电连接器",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q99": {
+      "category": "EV 充电连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q100": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q101": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q102": {
+      "category": "端子台",
+      "intent": "供应商对比",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q103": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q104": {
+      "category": "圆形连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q105": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q106": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q107": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q108": {
+      "category": "端子台",
+      "intent": "其他",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q109": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q110": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q111": {
+      "category": "EV 充电连接器",
+      "intent": "其他",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q112": {
+      "category": "EV 充电连接器",
+      "intent": "其他",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.421Z"
+    },
+    "q113": {
+      "category": "EV 充电连接器",
+      "intent": "其他",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.422Z"
+    },
+    "q114": {
+      "category": "EV 充电连接器",
+      "intent": "其他",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.422Z"
+    },
+    "q115": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.422Z"
+    },
+    "q116": {
+      "category": "储能连接器",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.422Z"
+    },
+    "q117": {
+      "category": "端子台",
+      "intent": "价格与交期",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.422Z"
+    },
+    "q118": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.422Z"
+    },
+    "q119": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.422Z"
+    },
+    "q120": {
+      "category": "端子台",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.422Z"
+    },
+    "q121": {
+      "category": "端子台",
+      "intent": "OEM定制",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.422Z"
+    },
+    "q122": {
+      "category": "电动自行车连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.422Z"
+    },
+    "q123": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.422Z"
+    },
+    "q124": {
+      "category": "储能连接器",
+      "intent": "认证合规",
+      "source": "rule",
+      "updatedAt": "2026-11-02T00:04:39.422Z"
+    },
+    "q125": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.170Z"
+    },
+    "q126": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.170Z"
+    },
+    "q127": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.170Z"
+    },
+    "q128": {
+      "category": "储能连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q129": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q130": {
+      "category": "铁路连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q131": {
+      "category": "端子台",
+      "intent": "价格与交期",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q132": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q133": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q134": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q135": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q136": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q137": {
+      "category": "其他及跨品类",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q138": {
+      "category": "EV 充电连接器",
+      "intent": "认证合规",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q139": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q140": {
+      "category": "电动自行车连接器",
+      "intent": "供应商对比",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q141": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q142": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q143": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q144": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q145": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q146": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q147": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q148": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q149": {
+      "category": "电动自行车连接器",
+      "intent": "OEM定制",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q150": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q151": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q152": {
+      "category": "电动自行车连接器",
+      "intent": "供应商对比",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q153": {
+      "category": "端子台",
+      "intent": "价格与交期",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q154": {
+      "category": "储能连接器",
+      "intent": "供应商对比",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q155": {
+      "category": "储能连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q156": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q157": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q158": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q159": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q160": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q161": {
+      "category": "圆形连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q162": {
+      "category": "铁路连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q163": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q164": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q165": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q166": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q167": {
+      "category": "EV 充电连接器",
+      "intent": "选型方法",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q168": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q169": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q170": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q171": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q172": {
+      "category": "电动自行车连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q173": {
+      "category": "储能连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q174": {
+      "category": "EV 充电连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q175": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q176": {
+      "category": "储能连接器",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q177": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q178": {
+      "category": "端子台",
+      "intent": "推荐名单",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    },
+    "q179": {
+      "category": "EV 充电连接器",
+      "intent": "选型方法",
+      "source": "llm",
+      "updatedAt": "2026-11-02T00:05:05.171Z"
+    }
+  }
+}
