@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
-import type { Run } from '../types'
+import SourceAnalysis from './SourceAnalysis.vue'
+import type { Run, SourceSummary } from '../types'
 
 interface Rate { hits: number; denominator: number; percent: number | null }
 interface Competitor { id: string; name: string; hits: number; percent: number | null; top1: number }
@@ -44,6 +45,7 @@ interface Report {
 }
 
 const props = defineProps<{ run: Run }>()
+const sourceSummary = computed<SourceSummary | null>(() => props.run.sourceSummary || props.run.degsonSourceSummary || null)
 const report = ref<Report | null>(null)
 const preview = ref<Report | null>(null)
 const loading = ref(true)
@@ -311,11 +313,14 @@ defineExpose({ label, busy, loading, feedback, failed, activate, generate, stop,
 
           <section id="r-summary" class="section">
             <div class="kpis">
-              <div class="kpi"><span>DEGSON 提及率</span><strong>{{ percent(report?.stats?.degsonRate) }}</strong><small>{{ rateText(report?.stats?.degsonRate) }}</small></div>
+              <div class="kpi"><span>模块加权分</span><strong>{{ sourceSummary?.moduleScore == null ? '—' : `${sourceSummary.moduleScore}%` }}</strong><small>仅用于内部优先级</small></div>
               <div class="kpi"><span>最弱分类</span><strong>{{ weakest?.name || '—' }}</strong><small>{{ weakest ? rateText(weakest.rate) : '无有效回答' }}</small></div>
               <div class="kpi"><span>最强分类</span><strong>{{ strongest?.name || '—' }}</strong><small>{{ strongest ? rateText(strongest.rate) : '无有效回答' }}</small></div>
               <div class="kpi"><span>有效品牌回答</span><strong>{{ report?.stats?.brandAnswerCount || 0 }}</strong><small>计划 {{ report?.stats?.plannedCount || 0 }} 次 · 失败 {{ report?.stats?.failedCount || 0 }}</small></div>
+              <div class="kpi"><span>引用来源</span><strong>{{ sourceSummary?.withCitations || 0 }} / {{ sourceSummary?.answers || 0 }}</strong><small>有引用 / 成功回答 · 共 {{ sourceSummary?.allCitationCount || 0 }} 条</small></div>
             </div>
+            <h3>模块表现</h3>
+            <div class="table-wrap"><table class="stats-table"><thead><tr><th>模块</th><th>题数</th><th>品牌回答</th><th>DEGSON 提及</th><th>提及率</th><th>有来源</th><th>目标页命中</th></tr></thead><tbody><tr v-for="(stat,name) in sourceSummary?.byModule || {}" :key="name"><td>{{ name }}</td><td>{{ stat.questionCount }}</td><td>{{ stat.brandAnswerCount }}</td><td>{{ stat.degsonMentions }}</td><td>{{ stat.degsonRate == null ? '—' : `${stat.degsonRate}%` }}</td><td>{{ stat.sourceAnswers }}</td><td>{{ stat.targetHits }}</td></tr></tbody></table></div>
             <h3>执行摘要</h3>
             <p class="headline">{{ narrative?.headline || '汇总内容尚未生成。' }}</p>
             <ul v-if="narrative?.summaryPoints?.length" class="points">
@@ -323,6 +328,7 @@ defineExpose({ label, busy, loading, feedback, failed, activate, generate, stop,
             </ul>
             <p v-if="narrative?.fallback" class="quiet">AI 汇总未完成，本段由系统根据已完成统计和逐题分析生成。</p>
             <p v-if="report?.stats?.reusedCount" class="quiet">本轮有 {{ report.stats.reusedCount }} 条回答沿用旧轮次。</p>
+            <SourceAnalysis v-if="sourceSummary" :summary="sourceSummary" />
           </section>
 
           <section id="r-stats" class="section">
@@ -503,6 +509,11 @@ defineExpose({ label, busy, loading, feedback, failed, activate, generate, stop,
 .headline{margin:8px 0;padding:12px 14px;border-left:3px solid var(--accent);border-radius:0 8px 8px 0;background:var(--accent-soft);font-size:14px;line-height:1.8}
 .points{margin:8px 0;padding-left:20px;color:var(--ink-2);font-size:13px;line-height:1.85}
 .quiet{color:var(--muted);font-size:12px;line-height:1.7}
+.source-box{margin-top:14px;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:#f7f9fc}
+.source-box h3{margin:0 0 6px;font-size:14px}
+.source-mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px;margin:8px 0}
+.source-mini > div{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--ink-2)}
+.source-mini b{font-variant-numeric:tabular-nums}
 .small{font-size:12px;color:var(--ink-2)}
 .strong{font-weight:700}
 .table-wrap{overflow:auto;border:1px solid var(--border);border-radius:8px;margin:8px 0}

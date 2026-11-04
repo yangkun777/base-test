@@ -80,6 +80,12 @@ function markStyle(brandId: string) {
               <i>{{ mention.rank }}</i>{{ brandName(mention.brandId, mention.brandName) }}
             </span>
             <span v-if="!result.mentions?.length" class="no-mention">未提及任何品牌 · 不计入品牌提及率</span>
+            <span v-if="result.sources?.length" class="source-line">
+              引用 {{ result.sources.length }}
+              <a v-for="source in result.sources.slice(0, 4)" :key="source.url" :href="source.url" target="_blank" rel="noreferrer" :class="{ degson: source.degsonRelated }">{{ source.kindLabel }} · {{ source.host }}</a>
+              <span v-if="result.sources.length > 4" class="more">+{{ result.sources.length - 4 }}</span>
+            </span>
+            <span v-else class="source-line muted">未留下引用</span>
           </span>
           <span v-else class="error-info">调研失败：{{ result.error }}</span>
         </div>
@@ -93,6 +99,22 @@ function markStyle(brandId: string) {
               <mark v-if="seg.brandId" :style="markStyle(seg.brandId)">{{ seg.text }}</mark>
               <span v-else>{{ seg.text }}</span>
             </template>
+            <div v-if="result.sources?.length" class="source-block">
+              <strong>引用来源（{{ result.sources.length }}）</strong>
+              <ul>
+                <li v-for="source in result.sources" :key="source.url">
+                  <span class="source-kind">{{ source.kindLabel }}</span>
+                  <a :href="source.url" target="_blank" rel="noreferrer">{{ source.title || source.host }}</a>
+                  <span class="source-host">{{ source.host }}</span>
+                  <em v-if="source.degsonRelated">DEGSON 相关</em>
+                </li>
+              </ul>
+            </div>
+            <div v-else class="source-block muted">该回答没有留下引用链接。</div>
+            <div v-if="result.usage?.searchQueries?.length" class="query-block">
+              <strong>检索词</strong>
+              <span v-for="(query, i) in result.usage.searchQueries" :key="i">{{ query }}</span>
+            </div>
           </template>
           <span v-else>{{ result.error }}</span>
         </div>
@@ -121,7 +143,7 @@ function markStyle(brandId: string) {
 }
 .question-text { flex: 1; font-size: 13px; line-height: 1.45; }
 .answers { display: flex; flex-direction: column; gap: 8px; padding: 8px 14px 12px 46px; }
-.model-line { display: flex; align-items: flex-start; gap: 10px; }
+.model-line { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px; }
 .model-name { flex: none; min-width: 62px; font-size: 12px; font-weight: 700; color: var(--ink-2); }
 .model-name.gpt { color: var(--m-gpt); }
 .model-name.gemini { color: var(--m-gemini); }
@@ -137,6 +159,21 @@ function markStyle(brandId: string) {
   display: inline-flex; align-items: center; justify-content: center; font-style: normal; font-size: 11px;
 }
 
+.source-line { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; font-size: 12px; color: var(--muted); }
+.source-line a { color: var(--accent); }
+.source-line a.degson { color: var(--good); font-weight: 650; }
+.source-line.muted { color: var(--muted); }
+.source-line .more { color: var(--muted); }
+.source-block { margin-top: 14px; padding-top: 10px; border-top: 1px dashed var(--border); font-size: 12px; line-height: 1.7; color: var(--ink-2); }
+.source-block > strong, .query-block > strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: 12px; }
+.source-block ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.source-block li { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
+.source-kind { flex: none; padding: 1px 6px; border-radius: 999px; background: var(--surface-3); color: var(--ink-2); font-size: 11px; }
+.source-host { color: var(--muted); }
+.source-block em { color: var(--good); font-style: normal; font-size: 11px; }
+.source-block.muted { color: var(--muted); }
+.query-block { margin-top: 10px; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px; }
+.query-block > span { padding: 1px 6px; border: 1px solid var(--border); border-radius: 4px; }
 .no-mention {
   font-size: 12px;
   color: var(--muted);

@@ -1,0 +1,54 @@
+{
+  "manufacturer": [
+    "degson.com",
+    "degson.com.cn",
+    "phoenixcontact.com",
+    "wago.com",
+    "weidmuller.com",
+    "te.com",
+    "amphenol.com",
+    "higo.com",
+    "julet.com",
+    "dinkle.com",
+    "wernerwirth.com"
+  ],
+  "certification_body": [
+    "productiq.ul.com",
+    "ul.com",
+    "certipedia.com",
+    "tuv.com",
+    "vde.com",
+    "iec.ch"
+  ],
+  "distributor": [
+    "nectogroup.com",
+    "wittig-electronic.de",
+    "digikey.com",
+    "mouser.com",
+    "rs-online.com",
+    "galco.com",
+    "rspsupply.com",
+    "entrelecsales.com",
+    "activecomponents.com",
+    "tme.eu",
+    "dacpol.eu"
+  ],
+  "directory": [
+    "viox.com",
+    "directindustry.com",
+    "thomasnet.com",
+    "goldsupplier.com"
+  ],
+  "trade_media": [
+    "connectorsupplier.com",
+    "chargedevs.com",
+    "designworldonline.com",
+    "automation.com",
+    "ebikegaragehq.com",
+    "controlsdrivesautomation.com"
+  ],
+  "blog_or_reseller": [
+    "zbotic.in",
+    "xbrele.com"
+  ]
+}

@@ -8,6 +8,7 @@ import Inspector from './components/Inspector.vue'
 import RunProgress from './components/RunProgress.vue'
 import QuestionBank from './components/QuestionBank.vue'
 import AnalysisReport from './components/AnalysisReport.vue'
+import SourceAnalysis from './components/SourceAnalysis.vue'
 const analysisPanel = ref<InstanceType<typeof AnalysisReport> | null>(null)
 
 const { state, init, selectRun, startRun, stopRun, progressDone } = useRun()
@@ -23,6 +24,7 @@ const plannedCount = computed(() => state.currentRun?.plannedCount ?? ((state.cu
 const selectedModelCount = computed(() => state.meta?.models.filter(model => model.configured && state.selectedModelIds.includes(model.id)).length || 0)
 const plannedRequests = computed(() => (state.meta?.questions.length || 0) * selectedModelCount.value)
 
+const sourceSummary = computed(() => state.currentRun?.sourceSummary || state.currentRun?.degsonSourceSummary || null)
 const runDate = computed(() => {
   if (!state.currentRun) return ''
   return new Date(state.currentRun.createdAt).toLocaleString('zh-CN', { hour12: false })
@@ -238,6 +240,8 @@ function exportDocx() {
               </div>
             </article>
           </section>
+
+          <section v-if="sourceSummary" class="card"><SourceAnalysis :summary="sourceSummary" /></section>
 
           <section class="card">
             <div class="section-head">
@@ -470,6 +474,23 @@ h1 { font-size: 20px; letter-spacing: 0; white-space:nowrap; line-height:1.4; }
 .split { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 14px; }
 .pill { display: inline-flex; margin-right: 6px; padding: 2px 8px; border-radius: 999px; background: #e8f7ee; color: var(--good); font-size: 12px; font-weight: 650; }
 .quiet { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; }
+.source-advice { margin: 8px 0; color: var(--ink); font-size: 14px; }
+.source-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 10px 0; }
+.source-kpis > div { border: 1px solid var(--border); border-radius: 8px; padding: 9px 11px; background: #fbfcfe; }
+.source-kpis span { display: block; color: var(--muted); font-size: 11px; }
+.source-kpis strong { display: block; margin-top: 2px; font-size: 18px; font-variant-numeric: tabular-nums; }
+.source-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 10px 0; }
+.source-panel { min-width: 0; }
+.source-panel h3 { margin: 4px 0 8px; font-size: 14px; }
+.source-details { border-top: 1px solid var(--border); padding: 10px 0 0; margin-top: 10px; }
+.source-details summary { cursor: pointer; font-size: 13px; color: var(--ink-2); }
+.source-models { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 8px 0 4px; font-size: 13px; }
+.source-bars { display: flex; flex-direction: column; gap: 8px; margin: 10px 0 14px; }
+.source-row { display: grid; grid-template-columns: 72px minmax(0, 1fr) 92px; gap: 10px; align-items: center; font-size: 13px; }
+.source-row .track { height: 8px; border-radius: 999px; background: #eef2f8; overflow: hidden; }
+.source-row i { display: block; height: 100%; background: var(--accent); }
+.source-row b { text-align: right; font-variant-numeric: tabular-nums; }
+.focus-table a { color: var(--accent); }
 .fail { color: var(--bad); font-weight: 650; }
 .narrow { width: 36px; color: var(--muted); }
 
@@ -510,7 +531,7 @@ h1 { font-size: 20px; letter-spacing: 0; white-space:nowrap; line-height:1.4; }
   border-bottom: 1px solid var(--border);
   vertical-align: top;
 }
-.focus-table th { color: var(--muted); font-weight: 550; font-size: 12px; }
+.focus-table th { color: var(--muted); font-weight: 550; font-size: 12px; white-space: nowrap; }
 .focus-table td { color: var(--ink-2); font-size: 13px; line-height: 1.45; }
 .focus-table td:nth-child(n+3) { min-width: 120px; }
 .empty-rank { margin: 8px 0 0; color: var(--muted); font-size: 13px; }

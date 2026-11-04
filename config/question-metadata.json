@@ -1,0 +1,5 @@
+{
+  "q22": { "module": "EV", "questionType": "certification", "priority": 1, "productFit": "consumer" },
+  "q52": { "module": "EV", "questionType": "certification", "priority": 1, "productFit": "oem_connector" },
+  "q4": { "module": "storage", "questionType": "certification", "priority": 1, "productFit": "oem_connector" }
+}

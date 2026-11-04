@@ -14,6 +14,18 @@ test('does not classify certification and generic headings as brands', () => {
   assert.deepEqual(mentions, []);
 });
 
+test('extracts all-caps and industry-suffix brands from bullet lists', () => {
+  const text = [
+    '- **OMG** (https://example.com/a)',
+    '- **MIDA** (https://example.com/b)',
+    '- **UTL (Utility)** (https://example.com/c)',
+    '- **Kangyu Terminal** (https://example.com/d)',
+    '- **AOSI** (https://example.com/e)'
+  ].join('\n');
+  const names = analyzeText(text).mentions.map(item => item.brandName);
+  assert.deepEqual(names, ['OMG', 'MIDA', 'UTL', 'Kangyu Terminal', 'AOSI']);
+});
+
 test('reanalysis is labelled without modifying the input record', () => {
   const run = { results: [{ status: 'ok', answer: '**Mennekes:**', mentions: [] }] };
   const result = enrichRun(run);

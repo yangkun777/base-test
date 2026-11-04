@@ -6,6 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "build": "cd frontend && npm run build"
+    "build": "cd frontend && npm run build",
+    "start:lan": "powershell -ExecutionPolicy Bypass -File scripts/start-lan.ps1",
+    "stop:lan": "powershell -ExecutionPolicy Bypass -File scripts/stop-lan.ps1"
   }
 }

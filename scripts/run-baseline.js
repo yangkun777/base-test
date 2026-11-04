@@ -2,11 +2,18 @@
 // 用法：node scripts/run-baseline.js
 const fs = require('node:fs');
 const path = require('node:path');
-const { ROOT, loadEnvFile, getQuestions, modelConfigs, askModel, analyzeText, brandsFromResults } = require('../lib/engine');
+const { ROOT, REGIONS, loadEnvFile, getQuestions, modelConfigs, askModel, analyzeText, brandsFromResults } = require('../lib/engine');
+const { attachSources } = require('../lib/citation-sources');
 
 loadEnvFile(path.join(ROOT, '.env'));
 
 async function main() {
+  const regionArg = process.argv.find(arg => arg.startsWith('--region='));
+  const regionId = regionArg ? regionArg.split('=')[1] : 'eu';
+  if (!REGIONS[regionId] || regionId === 'unspecified') {
+    console.error(`未知地区：${regionId}`);
+    process.exit(1);
+  }
   const cfgs = modelConfigs();
   const models = Object.values(cfgs).filter(c => c.apiKey);
   if (models.length === 0) {
@@ -19,9 +26,11 @@ async function main() {
     for (const cfg of models) {
       process.stdout.write(`[${question.id} × ${cfg.label}] 请求中…`);
       try {
-        const { answer, modelName, latencyMs } = await askModel(cfg.id, question.text);
+        const { answer, modelName, latencyMs, citations, retrievalSources } = await askModel(cfg.id, question.text, regionId);
         const { mentions, matches } = analyzeText(answer);
-        results.push({ questionId: question.id, modelId: cfg.id, status: 'ok', answer, modelName, latencyMs, mentions, matches });
+        const draft = { status: 'ok', answer, mentions, matches, citations, retrievalSources };
+        const sources = attachSources(draft);
+        results.push({ questionId: question.id, modelId: cfg.id, regionId, status: 'ok', answer, modelName, latencyMs, mentions, matches, citations, retrievalSources, sources: sources.sources, degsonSources: sources.degsonSources });
         console.log(` 完成（${(latencyMs / 1000).toFixed(1)}s，命中品牌 ${mentions.length} 个）`);
       } catch (error) {
         results.push({ questionId: question.id, modelId: cfg.id, status: 'error', error: error.message || String(error) });
@@ -33,6 +42,8 @@ async function main() {
   const run = {
     id,
     createdAt: new Date().toISOString(),
+    regionId,
+    regionLabel: REGIONS[regionId].label,
     models: models.map(c => ({ id: c.id, label: c.label, model: c.model })),
     questions,
     brands: brandsFromResults(results),

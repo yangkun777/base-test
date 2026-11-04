@@ -16,6 +16,7 @@ const PORT = Number(process.env.PORT || 3100);
 const RUNS_DIR = path.join(ROOT, 'data', 'runs');
 const REPORTS_DIR = path.join(ROOT, 'data', 'analysis-reports');
 const DIST_DIR = path.join(ROOT, 'frontend', 'dist');
+const REGION_IDS = ['cz', 'de', 'eu', 'us', 'cn'];
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -95,7 +96,9 @@ async function handleApi(req, res, url) {
   if (analysisExport && req.method === 'GET') {
     const report = readReport(analysisExport[1]);
     if (report.status !== 'complete' || report.version !== 'geo-analysis-v3') return sendJson(res, 409, { error: '报告尚未生成完成。' });
-    const docx = buildAnalysisDocx(report);
+    const sourceRun = enrichRun(JSON.parse(fs.readFileSync(runFilePath(analysisExport[1]), 'utf8')));
+    const refreshedReport = { ...report, stats: { ...report.stats, sourceStats: sourceRun.sourceSummary, citationSources: sourceRun.sourceSummary } };
+    const docx = buildAnalysisDocx(refreshedReport);
     const filename = `${analysisExport[1]}-GEO-analysis.docx`;
     res.writeHead(200, {
       'Content-Type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
@@ -116,6 +119,7 @@ async function handleApi(req, res, url) {
     if (report.status === 'missing' || report.status === 'legacy') {
       return sendJson(res, 200, { ...previewReport(run), legacyReport: report.status === 'legacy' });
     }
+    if (report.stats) report.stats = { ...report.stats, sourceStats: run.sourceSummary, citationSources: run.sourceSummary };
     const body = publicReport(report);
     body.stale = report.status === 'complete' && report.inputHash !== hashForRun(run);
     return sendJson(res, ['generating', 'stopping'].includes(report.status) ? 202 : 200, body);
@@ -127,7 +131,7 @@ async function handleApi(req, res, url) {
     return sendJson(res, 200, {
       questions,
       brands: [],
-      regions: ['cn', 'us', 'eu'].map(id => ({ id, label: REGIONS[id].label, detail: REGIONS[id].detail })),
+      regions: REGION_IDS.map(id => ({ id, label: REGIONS[id].label, detail: REGIONS[id].detail })),
       models: Object.values(cfgs).map(c => ({ id: c.id, label: c.label, model: c.model, configured: !!c.apiKey }))
     });
   }
@@ -158,20 +162,24 @@ async function handleApi(req, res, url) {
 
   if (req.method === 'POST' && url.pathname === '/api/ask') {
     const body = JSON.parse(await readBody(req) || '{}');
-    if (!['cn', 'us', 'eu'].includes(body.regionId)) return sendJson(res, 400, { error: '请选择中国、美国或欧洲地区。' });
+    if (!REGION_IDS.includes(body.regionId)) return sendJson(res, 400, { error: '请选择捷克、德国、欧洲、美国或中国地区。' });
     const question = getQuestions().find(q => q.id === body.questionId);
     if (!question) return sendJson(res, 400, { error: `未知问题：${body.questionId}` });
     const controller = new AbortController();
     const abort = () => controller.abort();
     res.on('close', abort);
     try {
-      const { answer, modelName, latencyMs, usage, regionApplied } = await askModel(body.modelId, question.text, body.regionId, controller.signal);
+      const { answer, modelName, latencyMs, usage, regionApplied, citations, retrievalSources } = await askModel(body.modelId, question.text, body.regionId, controller.signal);
       if (res.destroyed) return;
       if (!regionApplied) throw new Error('模型接口未接受地区参数，本题已标记失败，避免将默认地区回答计入评测。');
       const { mentions, matches } = analyzeText(answer);
+      const { attachSources } = require('./lib/citation-sources');
+      const draft = { status: 'ok', answer, mentions, matches, citations, retrievalSources };
+      const sources = attachSources(draft);
       return sendJson(res, 200, {
         questionId: question.id, modelId: body.modelId, regionId: body.regionId, regionApplied, status: 'ok',
-        answer, modelName, latencyMs, mentions, matches, usage
+        answer, modelName, latencyMs, mentions, matches, citations, retrievalSources,
+        sources: sources.sources, degsonSources: sources.degsonSources, usage
       });
     } catch (error) {
       if (res.destroyed) return;
@@ -186,7 +194,7 @@ async function handleApi(req, res, url) {
 
   if (req.method === 'POST' && url.pathname === '/api/runs') {
     const body = JSON.parse(await readBody(req) || '{}');
-    if (!['cn', 'us', 'eu'].includes(body.regionId)) return sendJson(res, 400, { error: '请选择评测地区，未保存。' });
+    if (!REGION_IDS.includes(body.regionId)) return sendJson(res, 400, { error: '请选择评测地区，未保存。' });
     let prepared;
     try { prepared = prepareRun(body, getQuestions()); }
     catch (error) { return sendJson(res, 400, { error: error.message || String(error) }); }
@@ -220,7 +228,7 @@ async function handleApi(req, res, url) {
     if (!file || !fs.existsSync(file)) return sendJson(res, 404, { error: '未找到该评测记录。' });
     const run = enrichRun(JSON.parse(fs.readFileSync(file, 'utf8')));
     const docx = buildRunDocx(run);
-    const regionSuffix = ['cn', 'us', 'eu'].includes(run.regionId) ? `-${run.regionId}` : '';
+    const regionSuffix = REGION_IDS.includes(run.regionId) ? `-${run.regionId}` : '';
     const filename = `${run.id}${regionSuffix}.docx`;
     res.writeHead(200, {
       'Content-Type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',

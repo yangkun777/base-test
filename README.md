@@ -30,7 +30,7 @@ npm install   # 国内网络：npm install --registry=https://registry.npmmirror
 npm run build
 ```
 
-3. 启动服务并打开 `http://localhost:3100`：
+3. 只在本机看：启动服务并打开 `http://localhost:3100`。同事要通过局域网访问时，用 [docs/本地部署.md](docs/本地部署.md)。
 
 ```bash
 node server.js

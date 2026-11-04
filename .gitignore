@@ -4,3 +4,4 @@ frontend/dist/
 data/results.json
 .env
 data/server-*.log
+deploy/nginx/

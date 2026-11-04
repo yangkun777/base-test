@@ -1,0 +1,8 @@
+[
+  { "id": "ev-type2-content", "label": "EV Type 2 内容页", "module": "EV", "priority": 1, "type": "official_content", "questions": ["q22", "q52", "q96", "q97", "q118", "q168"], "urls": ["https://www.degson.com/content/details_472_5319421.html"] },
+  { "id": "storage-typelist", "label": "储能 typelist20", "module": "storage", "priority": 1, "type": "official_product", "questions": ["q7", "q41", "q42", "q49", "q51"], "urls": ["https://www.degson.com/product/typelist20_4438063.html"] },
+  { "id": "storage-article", "label": "储能 UL/TÜV 文章", "module": "storage", "priority": 1, "type": "official_content", "questions": ["q4", "q41", "q51"], "urls": ["https://www.degson.com/content/details_472_5319452.html"] },
+  { "id": "terminal-viox", "label": "端子台 viox 榜单", "module": "terminal", "priority": 1, "type": "directory", "questions": ["q69", "q102", "q115"], "hosts": ["viox.com"] },
+  { "id": "terminal-directindustry", "label": "端子台 directindustry", "module": "terminal", "priority": 1, "type": "directory", "questions": ["q163"], "hosts": ["directindustry.com"] },
+  { "id": "ebike-content", "label": "电自连接器内容页", "module": "ebike", "priority": 2, "type": "official_content", "questions": ["q60", "q144"], "urls": ["https://www.degson.com/content/details_472_5319509.html", "https://www.degson.com/content/details_472_5319430.html"] }
+]
